@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마우스 이벤트 mouse event</title>
+  <style>
+  	body {
+  		/* 상속 */
+  		font-family:'나눔고딕','맑은 고딕','돋움',sans-serif;
+  		font-size:30px;
+  		line-height:1.5;
+  	}
+  	h1 {
+  		font-size:46px;
+  	}
+  	::selection {/* 브라우저 전역에 적용 */
+  		background-color:lightblue;
+  	}
+  	h1::selection {/* 드래그 했을 때 */
+  		background-color: teal;
+  		color:#fff;
+  	}
+  	span.txt {/* 종속 선택자: 기준 요소의 클래스명이나 아이디를 붙여서 작성. 해당 요소를 구체적으로 지정. */
+  		color:orange;
+  	}
+  	/* span#txt, .txt#txt */
+
+  	li {
+  		color:red;
+  	}
+  	/*
+  	a:link { 링크 상태(기본)
+  		color:#000;
+  		text-decoration:none;
+  	}
+  	a:visited {방문한 적이 있을 때 
+  		color:#1cc5dc;
+  	}
+  	a:hover { 마우스를 올렸을 때 
+  		color:#72147e;
+  		background-color:#e2bcb7;
+  		font-size:40px;
+  	}
+  	a:active { 마우스로 클릭했을 때 
+  		text-decoration:line-through;
+  		background-color:orange;
+  	}
+		*/
+		a {/* a요소의 성격이 밑줄과 고유의 색을 가지고 있기 때문에 a요소에 직접 적용 */
+			text-decoration:none;
+			color:#325288;
+		}
+		a:hover {
+			background-color:#845460;
+			color:#fff;
+		}
+  </style>
+</head>
+<body>
+	<h1>마우스 이벤트 <span class="txt" id="txt">mouse event</span></h1>
+	<ul class="txt">
+		<li class="txt"><a href="http://www.naver.com">스물</a></li>
+		<li><a href="#">킹스맨</a></li>
+		<li><a href="#">위플래시</a></li>
+		<li><a href="#">인서전트</a></li>
+		<li><a href="#"><span id="txt1">삼진그룹영어</span></a></li>
+	</ul>
+</body>
+</html>

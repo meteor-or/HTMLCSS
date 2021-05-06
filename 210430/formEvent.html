@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>폼 이벤트 form event</title>
+  <style>
+  	body {
+  		color:red;
+  		font-size:22px;
+  	}
+  	h1 {
+  		font-size:22px;
+  	}
+  	/*form > input {} */
+  	form > #txt {/* 폼 관련 요소에 직접 특성을 적용해야 됨 */
+  		background-color:#f8f5f1;
+  		color:teal;
+  		font-size:22px;
+  	}
+  	form > #txt:focus {/* 포커스 상태일 때 */
+  		font-weight:bold;
+  		background-color:orange;
+  	}
+
+  	form > #btn {
+  		background-color:#81b214;
+  		font-size:20px;
+  		font-weight:bold;
+  		color:#fff;
+  		cursor:pointer;/* 마우스 커서 */
+  	}
+  	form > #btn:hover {/* 버튼에 마우스를 올렸을 때 */
+  		background-color:#206a5d;
+  	}
+  </style>
+</head>
+<body>
+	<h1>폼 이벤트 form event</h1>
+	<form>
+		<input type="text" id="txt">
+		<!-- <input type="submit" id="btn"> -->
+		<button type="submit" id="btn">전송</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>formEx1</title>
+</head>
+<body>
+	<SECTION>
+	<h1>폼 연습 1</h1>
+	<h2>상세정보</h2>
+	이름 : <input type="text" name="name"><br>
+	이메일 : <input type="text" name="eamil">
+	</SECTION>
+
+	<section>
+	<h2>리뷰</h2>
+	사이트를 알게 된 경위는? <select name="sel" id="sel">
+	<option value="온라인" selected>온라인</option>
+	<option value="지인">지인</option>
+	<option value="검색">검색</option>
+	</select>
+	</section>
+
+	<section><br>
+		다시 방문하시겠습니까?
+		<br><input type="radio" name="decied" value="yes">예
+		<input type="radio" name="decied" value="no">아니요
+		<input type="radio" name="decied" value="idontknow">모름
+	</section>
+
+	<section><br>
+		의견<br>
+		<textarea cols="30" rows="6">이곳에 작성하세요</textarea>
+	</section>
+
+	<section><br>
+		<input type="checkbox" name="decied" value="yes"> 이메일에 가입하겠습니까?
+	</section>
+
+	<section>
+		<br><input type="submit" name="submit" value="리뷰 전송">
+		<input type="reset" name="reset" value="취소">
+	</section>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>마우스 이벤트</title>
+	<style type="text/css">
+		form > #txt{ /* 폼 관련 요소에 직접 특성을 적용해야 됨*/
+			background-color:#f8f5f1;
+			color:teal;
+			font-size:22px;
+		}
+
+		form> #txt:foucs{ /*포커스 상태일 때 */
+			font-weight:bold
+			background-color:orange;
+
+		}
+
+		form > #btn{
+			background-color:#81b214;
+			font-size:20px;
+			font-weight:bold;
+			color:#fff;
+			cursor:pointer; /* */
+		}
+		
+		form > #btn:hover {
+			background-color:#206a5d;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>마우스 이벤트 <span class="txt" id="txt">mouse event</span></h1>
+	<form>
+		<input type="text" name="txt">
+		<button type="submit" id="btn">전송</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+h1{
+	background-color:gray; 
+	text-align: center; 
+	color:#fff;
+}
+
+div {
+	background-color:#eee;
+	text-align:center;
+	}
+	
+
+body{
+	color:#7E8054;
+	line-height:2;
+}
+
+
+h3{
+	color:orange;
+	text-decoration:underline;
+		text-align: center;
+}
+
+h4{
+	background-color:#eee;
+	text-align: right;
+}
+
+a {
+	color:#fff;
+	background-color:red;
+	text-decoration:line-through;
+	font-weight:normal;
+}
+
+
+
+#txt1{
+	background-color:orange;
+
+}
+
+#txt2{
+	color:red;
+	font-style:normal;
+	font-size:10px;
+}
+
+
+

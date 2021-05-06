@@ -1,0 +1,10 @@
+<첫페이지(메인 페이지) 기준>
+pf01의 index.html로 이동: pf01/index.html
+logo.png로 이동:pf01/images/logo.png 
+common.js로 이동:common/scripts/common.js
+----------------------------------
+<pf01의 index.html 기준>
+intro.html로 이동:../intro.html
+index.html로 이동: index.html
+img02.png로 이동:../images/sub_img02.png
+intro.css로 이동:../css/intro.css

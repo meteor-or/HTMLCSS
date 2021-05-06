@@ -1,0 +1,71 @@
+@charset 'utf-8';
+
+header {
+	text-align:center;
+	font-family:'맑은 고딕',돋움,sans-serif;
+}
+
+ header p {
+	background-color:gray;
+	width:876px;
+	color:white;
+	margin: 0 auto;
+	text-align:left;
+	text-indent:50px;
+	font-weight:bold;
+	line-height:2;
+}
+
+table {
+	width:920px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-right: 10px;
+
+}
+
+table td {
+
+	vertical-align:top;
+}
+
+
+table h2{
+	font-weight:normal;
+}
+
+table h4 {
+	color:red;
+}
+
+table img {
+	width: 300px;
+}
+
+table p {
+	line-height: 1.5;
+}
+table tr td.side
+{
+	width:250px;
+
+}
+
+ul{
+   list-style:none;
+   line-height: 3;
+   color: red;
+	text-indent:-30px;
+   }
+
+footer p {
+	background-color:gray;
+	width:876px;
+	color:white;
+	margin: 0 auto;
+	text-align:left;
+	line-height:2;
+	text-indent:20px;
+	font-size: 12px;
+
+}
