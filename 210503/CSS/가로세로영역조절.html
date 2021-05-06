@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>가로세로영역조절width, height</title>
+	<style type="text/css">
+		/* 
+
+			블록 요소 : p, div, h1, header, ul, li, article;
+				블록 요소 옆에 다른 요소가 올 수 없음.
+				가로 값의 경우 부모 요소의 가로 값을 물려 받음.
+				세로 값의 경우 자식의 높이값을 받음.
+				width, height 값으로 제어 가능.
+
+			인라인 요소 :span, strong, a, img, input;
+				인라인 요소 옆에 다른 인라인 요소가 올 수 있음.
+				가로, 세로 값의 경우 자식(콘텐츠)이 가지는 값을 받음.
+				width, height 값으로 제어 불가능
+		*/	
+
+		body {
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		div.box1 {/*종속 선택자: 띄어쓰기없이 작성. 단독으로 쓰이는 선택자들보다 우선순위가 필요할 때 주로 사용*/
+			background-color: salmon;
+			width:500px;
+			height:300px;/* 세로의 %는 부모늬 높의값이 한정되어 있는 경우에만 적용 */
+		}
+
+		div.box1 > div.block1 { /* 자식 선택자 */
+			background-color: maroon;
+			color:#fff;
+			/*가변 너비*/
+			width:60%; /* 부모를 기준으로 60%*/
+			height:50%; /* 부모인 .box1의 높이 값이 300px로 한정되었기 때문에 인식*/
+		}
+
+		div.box1 > span.inline1{
+			background-color: lightblue;
+			/* 인라인 요소는 가로 세로 값을 인식하지 못함 이미지는 제외*/
+			width:400px;
+			height:200px;
+		}
+
+		p.box2{
+			background-color:teal;
+			width:500px;
+			height:100px;
+		}
+		span.inline2{
+			background-color:red;
+			width:500px;
+			height:100px;
+		}
+	</style>
+</head>
+<body>
+	<h1>가로세로영역조절width,height</h1>
+	<div class="box1">
+		<div class="block1">블록 요소</div>
+		<span class="inline1">인라인 요소</span>
+	</div>
+	<p class="box2"></p>
+	<span class="inline2"></span>
+</body>
+</html>

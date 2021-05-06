@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>다양한 폼 태그들</title>
+</head>
+<body>
+	<h1>다양한 폼 태그들</h1>
+	<h2>input 태그</h2>
+	<p><strong>인라인 요소로 폼 안의 기본적인 필드 값을 만들 때 사용.<br>빈요소</strong></p>
+
+
+	<form action="http://www.dothome.co.kr" method="post">
+	<!--
+		type 값에 따라 input의 역할이 달라짐.
+		name="데이터 이름" id="요소의 고유한 이름"	 maxlength="최대 작성 글자수"
+		placeholder="입력창 안의 힌트" re	quired=
+	  -->
+
+	<section>
+		<h3>type="text" / type="password"</h3>
+		사용자명 : <input type="text" name="user_name" id="username" maxlength="5" placeholder="이곳에 이름을 작성하세요"> <br>
+		비밀번호 : <input type="password" name="user_pw" id="userpw" required placeholder="비밀번호를 작성하시오"><br>
+
+		<!-- 가장 기본 버튼, 전송 -->
+		<input type="submit" name="submit">
+		<!-- value값을 적지 않으면 가장 기본값이 나오게 됨 -->
+		<!-- 취소 -->
+		<input type="reset" name="reset" value="취소">
+		<!-- 버튼 -->
+		<input type="button" name="btn" value="버튼">
+	</section>
+
+	<section>
+		<h3>여러 줄의 텍스트 박스</h3>
+		<textarea cols="30" rows="6"> 닫아주는 태그가 있음. 이 안에 글 작성시 박스안에 출력. 인라인</textarea>
+		<!-- 계산하기 힘들기 때문에 자주 쓰이지는 않음 -->
+	</section>
+
+	<section>
+		<h3>라디오 버튼</h3>
+		<p>하나의 값만 선택 가능. <strong>name 속성은 반드시 같아야 함.</strong></p>
+		<input type="radio" name="choice" value="선택1"> 선택1
+		<!-- checked 속성은 처음부터 선택된 상태로 출력 -->
+		<input type="radio" name="choice" value="선택2"> 선택2
+		<input type="radio" name="choice" value="선택3"> 선택3
+	</section>
+		<!-- 미리 value라는 값을 넣어주면 귀찮아지지 않음 value값을 넣어주는게 좋음 -->
+	
+	<section>
+		<h3>체크박스 버튼</h3>
+		<p>여러 개의 값 선택 가능.<strong>name 속성은 반드시 같아야 함</strong></p>
+		<input type="checkbox" name="decide" value="선택1">선택1
+ 		<input type="checkbox" name="decide" value="선택2">선택2
+		<input type="checkbox" name="decide" value="선택3">선택3
+	</section>
+
+	<section>
+		<h3>드롭다운 형태의 메뉴</h3>
+		<select name= "sel" id="sel">
+			<option value="선택1">선택1</option>
+			<!-- selected 선택한 옵션이 화면에서 먼저 보임 -->
+			<option value="선택2" selected>선택2</option>
+			<option value="선택3">선택3</option>
+		</select>
+	</section>
+
+	<section>
+		<h3>파일 첨부 버튼</h3>
+		<input type="file" name="file"><br>
+		<button type="submit">전송</button>
+		<button type="reset">취소</button>
+		<button>버튼</button>
+	</section>
+
+		<section>
+			<h3>html5에서 새로 정의된 태그들</h3>
+			<p>
+				날짜 <input type="date" name="yymmdd"> <br>
+			</p>
+			<p>
+				이메일 <input type="email" name="email"> <br>
+			</p>
+			<p>
+				url <input type="url" name="url"> <br>
+			</p>
+			<p>
+				검색 <input type="search" name="ser"> <br>
+			</p>
+			<p>
+				숫자 <input type="number" name="num"> <br>
+			</p>
+			<p>
+				범위 설정 <input type="range" name="">
+			</p>
+		</section>
+
+
+
+	</form>
+
+</body>
+</html>

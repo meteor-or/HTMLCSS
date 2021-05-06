@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+body {
+	font-family:'명조','맑은 고딕',돋움,sans-serif;
+	font-size: 18px;
+	color:#333;}
+
+/*table {
+	width: 1000px;
+	*/
+
+table > caption {
+	background-color: purple;
+	color: orange;
+	font-weight: bold;
+	text-align:left;
+	font-size:30px;
+	line-height:1.8;
+	text-indent:15px;
+}
+
+table > thead{
+	background-color: maroon;
+	color: white;	
+	height: 30px;
+	font-size: 22px;
+	vertical-align: middle;
+	text-align:left;
+	text-indent:5px;
+	line-height:1.4;
+	font-weight:normal;
+}
+
+table > thead > tr > td.price {
+	width: 150px;
+}
+
+tbody td{/* == table>tbody>tr>td == table tr td == table tr>td == table>tbody tr */
+	background-color:#efefef;
+	vertical-align: top;
+	max-width:200px; /*최대값. 이 이상으로 커지지 않음 */
+	min-width: 100px; /*최소값. 이 이하로 작아지지 않음 */
+}
+
+
+/* 테이블 요소의 성격 : 
+table 요소에서 width값이 있으면 각 셀의 크기 제어가 어려움.
+하나의 셀에 값을 주면 나머지 셀의 크기는 따라감.
+셀 안의 컨텐츠는 세로 중앙 정렬이 기본.*/

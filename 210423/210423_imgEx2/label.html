@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>lable</title>
+</head>
+<body>
+	<h1>레이블 label</h1>
+	<ul>
+		<li>인라인</li>
+		<li>폼과 관련된 요소에 이름표 지정</li>
+		<li>label 요소를 정의함으로써 폼 요소와 연관시킬 수 있음</li>
+		<li>키보드를 통해 컨트롤이 가능하여 접근성 향상</li>
+		<li>&lt;input id="one"&gt;의 아이디 값과 &lt;label for="one"&gt;의 for 값이 동일해야 연결됨</li>
+	</ul>
+
+	<h2>연결 방법1</h2>
+		<!-- 레이블을 연결하면 빈 네모 칸이 아닌 이름만 눌러도 박스가 눌려짐 
+			아이디와 관련된 값임을 알게되므로 작성해주는 게 좋음-->
+		<label>이름 : <input type="text" name="user_name"></label> <br>
+		<label>아이디 : <input type="text" name="User_id" disabled> </label>
+
+	<h2>연결 방법2</h2>
+		<!-- td나 th에 막혀있는 경우엔? 월요일에 추가설명-->
+		<table border="1">
+			<caption>성별</caption>
+			<tr>
+				<td><input type="radio" name="gender" value="woman"></td>
+				<td>여성</td>
+			</tr>			
+
+			<tr>
+				<td><input type="radio" name="gender" value="man"></td>
+				<td>남성</td>
+			</tr>
+		</table>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>넘치는 컨텐츠 제어 overflow</title>
+	<style type="text/css">
+		body{
+			font-family:'나눔바른고딕', '맑은 고딕',돋움,sans-serif;
+			font-size:20px ;
+			color:#3f3697 ;
+			line-height: 1.6;
+		}
+
+		table > thead > tr > th {
+			background-color:#344fa1;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>넘치는 컨텐츠 제어 overflow</h1>
+	<p>고정된 크기를 가진 부모 요소에서 컨텐츠가 넘칠 때 스크롤바 표시 여부 결정</p>
+
+	<table>
+		<thead>
+			<tr>
+				<th>inherit</th>
+				<th>visible</th>
+				<th>hidden</th>
+				<th>auto</th>
+				<th>scroll</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><p class="box1">지정된 영역에서 컨텐츠가 넘치지 않을 때</p></td>
+				<td><p class="box2">지정된 영역에서 컨텐츠가 넘치면 무조건 보여짐.<br>지정된 영역에서 컨텐츠가 넘치면 무조건 보여짐.<br>지정된 영역에서 컨텐츠가 넘치면 무조건 보여짐.<br>지정된 영역에서 컨텐츠가 넘치면 무조건 보여짐.</p></td>
+				<td><p class="box3">지정된 영역에서 컨텐츠가 넘치면 무조건 숨김.<br>지정된 영역에서 컨텐츠가 넘치면 무조건 숨김.<br>지정된 영역에서 컨텐츠가 넘치면 무조건 숨김.<br>지정된 영역에서 컨텐츠가 넘치면 무조건 숨김.</p></td>
+				<td><p class="box4">지정된 영역에서 컨텐츠가 넘치면 자동으로 스크롤이 생기고 넘치지 않으면 스크롤이 생기지 않음</p></td>
+				<td><p class="box5">지정된 영역에서 컨텐츠가 넘치든 넘치지 않든 무조건 스크롤이 생김</p></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
