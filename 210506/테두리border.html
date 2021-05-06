@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>테두리border</title>
+	<style>
+		body{
+			font-family: '나눔고딕','맑은 고딕',돋움,sans-srif;
+			font-size:22px;
+			line-height:1.6;
+		}
+
+		h1{
+			text-transform:uppercase;
+			font-size: 50px;
+			text-shadow: 2px 2px purple; 
+
+			border-bottom-width: 10px; /* 테두리-방향-굵기 */
+			border-bottom-style: solid; /* 테두리 방향 모양 */
+			border-bottom-color: coral; /* 테두리 방향 색상 */
+		}
+
+		p {
+			width: 540px;
+		}
+
+		p.box1 {
+			/*테두리 굵기*/
+			border-top-width: 5px;
+			border-right-width: 8px;
+			border-left-width: 1px;
+			border-bottom-width: 6px;
+			/*테두리 스타일*/
+			border-top-style: dashed; /* 자른선 */
+			border-right-style:double;/* 이중선 3px이상 보임*/
+			border-left-style:dotted; /* 점선 */
+			border-bottom-style:groove;/* 입체선 3px이상 보임*/
+			/*테두리 색상*/
+			border-top-color:rgba(250,50,40,1);
+			border-right-color:#cf0000;
+			border-left-color:teal;
+			border-bottom-color:rgb(55,66,200);
+		}
+
+		p.box2 {
+			/*  테두리의 네 방향에 같은 값을 가질 때*/
+			border-width:10px;
+			border-style:groove;
+			border-color:#9f5f80;
+		}
+
+		p.box3 {
+			/*축약형 : 값의 순서에 상관없이 띄어쓰기로 구분*/
+			border:6px ridge lightblue; /* 바깥 입체선 */
+		}
+
+		p.box4 {
+			border-right:dotted 4px #72147e;
+			border-top: dotted 6px coral;
+			border-bottom: dashed 4px salmon;
+			border-left:#f21170 solid 2px; /* 순서는 상관 없음 */
+		}
+
+		p.box5 {
+			border-top: dashed 2px #aa2ee6;
+			border-bottom: 4px double #ff79cd; 
+		}
+
+		p.box6 {
+
+			/*
+			border-top:orange 4px solid;
+			border-right:orange 4px solid;
+			border-left:orange 4px solid ;
+			border-bottom:red 4px solid;*/
+			/* override 우선 순위 중요 과하면 속도가 느려지지만 보통은 괜찮음*/
+			border:6px solid orange;
+			border-bottom-color: red;
+		}
+
+		p.box7 { /* outline은 오래됨 border보다 달리 요소의 실제 영역 크기에 영향을 미치지 않음*/
+			outline-style: solid;
+			outline-width: 4px;
+			outline-color: #5b6d5b;
+			outline: solid 4px  #5b6d5b; /* 축약형 */
+		}
+		
+
+		div.box8 {
+			border:20px dashed lightblue;
+			/*outline-bottom: 50px solid rgba(50,50,50,0.6); 적용되지 않음*/
+			outline: 50px solid rgba(50,50,50,0.6);
+			/* border의 값을 크게 줄 수록 박스 자체의 크기는 커지지만 
+			outline의 값은 아무리 크기를 늘려워 원래 박스의 값은 바뀌지 않음*/
+		}
+
+		div.box9 {
+			border:30px solid orange;
+			
+		}
+	</style>
+</head>
+<body>
+	<h1>테두리 Border</h1>
+	<p class="box1">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</p>
+	<p class="box2">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</p>
+	<p class="box3">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</p>
+	<p class="box4">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</p>
+	<p class="box5">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</p>
+	<p class="box6">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</p>
+	<p class="box7">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</p>
+	<div class="box8">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</div>
+	<div class="box9">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 여역 사이의 여백인 패딩(padding), 박스 테두리(border), 그리고 여러 박스 모델 간의 여백이 마진(margin)등의 요소로 구성되어 있다.</div>
+</body>
+</html>
