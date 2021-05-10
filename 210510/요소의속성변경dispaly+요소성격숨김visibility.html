@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>요소의 속성 변경 display + 요소의 숨김 visibility</title>
+	<style>
+		body{
+			font-family:'나눔고딕','맑은 고딕',돋움,sans-serif;
+			font-size: 22px;
+			font-weight: bold;
+		}
+		ul {
+			background: orange;
+			margin-bottom: 50px auto;
+			text-align: center;
+			/*magin과 padding은 상속이 되지 않음				*/
+			padding: 0; 
+			/* ul 요소 */
+		}
+
+		.gnb1 li {
+			background-color: red;
+			border:1px solid black;
+			padding: 6px;
+			max-width: 200px; 
+			/* 인라인 성격으로 변경되었기 때문에 적용 x*/
+		
+			/* 요소의 기본 성격 변경 */
+			display: inline; /* 인라인*/
+			padding:6px 10px;
+			margin: 0 10px;
+		}
+
+		.gnb2 li {
+			display: inline-block; /* 인라인, 블록 성격 모두 가짐 좋을 때도 있고 불편할 때도 있음*/ 
+			background-color: lightblue;
+			border:1px solid black; /* 인라인, 블록 성격 모두 가짐  */
+			width: 200px; /* 블록 성격도 포함하고 있기 때문에 적용 */
+			height: 40px;
+			line-height: 40px; /* 세로 중앙 정렬, height 값과 동일하게 적용. 단, 한줄인 경우만 가능 */
+			padding: 6px;
+			margin: 10px;
+			/*단점은 띄어쓰기가 생김*/
+		}
+
+
+	/*
+	inline-block:
+		인라인처럼 가로 나열이 되며 자식 컨텐츠만큼의 가로 세로 값을 가짐.
+		인라인처럼 띄어쓰기 및 줄바꿈 인식.
+		인라인처럼 line-height 값을 가짐.
+		블록처럼 width, height 값 가짐.
+		블록처럼 부모의 높이값에 영향을 줌.
+		가로 중앙 정렬은 인라인, 블록 방식 둘 다 적용 가능
+			*/
+
+		.gnb1 .none {
+			display: none;
+			/*브라우저에서 요소 영역이 사라짐. 코드 창에서만 확인 가능하며 레이아웃(원래 있어야했던 영역을 없애니까 뒤에있던 것을 땅겨옴)에 영향을 줌*/
+		}
+
+		.gnb2 .hidden {
+			visibility: hidden;
+			/*브라우저에 영역은 남으나 컨텐츠가 보이지 않게 처리. visible; 요소 보임. ==opacitiy */
+		}
+
+		.gnb2 .opacity {
+			opacity:0; /* 불투명도 0~1*/
+			opacity: 0.5
+		}
+
+	</style>
+</head>
+<body>
+	<h1>요소의 속성 변경 display + 요소의 숨김 visibility</h1>
+	<ul class="gnb1">
+		<li>홈(home)</li>
+		<li>상품(product)</li>
+		<li>소개(about)</li>
+		<li class="none">서비스(service)</li>
+		<li>연락처(contact)</li>
+	</ul>
+	<ul class="gnb2">
+		<li>홈(home)</li>
+		<li>상품(product)</li>
+		<li class="opacity">소개(about)</li>
+		<li class="hidden">서비스(service)</li>
+		<li>연락처(contact)</li>
+	</ul>
+</body>
+</html>
