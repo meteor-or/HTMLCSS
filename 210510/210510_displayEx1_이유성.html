@@ -10,14 +10,24 @@
 			margin: 0 auto;
 			text-align: center;
 		}
-
+/*
 		h1{
 			display: none;
-		}
+		}*/
 		
-		#none {
-			display: none;
+
+		h1 + ul { /* 인접형제 선택자 : 기준 요소 바로 뒤에 오는 형제 관계의 요소*/
+			border: 1px solid #000;
+			width: 60%;
 		}
+
+		h1 + ul  li{ /* ==h1 + ul > li */
+			color: blue;
+		}
+
+		/*#none {
+			display: none;
+		}*/
 
 
 		#gnb li { 

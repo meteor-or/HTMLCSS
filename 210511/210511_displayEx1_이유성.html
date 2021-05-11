@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>display 연습</title>
+	<style>
+		body{
+			font-size: 32px;
+			font-family: '휴먼명조','맑은 고딕',돋움, sans-serif;
+			margin: 0 auto;
+			text-align: center;
+		}
+/*
+		h1{
+			display: none;
+		}*/
+		
+
+		h1 + ul { /* 인접형제 선택자 : 기준 요소 바로 뒤에 오는 형제 관계의 요소*/
+			border: 1px solid #000;
+			width: 60%;
+			padding: 0;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		h1 + ul  li{ /* ==h1(1) + ul(1) > li(1) */
+			background-color: lightblue;
+			/*text-indent: 50px; 레이아웃에 영향을 끼치지 않음*/
+			padding:5px 0 5px 40px;
+			
+			text-align: left;
+		}
+
+		/*#none {
+			display: none;
+		}*/
+
+		#gnb { /* 5점 */
+			/*background-color: lightgreen;*/
+			padding-left: 0; /* UL값이 기본적으로 왼쪽 그 list여백 값을 가지고 있어서 이걸 없애줌 */
+		}
+
+		#gnb li { 
+			display: inline-block; 
+			margin: 2px;
+		}
+	
+		/* #gnb li:hover {a의 글자색 변경 X} # gnb a:hover; */ 
+		#gnb li a {
+			border: 2px solid darkmagenta;
+			padding: 5px 20px;
+			text-decoration: none;
+			color: darkmagenta;
+			padding: 10px;
+			margin: 30px 5px;
+			display: block;
+		}
+
+		#gnb li:hover a{ /* #gnb 하위의 li에 마우스를 올리면 하위의 a에도 적용*/
+			background-color:darkmagenta;
+			color: lavender;
+
+		}
+
+		
+
+	
+	</style>
+</head>
+<body>
+	<h1>display 연습</h1>
+	<ul id="none">
+		<li>마우스를 올리면 그자색과 배경색 변경</li>
+		<li>중앙 정렬</li>
+	</ul>
+
+
+	<ul id ="gnb">
+		<li><a href="#">MENU 1</a></li>
+		<li><a href="#">MENU 2</a></li>
+		<li><a href="#">MENU 3</a></li>
+		<li><a href="#">MENU 4</a></li>
+	</ul>
+</body>
+</html>

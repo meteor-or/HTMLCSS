@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>box size 1</title>
+	<style>
+		* { /* 전체 선택자: 각각의 모든 요소에 직접 적용. 그래서 많이 사용되지 않음 */
+			font-size: 28px;
+		}
+
+		.box1 {
+			background-color: orange;
+			width: 500px ; height: 300px;
+			border:10px solid #ddd;
+			outline: 10px solid #3f37c9;
+			padding: 10px;
+			margin: 10px;
+		}
+
+		.box2{
+			background-color: #7209b7;
+			width: 600px ; height: 300px;
+			border:4px solid maroon;
+			outline: ;
+			padding: 15px;
+			margin: 50px auto;
+
+		}
+	</style>
+</head>
+
+<body>
+	<h1>요소의 실제 크기 1</h1>
+	<div class="box1">
+		<h3>width + margin + padding + border</h3>
+		<p>요소의 실제 가로: 500(w)+ (10(m)*2)+(10(p)*2)+(10(b)*2) = 560px </p>
+		<p>요소의 실제 세로: 300 + (10*2:margin-top, margin-bottom)+(10*2)+(10*2) = 360px</p>
+	</div>
+	<div class="box2">
+		<p>가로 : 600+ auto(0)+ p:(15*2)+ b:(4*2) = 638px</p>
+		<p>세로 : 300 + (50*2) + p:(15*2) + b:(4*2)</p>
+	</div>
+</body>
+</html>

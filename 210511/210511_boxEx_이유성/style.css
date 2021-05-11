@@ -1,0 +1,63 @@
+@charset 'utf-8';
+
+body{
+	font-family: '나눔고딕','맑은 고딕',돋움, sans-serif;
+	font-size: 18px;
+	text-align: center;
+	margin: 0;
+}
+
+.container  {
+	/*background-color: lightblue;*/
+	margin: 0 auto;
+	width: 640px;
+
+
+}
+/* h1는 기본적으로 가지는 여백 값이 있음 */
+.container h1 {
+	/* 마진 상쇄 현상 : 
+	일반적인 흐름에서, 
+	1 .형제 관계의 margin-bottom과 margin-top이 만나면 둘 중 큰 값이 적용.
+	2. 부모의 magin-top과 자식의 margin-top이 만나면 둘 중 큰 값이 적용되어 부모에도 margin-top 적용*/
+
+	margin: 14px 0 0;
+
+}
+
+.container h1 img {
+	/*	opacity: 0.3;*/
+	/*이미지의 경우 인라인 요소의 특성으로 인해 하단 여백이 생김. 이 경우 vertical-align으로 해결*/
+	vertical-align: top;
+	}
+
+.container h2 {
+	background-color: #7400b8;
+	color: #fff;
+	text-align: left;
+	font-size: 20px;
+	padding: 11px 9px;
+	margin: 0px;
+
+}
+.container section {
+	padding: 22px;
+	border: 1px solid #7400b8;
+	border-top: none;
+}
+.container section h3 {
+	margin: 0;
+	color:#5e60ce;
+}
+.container section strong {
+	font-size: 20px;
+	color: #5390d0;
+}
+
+.container section address {
+	font-style: normal;
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+	padding-top: 14px;
+}
