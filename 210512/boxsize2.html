@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>box size2</title>
+	<style>
+		body {
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.box1{
+			width:300px ; height:300px ;
+			background-color: orange;
+			border:solid 3px;
+			margin: 0 auto;
+			padding-top: 100px; padding-left: 20px;
+
+		}
+		.box2{
+			width:300px; height: 400px;
+			background-color: teal; color: #fff;
+			outline: 4px solid violet; /* 실제 요소의 크기에 계산되지 않는다.*/
+			margin: 20px auto 0; /* top left+right bottom*/
+			padding: 20px 10px 0 30px; /* top right bottom left*/
+			
+		}
+		.box3{
+			width:400px ; height:200px ;
+			background-color:salmon ;
+			border:2px dotted maroon;
+			outline:2px solid pink;
+			margin: 20px auto 0;
+			padding:20px 10px 0 30px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<p>가로: 300 + 20 + 0 + 3*2 = 326</p>
+		<p>세로: 300 + 100 + 0 + 3*2 = 406</p>
+	</div>
+	<div class="box2">
+		<p>가로: 300 + 0 + (10 + 30) = 340</p>
+		<p>세로: 400 + 20 + 20 = 440</p>
+	</div>
+	<div class="box3">
+		<p>가로: 400 + 2*2 + 0 + (10 + 30) = 444</p>
+		<p>세로: 200 + 2*2 + 20 + 20 = 244</p>
+	</div>
+
+</body>
+</html>

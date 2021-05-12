@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>box-sizing</title>
+	<style>
+		div {
+			font: bold 24px/1.4 '나눔고딕','맑은 고딕','돋움',sans-serif;
+			/*서체는 축약형으로 작성하는 경우가 많지 않다.*/
+
+			width: 400px; height: 300px;
+			margin: 30px; padding:30px;
+			border:10px solid lightblue;
+		}
+
+		.box1 {
+			background-color: #f55c47;
+			box-sizing: content-box; /* 기본값. 실제크기:width+maring+padding+border */
+		}
+
+		.box2 {
+			background-color: #907fa4;
+			box-sizing:border-box; /*실제크기:width(padding+border) + marging */
+		}
+	</style>
+</head>
+<body>
+	<h1>box-sizing</h1>
+	<div class="box1">
+		<h3>box-sizing: content-box;</h3>
+		<p>가로: w400+m(30+3)+p(30+30)+b(10+10)=540</p>
+	</div>
+	<div class="box2">
+		<h3>box-sizing: border-box;</h3>
+		<p>가로: w400+m(30+30) = 460</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>boxsize4</title>
+	<style>
+
+	body{
+				font-size: 28px ;
+		font-weight:bold ;
+		border-color: darkorange;
+	}
+	.box1{
+		font-size: 28px ;
+		font-weight:bold ;
+		border-color: darkorange;
+
+		width: 400px; height: 200px;
+		border-top: 5px double red;
+		border-bottom: 3px solid red;
+		margin: 100px auto 0 auto;
+		padding: 20px 30px 50px 30px;
+		outline: rgba(50,100,200,0.4) solid 50px;
+	}
+	.box2{
+		width: 800px; height: 300px;
+		outline: 6px lightblue;
+		padding-left: 50px;
+		padding-right: 30px;
+		margin: 20px;
+		background-color: orange;
+	}
+
+	.box3{
+		width: 400px; height: 200px;
+		border:2px solid #ddd;
+		outline:2px solid #333;
+		text-align: center;
+		margin: 20px auto 0;
+		padding: : 30px;
+		background-color: gray;
+		color: white;
+	}
+
+	.box4{
+		background-color: blue;
+		color: white;
+		width: 700px;
+		padding: 100px 20px ;
+		margin-top: 20px;
+		margin-right: 20px;
+		outline: 5px solid black;
+		border: 0 0 5px 5px gray;
+	}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<p>가로: w:400 + b:0 + m:0 + p:(30+30) = 460 </p>
+		<p>세로: h:200 + b:(5+3) + m:100 + p:(20+50) = 378</p>
+	</div>
+
+	<div class="box2">
+		<p>가로 : 800 + 40 = 840</p>
+	</div>
+
+	<div class="box3">
+		<p>가로: 400 + b: 2*2 + m: 0 + p:30*2 = 464</p>
+		<p>세로: 200 + b: 2*2 + m: 20 + p:30*2 =284</p>
+	</div>
+	
+	<div class="box4">
+		<p>가로: w: 700 + p: 20*2 + b:5 + m:20= 765</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>BoxSizingEx</title>
+	<style>
+		body{
+			font: bold 24px/1.4 '나눔고딕','맑은 고딕','돋움',sans-serif;
+			/*서체는 축약형으로 작성하는 경우가 많지 않다.*/
+			width: 400px; height: 300px;
+			margin: 30px auto; padding:30px;
+			}
+
+		.box1{
+			margin:30px auto 50px;
+			padding: 20px 30px;
+			border:10px dotted black;
+			box-sizing: content-box;
+
+		}
+
+		.box2{
+			margin:30px auto 50px ;
+			padding: 20px 30px;
+			border:10px dotted black;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<h3>"content-box"</h3>
+		<p>가로: w:600+ m:0 + p:30*2 + b:10*2 = 680 </p>
+		<p>세로: h:300 + m:80 + p:20*2 + b:10*2 = 440</p>
+	</div>
+	<div class="box2">
+		<h3>"border-box"</h3>
+		<p>가로: 600(p+b) =600</p>
+	</div>
+
+</body>
+</html>
