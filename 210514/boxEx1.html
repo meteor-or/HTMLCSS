@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>BoxEx1</title>
+	<style>
+		body{	
+			font-family: '나눔고딕','맑은 고딕',돋움,sans-serif;
+			font-size: 22px;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin: 0; /* 마진 상쇄현상때문에 인식이 안되고 있다가 gnb의 top이 값이 0으로 설정하니 body의 값이 드러남*/
+		}
+
+		#gnb{
+			background-color: #511281;
+			margin: 0;
+			padding: 0;
+			box-shadow : 0 5px 15px gray;
+		}
+
+		#gnb li{
+			list-style: none;
+			display:inline-block;
+			
+		}
+
+		#gnb li a{
+			color:#fff;
+			text-decoration:none;
+			padding: 10px;
+			display: block;  /* 패딩값이 넘치는걸 해결하기 위해서 li에 또 패딩을 줄수도있지만 똑같은 값을 두 번 줄 필요는 없으므로 블록값을 주면 더 제어하기 쉬워짐*/
+		}
+
+		#gnb li a:hover{
+			background-color: darkorange;
+		}
+	</style>
+</head>
+
+<body>
+	<ul id="gnb">
+		<li><a href="#">menu 1</a></li>
+		<li><a href="#">menu 2</a></li>
+		<li><a href="#">menu 3</a></li>
+		<li><a href="#">menu 4</a></li>
+		<li><a href="#">menu 5</a></li>
+	</ul>
+</body>
+</html>

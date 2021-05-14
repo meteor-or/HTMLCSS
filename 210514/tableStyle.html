@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>tablestyle</title>
+	<style>
+		table{
+		text-align: center;
+		font-size: 100px;
+		}
+
+		table td {
+		border: 6px purple solid	;
+		width: 300px; height: 300px;		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+
+		table.box1{
+			empty-cells: show; /* 기본값. 컨텐츠가 없는 경우에도 셀 보임*/
+		}
+		
+		table.box2{
+			empty-cells: hide; /* 컨텐츠가 없는 경우 숨김*/
+		}
+
+		table.box3{
+			
+		}
+	</style>
+</head>
+
+<body>
+	<h1>table style</h1>
+	<table class="box1">
+		<tbody>	
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<table class="box2">
+		<tbody>
+		<tr>
+			<td></td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<table class="box3">
+		<tbody>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<table class="box4">
+		<tbody>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		</tbody>	
+	</table>
+
+	<table class="box5">
+		<tbody>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

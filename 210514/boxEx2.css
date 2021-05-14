@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+body{
+	/* pc 기준 */
+	font-family:'NanumGothic','나눔고딕','malgun Gothic','맑은 고딕',dotum,돋움,sans-serif;
+	font-size: 18px;
+	background-color: #efefef;
+	text-align: center;	
+}
+
+.container {
+	border: #000 double 4px;
+	background-color: #fff;
+	max-width: 980px; /* 980이상 커지지 않음. 최대 크기 980 */
+	min-width: 600px; /* 600이하 작아지지 않음. 최소크기 600*/
+	margin: 18px auto; /* 블록의 중앙정렬 */
+	padding: 30px 0 42px 0;
+}	
+
+.container ul{
+	display: inline-block;
+	border-bottom:1px solid #000;
+	border-top: 1px solid black;
+
+}
+
+.container li a{
+	text-decoration: none;
+	color: black;
+	display:inline-block;
+
+}
+
+.container li a:hover{
+	color: coral;
+}
+
+.container .gnb li a:active{
+
+}
+
+
+.cotanoner{
+	width: 500px;
+	margin: 20px; 
+	line-height: 1.5; 
+	;
+}
