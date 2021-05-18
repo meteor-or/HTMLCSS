@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>form style ex</title>
+	<style>
+		body{
+			font-family: '나눔고딕','맑은 고딕', 돋움, sans-serif;
+			font-size: 20px;
+		}
+		div.box{
+			width: 700px; height: 300px;
+			background-color: darksalmon;
+			vertical-align: middle;
+			text-align: center;
+			margin: 0 auto;
+			
+			
+		}
+		section{
+			width: 50%; height: 40%;
+			background-color: #fff;
+			border: red solid 1px;
+			border-radius: 20px;
+			padding: 20px 20px 30px 20px;
+			margin: auto;
+			margin-top: 50px;
+			text-align: right;
+			display: inline-block;
+		}
+		label {
+			color: red;
+			word-spacing: 10px;
+		}
+		input {
+			width: 60%; height: 30%;
+			border-style: none;
+			border : 1px white solid;
+			border-bottom: 1px red dashed;
+			margin-bottom: 10px;
+		}
+		
+		input:hover{
+			background-color: lightgoldenrodyellow;
+			border: 1px red dashed;
+		}
+		
+		button{
+			padding: 5px 20px;
+			background-color: mediumseagreen;
+			color: white;
+			font-size: 18px;
+			border-radius: 20px;
+			margin-right: 0;
+			border-style: none;
+		}
+
+		div.btn{
+			margin-left: 100px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="box">
+	<section>
+		<label for="Id">이 름 : </label><input type="text"><br>
+		<label for="email">이 메 일 : </label><input type="email">
+		<br>
+		<div class="btn">
+		<button>가입</button>
+		<button>취소</button>
+		</div>
+	</section>
+	</div>
+</body>
+</html>
