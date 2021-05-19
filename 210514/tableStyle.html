@@ -30,17 +30,35 @@
 		
 		table.box2{
 			empty-cells: hide; /* 컨텐츠가 없는 경우 숨김*/
+			border-collapse: collapse;
 		}
 
-		table.box3{
-			
+		/* 일반 형제 선택자: 기준 요소 뒤로 오는 모든 형제 선택자*/
+		table.box2 ~ table td { /* table.box3 td, table.box4 td, table.box5 td*/
+			border-color: red; 
 		}
+
+		table.box3 {
+			border-spacing: 20px; /* 셀과 셀 사이 간격. table 요소에 적용*/
+			border-spacing: 20px 50px; /* x y */
+		}
+		/* 보더 값을 없애고 싶을 때 */
+		table.box4 {
+			border-spacing: 0;
+		}
+
+		table.box5 {
+			border-spacing: 0;
+			border-collapse: separate; /* 기본값 : separate*/
+			border-collapse: collapse; /* 셀 테두리 합침*/
+		}	
 	</style>
 </head>
 
 <body>
 	<h1>table style</h1>
 	<table class="box1">
+		<caption>box1</caption>p
 		<tbody>	
 		<tr>
 			<td>1</td>
@@ -61,7 +79,7 @@
 		</tr>
 		<tr>
 			<td>3</td>
-			<td>4</td>
+			<td></td>
 		</tr>
 		</tbody>
 	</table>
