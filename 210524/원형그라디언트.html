@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>원형 그라디언트 </title>
+    <style>
+
+    ul{
+        font-weight: bold;
+        font-size: 22px;
+        list-style: none;
+        padding: 0;
+        width: 700px;
+        margin: 0 auto;
+        background-color: #ddd;
+    }   
+
+    ul > li {
+        border: 1px solid #000;
+        margin-bottom: 20px;
+        height: 300px;
+    }
+    
+    .box1{
+        background-image: radial-gradient(teal, lightblue);
+        
+    }
+    .box2{
+        background-image: radial-gradient(teal,lightblue,tomato,purple);
+        
+    }
+    .box3{
+        background-image: radial-gradient(teal 20%,lightblue 80%);
+        
+    }
+    .box4{
+        background-image: radial-gradient(circle, teal,lightblue);
+    }
+    .box5{
+        background-image: radial-gradient(circle, #fadde1,#0496ff 50%, #7678ed 70%);
+
+    }
+    .box6{
+        background-image: radial-gradient(circle closest-side at 90% 80%, #f3d8c7,#b58);
+        background-image: radial-gradient(circle closest-side at 400px 100px, #f3d8c7,#b58);
+    }s
+/* 요즘에는 그라디언트를 직관적으로 쓰기보단 다른 툴의 도움을 받아서 다채롭게 적용을 시키는 편 */
+
+    .box7{
+        background-image: repeating-radial-gradient(#ee6352, #ffeedd 50px);
+        
+    }
+    .box8{
+        background-image: repeating-radial-gradient(circle, tomato, tomato 10%, #fff 10%, #fff 20%);
+        
+    }
+    </style>
+</head>
+
+<body>
+    <h1>원형 그라디언트 radial-gradient()</h1>
+    <ul>
+        <li class="box1">radial-gradient(1색상, 2색상)</li>
+        <li class="box2">radial-gradient(1색상, 2색상, 3색상, 4색상)</li>
+        <li class="box3">radial-gradient(1색상 위치%, 2색상 위치%)</li>
+        <li class="box4">radial-gradient(circle, 1색상, 2색상) 정 원의 그라디언트</li>
+        <li class="box5">radial-gradient(circle, 1색상 위치%, 2색상 위치%)</li>
+        <li class="box6">radial-gradient(circle closest-side at 위치, 1색상, 2색상)</li>
+        <li class="box7">repeating-radial-gradient(1색상 %, 2색상 %)</li>
+        <li class="box8">repeating-radial-gradient(1색상, 2색상)</li>
+    </ul>
+</body>
+</html>

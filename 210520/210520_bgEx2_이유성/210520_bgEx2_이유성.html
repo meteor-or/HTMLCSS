@@ -5,18 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>background 연습 2</title>
   <style>
-    .box1, .box2 {
+    div {
       width: 700px; height: 150px;
       border: 1px solid black;
       padding: 40px 20px;
       margin: 30px auto;
+      background-image: url(images/bg.jpg);
+      background-repeat: no-repeat;
+      
     }
     .box1 {
-      background: url(images/bg.jpg) no-repeat 30px 30px;
+      background-position:  30px 30px;
       padding-top: 200px;
     }
     .box2 {
-      background: url(images/bg.jpg) no-repeat center;
+      background-position: center;
+      
     }
   </style>
 </head>

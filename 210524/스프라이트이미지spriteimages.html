@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>스프라이트이미지spriteimages.html</title>
+    <style>
+        li  {
+            display: inline-block;
+        }
+
+        a{
+            display: block;
+            height: 37px;
+            background: url(Images/button-sprite.jpg) no-repeat;
+            text-indent: -9999px; 
+            /* 배경 이미지를 컨텐츠로 사용할 때 보이는 텍스트를 화면 밖으로 보내 보이지 않게 처리. html 컨텐츠로는 남아있기 때문에 접근성을 고려해 작성*/
+            /* color:transparent; 도 가능 - 모바일에서만 사용*/
+            /* font size: 0 */
+        }
+        #btn1 {
+            width: 172px;
+            background-position: 0 0; /* 기본값 */
+        }
+        #btn2 {
+            width: 205px;
+            background-position: -180px 0;
+        }
+
+        #btn1:active {
+            background-position: 0 -80px;
+        }
+
+        #btn2:active {
+            background-position: -180px -80px ;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>스프라이트이미지spriteimages.html</h1>
+    <ul class="btn">
+        <li><a href="#" id="btn1">버튼 1</a></li>
+        <!-- 접근성 부분에서 버튼의 텍스트를 넣어줌, 안 쓰면 편하지만 -->
+        <li><a href="#" id="btn2">버튼 2</a></li>
+    </ul>
+
+
+</body>
+</html>

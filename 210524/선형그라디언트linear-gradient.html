@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>선형 그라디언트 linear-gradient()</title>
+<style>
+  h1 {
+    font-size:26px;
+    text-align: center; 
+  }
+  .container {
+    background-color: #ddd;
+    list-style:none;
+    padding:0;
+    overflow:hidden;/* 일반적인 흐름 안에서 마진상쇄 현상 해결하기 위해 부모 요소에 작성 */
+  }
+  .container li {
+    border:1px solid #000;
+    width:80%; height:240px;
+    margin:20px auto;
+  }
+  .container .box1 {
+    background-image: linear-gradient(orange, red);
+  }
+
+  .container .box2 {
+    background-image:  linear-gradient(to bottom,  lightblue, yellow);/*아래를 향해서*/
+    background-image:  linear-gradient(to top, lightblue, yellow); /* 위를 향해서*/
+    background-image:  linear-gradient(to left, lightblue, yellow);/*왼쪽을 향해서*/
+  }
+
+  .container .box3 {
+    background-image: linear-gradient(to right top, #185adb, #ffc947);
+  }
+  .container .box4 {
+    background-image: linear-gradient(#f72585, #560bad,#4261ee,#a8dadc);
+  }
+  .container .box5 {
+    background-image: linear-gradient(-65deg,#5a040f,#ffba08);
+  }
+  .container .box6 {
+    background-image: linear-gradient(30deg, #8ad818 50%, #2b2d42 80%);
+  }
+  .container .box7 {
+    background-image: linear-gradient(-50deg, rgba(144,190,109,0) 20%,rgba(144,190,109,1) 50%);
+  }
+  .container .box8 {
+    background-image: linear-gradient(transparent, #3e1f47);
+  }
+  .container .box9 {
+    background-image: repeating-linear-gradient(45deg,#ffbe0b 0,#ff006e 10%);
+  }
+  .container .box10 {
+    background-image: 
+    repeating-linear-gradient(orange,orange 10%, tomato 10%,tomato 20%, maroon 20%, maroon 40%);
+  }
+</style>
+</head>
+
+<body>
+  <h1>선형 그라디언트 linear-gradient()</h1>
+  <ul class="container">
+    <li class="box1">background-image:linear-gradient(1색상, 2색상)</li>
+    <li class="box2">background-image:linear-gradient(방향txt,1색상,2색상)</li>
+    <li class="box3">background-image:linear-gradient(방향txt,1색상,2색상)</li>
+    <li class="box4">background-image:linear-gradient(1색상, 2색상, 3색상, 4색상)</li>
+    <li class="box5">background-image:linear-gradient(방향deg, 1색상, 2색상)</li>
+    <li class="box6">background-image:linear-gradient(방향, 1색상 위치%, 2색상 위치%)</li>
+    <li class="box7">background-image:linear-gradient(rgba(1,1,1,1),2색상)</li>
+    <li class="box8">background-image:linear-gradient(transparent, 2색상)</li>
+    <li class="box9">background-image:linear-gradient(reapeating-linear-gradient(방향deg, 1색상 위치5, 2색상 위치%))</li>
+    <li class="box10">background-image:linear-gradient()</li>
+  </ul>
+</body>
+</html>
