@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>요소의 정렬 float</title>
+	<style>
+		span.li_1 {
+			background-color: teal;
+			color: white;
+		}
+
+		span.li_2 {
+			background-color: orange;
+			
+		}
+		
+		img{
+			float:left;
+			margin: 0 60px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<img src="Images/magnolia-medium.jpg" alt="flower">
+	<h1>요소의 정렬 float</h1>
+	<ul>
+		<li>float는 <span class="li_1">요소를 부유시켜 나란히 정렬</span>하고자 할 때 사용한다.</li>
+		<li>블록 요소, 인라인 요소 상관없이 <span class="li_2">사용 가능하며 자식에게 float가 적용된 경우 부모 요소는 일반적으로 높이값을 인식하지 못하게 된다.</span></li>
+		<li>float:left와 float:right 값만 가진다.</li>
+	</ul>
+</body>
+</html>

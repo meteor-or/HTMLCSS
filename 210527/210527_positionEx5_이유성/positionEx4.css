@@ -1,0 +1,92 @@
+@charset 'utf-8';
+
+div {
+	width: 100%;
+
+	position: fixed;
+	top:0;
+	background-color: #01024e;
+}
+
+header{
+	font-family: '나눔바른고딕','나눔고딕','맑은 고딕',돋움,sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #01024e;
+	width: 960px; height: 140px;
+	margin: 0 auto;
+	color: #fff;
+	position: relative; /* absolute의 기준으로 '무난하게' 사용*/
+}
+
+header li{
+	display: inline-block;
+}
+header a{
+	color: inherit;
+}
+
+/* 로고 */
+header h1 {
+	background-color: #f8f3d4;
+	width: 140px; height: 80px;
+	font-size: 40px;
+	line-height: 80px;
+	color: #01024e;
+
+	position: absolute; /* 절대위치(일반적으로 부모 이상의 요소에 기준값을 부여해 사용 */
+	bottom: 10px; left: 10px;
+	margin:0;
+
+}
+
+header .utill {
+	background-color: #543865;
+	font-weight: bold;
+	font-size: 16px;
+	width: 160px;
+	padding: 8px 0;
+	margin:0;
+	
+
+	position: absolute;
+	top:0; right: 10px;
+}
+
+header .utill a:hover {
+	color: red;
+}
+
+header .gnb {
+	background-color: #ea0599;
+
+	position: absolute;
+	right: 10px; bottom: 10px;
+	margin:0;
+}
+
+header .gnb li {
+	padding:10px 28px;
+}
+
+header .gnb li:hover {
+	color: #ea0599 ;
+	background-color: #ffdb39;
+}
+
+a {
+	text-decoration: none;
+}
+
+main {
+	background-color: lightgray;
+	height: 3000px; 
+}
+
+main p {
+	font-size: 50px;
+	line-height: 500px;
+	text-align: center;
+	font-weight: bold;
+}
