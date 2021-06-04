@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>layout Ex1</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  .wrapper {/* 1042px */
+    border:1px solid #000;
+    margin:0 auto; padding:20px;
+    width:1000px;
+  }
+
+  section, article, aside, footer {
+    box-sizing:border-box;
+  }
+
+  .wrapper h1 {
+    border:1px solid #000;
+    margin:0; 
+    /* padding:40px 20px; */
+    height: 123px; line-height:123px;
+    padding-left:20px;
+  }
+  .wrapper footer {
+    border:1px solid #000;
+    height:189px;
+    padding-left:20px; padding-top:60px;
+  }
+  .wrapper footer h2 {
+    margin-top:0;
+  }
+  .wrapper main {
+    overflow: hidden;
+    margin:20px 0; 
+  }
+  .wrapper main article {
+    border:1px solid #000;
+    padding:20px;
+    float:left;
+    width:466px;
+    margin: 0 20px;
+  }
+  .wrapper main aside, section {
+    background-color: #000;
+    color:#fff;
+    padding:20px;
+    float:left;    width: 245px;
+    /* .wrapper:1000 - article:602 - aside:368 */
+  }
+  
+</style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>2열 레이아웃</h1>
+    <main>
+      <section>
+        <h2>사이드 바</h2>
+          <ul>
+            <li>항목 1</li>
+            <li>항목 2</li>
+            <li>항목 3</li>
+            <li>항목 4</li>
+          </ul>
+      </section>
+      <article>
+        <h2>본문</h2>
+        <p>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.</p>
+        <p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.</p>
+      </article>
+      <aside>
+        <h2>사이드 바</h2>
+        <ul>
+          <li>모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.</li>
+        </ul>
+      </aside>
+    </main>
+    <footer>
+      <h2>바닥글</h2>
+      <p>이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>float4 </title>
+    <link rel="stylesheet" href="../common/basic.css">
+    <style>
+      ul{
+        font-size: 26px;
+        font-weight: bold;
+        list-style: none;
+        padding: 0;
+      }
+
+      ul li {
+        padding: 30px;
+      }
+
+      .box1 li {
+        /* 부유요소. 즉 떠있는 요소로 다른 흐름을 가짐. 
+        원래 있던 공간에서 벗어났기 때문에 일반적인 흐름을 
+        가진 다른 요소가 브라우저의 상단에 위치하게됨*/
+        float: left;  /* 왼쪽을 기준으로 정렬 */ 1 2 3 4
+        float: right; /* 오른쪽을 기준으로 정렬*/ 4 3 2 1
+      }
+
+      .box1 li:first-child { background-color: ##fff5fd;}
+      .box1 li:nth-child(2){ background-color: #ff96ad;}
+      .box1 li:nth-child(3) {background-color: #005a8d;}
+      .box1 li:last-child { background-color: #022e57;}
+    
+      .box2 {
+        clear: both; /* float의 영향을 벗어나기 위해 사용*/
+      }
+
+      .box2 li {
+        background-color: #ddd;
+        float: right;
+        float:inline-engd;
+      }
+
+      .box2 
+    </style>
+</head>
+
+<body>
+  <ul class="box1">
+    <li>박스 1</li>
+    <li>박스 2</li>
+    <li>박스 3</li>
+    <li>박스 4</li>
+  </ul>
+  <ul class="box2">
+    <li>박스 1</li>
+    <li>박스 2</li>
+    <li>박스 3</li>
+    <li>박스 4</li>
+  </ul>
+  <ul class="box3">
+    <li>박스 1</li>
+    <li>박스 2</li>
+  </ul>
+
+</body>
+</html>
