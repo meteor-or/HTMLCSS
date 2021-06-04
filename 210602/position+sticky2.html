@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>Ex2</title>
+	<style>
+		.container aside .sticky {
+			background-color: maroon; color: #fff;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+
+			/* 벤더 vender : 실험적인 CSS 기능을 미리 사용해 볼 수 있게 각 브라우저에 맞게 제공해 주는 접두어 prefix
+				-webkit- 사파리, 크롬
+				-o- 오페라
+				-moz- 파이어폭스
+				-ms- 익스플로러
+				*/
+		}
+
+		.clearfix::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	</style>
+	<script src="../common/prefixfree.min.js"></script>
+</head>
+
+<body>
+	<header>header</header>
+	<div class="container c">
+		<aside>
+			<div class="static">static</div>
+			<div class="fixed">fixed</div>
+			<div class="sticky">sticky</div>
+		</aside>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>::before, ::after</title>
+	<link rel="stylesheet" href="../common/basic.css">
+	<style>
+		p::before{
+			content: "설명: "; /* 생략 불가능, 드래그 안됨*/
+			color: white;
+			background-color: orange;
+		}
+
+		.box1 li:nth-child(1)::before{
+			content: "http://google.com ->";
+			font-weight: bold;
+			background-color: salmon;
+			padding: 4px 8px;
+		}
+
+		.box1 li:nth-child(2)::before{
+			content: "http://naver.com -> ";
+			text-decoration: underline;
+		}
+
+		.box1 li:nth-child(3)::before{
+			content: "http://daum.net -> ";
+			font-style: italic;
+			background-color: lightgreen;
+		}
+
+		.box2 li:first-child::after{
+			content: "http://google.com"; /* 값은 ""로 비워둘 수 있음 */
+			margin-left: 20px;
+		}
+		.box2 li:nth-child(2)::after{
+			content: "http://naver.com";
+			background-color: lightblue;
+			margin-left: 20px;
+		}
+		.box2 li:last-child::after{
+			content: "http://daum.net";
+			margin-left: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>::before, ::before</h2>
+	<p>기준 요소 안의 컨텐츠 영역 앞쪽으로 적용</p>
+	<ol class="box1">
+		<li>구글</li>
+		<li>네이버</li>
+		<li>카카오</li>
+	</ol>
+
+	<h2>::after, ::after</h2>
+	<p>기준 요소 안의 컨텐츠 영역 뒤쪽으로 적용</p>
+		<ol class="box2">
+			<li>구글</li>
+			<li>네이버</li>
+			<li>카카오</li>
+		</ol>
+</body>
+</html>

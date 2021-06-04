@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>position: sticky 2</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  header {
+    background-color: #ddd;
+    height:100px;
+  }
+  .container {
+    border:4px solid #000;
+    /* overflow: hidden; */
+  }
+  .container .box {
+    background-color:lightblue;
+    width:50%; height:2000px;
+    float:left;
+  }
+  .container aside {
+    float: left;
+    width:50%; height:100vh;
+  }
+  .container aside div {
+    display:inline-block;
+  }
+  .container aside .static {
+    background-color: orange;
+    position: static;
+  }
+  .container aside .fixed {
+    background-color:teal; color:#fff;
+    position: fixed;
+    top:116px; left:150px;
+  }
+  .container aside .sticky {
+    background-color:maroon; color:#fff;
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top:0;
+
+    /* 
+    벤더 vendor: 실험적인 css 기능을 미리 사용해 볼 수 있게 각 브라우저에 맞게 제공해 주는 접두어prefix
+      -webkit- 사파리, 크롬, ios사파리, 안드로이드 브라우저, 안드로이드 크롬
+      -o- 오페라
+      -moz- 파이어폭스
+      -ms- 익스플로러
+    */
+
+  }
+  .clearfix::after {
+    content:"";
+    display: block;
+    clear:both;
+  }
+</style>
+<!-- 벤더 프리픽스 -->
+<script src="../common/prefixfree.min.js"></script>
+</head>
+
+<body>
+  <header>header</header>
+  <div class="container clearfix">
+    <aside>
+      <div class="static">static</div>
+      <div class="fixed">fixed</div>
+      <div class="sticky">sticky</div>
+    </aside>
+    <div class="box">
+      box
+    </div>
+  </div>
+</body>
+</html>
