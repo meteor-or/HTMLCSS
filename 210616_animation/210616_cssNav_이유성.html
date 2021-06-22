@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>css navigaion</title>
+	<style>
+@import url(https://fonts.googleapis.com/css?family=Lato);
+body {
+	margin: 0;
+}
+nav {
+	min-height: 100vh;
+	background: linear-gradient(90deg, #eecda3 , #ef629f);
+}
+
+nav ul {
+	margin: 0 auto;
+	text-align: center;
+	padding: 0;
+	list-style: none;
+}
+nav ul li {
+	position: relative;
+	float: left;
+	background-color: thistle;width: 171px;
+}
+
+nav ul li:hover {
+	background-color: rgba(255,255,255,.3);
+}
+
+nav ul li a {
+	display: inline-block;
+	padding: 10px 50px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	box-sizing: border-box;
+	white-space: nowrap;	
+	width: 171px;
+	
+}
+nav ul ul {
+	
+	position: absolute;
+	top: 100%;
+
+}
+nav ul ul li {
+	float: none;
+	margin: 0;
+}
+
+ul ul {
+	visibility: hidden;
+	opacity: 0;
+	transition: .2s ease-in-out;
+}
+ul li:hover > ul {
+	visibility: visible;
+	opacity: 1;
+}
+
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul class="gnb">
+			<li><a href="#">대메뉴 01</a>
+				<ul>
+					<li><a href="#">소메뉴 1-1</a></li>
+					<li><a href="#">소메뉴 1-2</a></li>
+					<li><a href="#">소메뉴 1-3</a></li>
+					<li><a href="#">소메뉴 1-4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">대메뉴 02</a>
+				<ul>
+					<li><a href="#">소메뉴 2-1</a></li>
+					<li><a href="#">소메뉴 2-2</a></li>
+					<li><a href="#">소메뉴 2-3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">대메뉴 03</a>
+				<ul>
+					<li><a href="#">소메뉴 3-1</a></li>
+					<li><a href="#">소메뉴 3-2</a></li>
+				</ul>
+			</li>
+			<li><a href="#">대메뉴 04</a>
+				<ul>
+					<li><a href="#">소메뉴 4-1</a></li>
+					<li><a href="#">소메뉴 4-2</a></li>
+					<li><a href="#">소메뉴 4-3</a></li>
+					<li><a href="#">소메뉴 4-4</a></li>
+					<li><a href="#">소메뉴 4-5</a></li>
+				</ul>
+			</li>
+			<li><a href="#">대메뉴 05</a>
+				<ul>
+					<li><a href="#">소메뉴 5-1</a></li>
+				</ul></li>
+		</ul>
+	</nav>
+
+</body>
+</html>

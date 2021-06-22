@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<!-- 미디어쿼리 작성시  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mediQueries 기본1</title>
+	<style>
+		/* 
+		미디어쿼리 기본 작성 방식
+		@media screen(미디어유형:screen,all,prink...) and (조건값:min-width:415px) {실행문
+		}
+		* 모바일 우선 mobile first로 인해 min-wdith 조건 적용이 많아짐
+		 */
+
+		body {
+			background-color: orange;
+			font-size: 1.6rem;
+			color: rgb(50, 0, 70);
+		}
+
+		h1{
+			background-color: #fff;
+			color: #000;
+		}
+		/* 스크린의 가로사이즈가 최소 768px 이상이면 적용. 태블릿~*/
+		@media screen and (min-width:768px) {
+			body{background-color: teal;font-size: 1.2rem;}
+			h1{background-color: orange;}
+		}
+		
+		/* 스크린의 가로사이즈가 최소 1200px 이상이면 적용. */
+		@media screen and (min-width:1200px) {
+			body{background-color: #ddd; color:saddlebrown;}
+			h1 {text-decoration: underline;}
+			::selection {background-color: orange;}
+		}
+		/* 스크린의 가로사이즈가 최소 1680px 이상이면 적용. */
+		@media screen and (min-width:1680px) {
+			h1{
+				padding:10px;
+				font-size:1.6rem;
+			}
+			h2{
+				border:6px groove #9df;
+			}
+			p {
+				font-size: 1.1rem;
+			}
+			::selection{background-color: transparent;}
+			
+		}
+	</style>
+</head>
+
+<body>
+	<H1>미디어 쿼리 media Queries란?</H1>
+	<h2>화면 해상도, 기기 방향 등의 조건으로 html에 적용하는 스타일에 전환할 수 있는 CSS3의 속성 중 하나이다.</h2>
+	<p>@media [only 또는 not] [미디어유형] [and 혹은 ,] (조건문) {실행문}</p>
+	<p>**** min을 사용할 땐 반드시 크기가 작은 순서대로 작성해야 하고 max를 사용할 때는 반드시 크기가 큰 순서대로 작성해야 한다.</p>
+</body>
+</html>

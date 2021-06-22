@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>연습2</title>
+	<style>
+		body{
+			text-align: center;
+			font-weight: bold;
+			font-size: 30px;
+			margin: 0;
+		}
+		.wrap {width: 100%;}
+		.wrap {width: 100%; float: left;}
+		.wrap .box1{
+				width:100vw; height: 50vh;
+				background: #053742;}
+		.wrap .box2 {
+			width:100vw; height: 25vh;
+			background-color: #39A2DB;;
+		}
+		.wrap .box3 {
+			width:100vw; height: 25vh;
+			background-color: #A2DBFA;
+		}
+		
+		@media screen and (min-width:768px) {
+			.wrap{
+				width: 100%;
+			}
+
+
+			.wrap .box1 {
+				width:30%; height: 50vh;float: left;
+	
+			}
+			.wrap .box2 {
+				width: 70%; height: 30vh;float: left;
+
+			}
+			.wrap .box3 {
+				width: 70%; height: 20vh;float: left;}
+		}
+		
+		@media screen and (min-width:1200px) {
+
+			.wrap {
+				width: 80%;
+				
+				float: right;
+
+position: relative;
+
+left: -50%;
+
+
+			}
+			.box1 , .box2 , .box3 {
+    position: relative;
+    left: 50%;
+		
+			}
+			}
+			
+			
+
+		
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+	</div>
+</body>
+</html>

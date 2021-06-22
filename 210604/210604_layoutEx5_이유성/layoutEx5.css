@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+
+body{background-image: url(Image/hotel-wallpaper-black.png); font-family: '나눔고딕','맑은 고딕',돋움,sans-serif; line-height: 1.5;}
+		
+h1, h3 { margin:0; 
+	font-style: normal;}
+
+p {
+	
+	margin: 0;
+}
+ul{
+	list-style: none; padding-left: 0;
+}
+
+.container {width: 950px; margin: 0 auto; border: 4px solid #dd0a35;background-color: #ff3434; box-sizing: border-box;
+}
+
+header img {padding: 20px;}
+
+ul.nav {background-color: #0c317a; 
+	overflow: hidden;
+	margin: 0;}	
+
+.nav li {
+	height:35px; line-height: 35px;
+	float: left; 
+	padding: 0 30px;}
+
+.nav li a {color: white; text-decoration: none;
+font-size: 17px;  }
+
+main{background-color: #fff; overflow: hidden;}
+
+div.contents{
+	box-sizing: border-box;
+	width: 660px;  float: left;
+	padding: 30px;
+	border-right: 1px solid #0c317a;
+}
+
+div.contents h3 {
+	color:#ff3434 ;
+	font-weight: bold;
+}
+
+div.imgbox {
+	box-sizing: border-box;
+	width: 305px; height:225px;
+	padding: 6px;
+	float: left; 
+	position: relative;
+	border: #0c317a 1px  solid;
+	text-align: center; 
+	margin-bottom: 50px;	
+}
+div.imgbox img{
+	margin-bottom: 50px;  margin: 0 auto; 
+}
+
+div.imgbox p {
+	position: absolute;
+	bottom: 7px; right: 7px;
+	margin: 0; font-style: italic;
+	font-size: 14px;
+}
+
+
+div.textbox{
+		width: 280px;  height:225px;
+		float: right;
+}
+.textbox h3 {
+	margin-top: 10px;
+}
+.textbox p {
+	margin-top:15px;
+}
+
+aside {width: 280px; box-sizing: border-box; float: left; 
+	}
+
+aside h1{color:#ff3434 ;padding: 30px 15px 0 15px;}
+aside ul {margin-top: 45px;}
+
+aside ul li {
+	height: 50px; line-height: 50px;
+	border-bottom: 1px solid #0c317a;
+	color:#ff3434 ;
+	text-indent: 15px;
+}
+
+
+aside p{padding:15px;}
+
+footer { height: 35px;	line-height: 35px;}
+footer p {text-indent: 17px;}

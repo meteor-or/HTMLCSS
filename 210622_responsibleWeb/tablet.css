@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+	.container {width: 80vw;}
+.container > .box1 { background: #f94144; width: 100%;}
+.container > .box2 { background: #f3722c; float: left; width: 50%;}
+.container > .box3 { background: #f8961e; float: left; width: 50%;}

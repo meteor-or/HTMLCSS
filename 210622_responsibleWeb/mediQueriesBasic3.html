@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>mediQueries 기본3</title>
+	<style>
+		/* 모바일 우선 min-width */
+		body{background-color: maroon;color:white; font-size: 2px solid #000; border-bottom: 1px solid #000;}
+		h1{text-align: center; background-color: #fff; border-top: 1px solid #000; padding:10px}
+		h2{ text-align: center; margin: 10px;}
+		p{background-color: lightblue;}
+	
+	/* 768px ~1200px의 범위 외는 적용되지 않음 */
+	@media screen and (min-width:768px) and (max-width:1200px) {
+		body{background-color: orange;}
+	}
+		h1{background-color: pink;}
+	
+	@media screen and (min-width:1640px) and (max-width:1940px) {
+		body { background-color: #ddd;}
+	}
+	
+	</style>
+</head>
+
+<body>
+	<h1>mediaQueries 기본 3</h1>
+	<h2>media Queries 작성 방식</h2>
+	<p>min-width와 max-widht 조건을 함께 작성시 작은 순서대로 작성</p>
+	<ul>
+		<li>@media screen {}</li>
+		<li>@media all and () {}</li>
+		<li>@media screen and (min-) and (max-) {}</li>
+		<li>@media () {}</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>mediQueries 기본4</title>
+	<!-- 미디어쿼리 외부선언 1 
+	<link rel="stylesheet" href="mq_all.css"> -->
+
+	<!-- 미디어쿼리 외부선언 2 min-width 작성시 작은 값을 먼저 작성 
+	<link rel="stylesheet" href="mq_m.css">
+	<link rel="stylesheet" href="mq_t.css">
+	<link rel="stylesheet" href="mq_pc.css"> -->
+
+<!-- 미디어쿼리 외부선언 3 -->
+<link rel="stylesheet" href="mq_m.css">
+<link rel="stylesheet" media="(min-width:768px)" href="tablet.css">
+<link rel="stylesheet" media="(min-width:1280px)" href="pc.css">
+
+	<!-- <style>
+		/* 기본값(모바일) */
+		body{margin:0; text-align: center; font-size:1.6rem;}
+		h1{position: fixed; top: 0; width: 100%; background-color: maroon; padding:10px; color: white;}
+		.container {width: 50vw; margin: 300px auto;}
+		.container > div { height: 10vw;transition: 0.5s;}
+		.container > .box1 { background: #f72585;}
+		.container > .box2 { background: #b51793;}
+		.container > .box3 { background: #7209b7;}
+
+		/* 테블릿 768px */
+		@media (min-width:768px) {
+			.container {width: 80vw;}
+		.container > .box1 { background: #f94144; width: 100%;}
+		.container > .box2 { background: #f3722c; float: left; width: 50%;}
+		.container > .box3 { background: #f8961e; float: left; width: 50%;}
+		}
+
+		/* pc 1280px */
+		@media (min-width:1280px) {
+			.container {width: 60vw;}
+		.container > .box1 { background: #2b9348;}
+		.container > .box2 { background: #80b918;}
+		.container > .box3 { background: #aacc00;}
+		}
+	</style> -->
+</head>
+
+<body>
+	<h1>미디어쿼리 선언방식</h1>
+	<div class="container">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+	</div>
+</body>
+</html>
