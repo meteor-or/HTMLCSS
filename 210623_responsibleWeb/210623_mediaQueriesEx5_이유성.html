@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>연습5</title>
+	<style>
+		body{margin:0;text-align: center; font-size: 1.8rem; color: salmon; font-weight: BOLD;}
+
+		.box {
+			list-style: none; padding:0; margin:1%;
+			width: 100%;
+			overflow: hidden;}
+
+		.box li {
+			border: 6px solid teal;overflow:hidden
+		}
+		a{display: block; padding: 10px 50px;color: salmon; text-decoration: none; text-align: center;}
+		.box li:nth-child(4){
+			display: none;
+		}
+
+		li:nth-child(-n+4){
+			border-bottom: none;
+		}
+
+		@media (min-width:768px) {
+			.box li {width: 48%; float: left;
+				border: 6px solid teal;}
+
+			.box li:nth-child(-n+2){
+			border-bottom: none;
+		}
+			.box li:nth-child(2), li:last-child{
+				border-left: none;
+			}	
+		}
+
+		@media (min-width:1024px){
+			.box { text-align: center;}
+			.box li:nth-child(-n+5) {width: 18%;
+				border: 6px solid teal;
+				border-right: none; }
+				
+			.box li:nth-child(4){
+			display: block;
+		}
+			.box li:last-child{
+				border-right: 6px solid teal;}
+			
+			.box a:hover{
+				background-color: teal;
+				color: white;
+			}
+			}
+	</style>
+</head>
+
+<body>
+<div class="wrap">
+	<ul class="box">
+		<li><a href="">HOME</a></li>
+		<li><a href="">ABOUT</a></li>
+		<li><a href="">PRODUCT</a></li>
+		<li><a href="">BOARD</a></li>
+		<li><a href="">CONTACT</a></li>
+	</ul>
+</div>
+</body>
+</html>
+
+<a href=""></a>

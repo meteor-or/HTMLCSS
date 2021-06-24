@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>flexible box 8: order</title>
+	<style>
+		body{margin: 0; font-size: 2rem; font-weight: bold; text-align: center;}
+		.container{
+			border: 6px solid #000;
+			width: 96vw; height: 60vh; margin: 2vw auto;
+			display: flex;
+			/* flex-flow: row nowrap; */
+			justify-content: space-around; /* 주축 기준 정렬 */
+			align-items: center; 
+			/* 교차축 기준 정렬 */
+		}
+
+		.container > .box {width: 10%;}
+		/* 플렉스 아이템 배치 순서 설정 */
+		.container > .box1 {background-color: #558776; order:4;}
+		.container > .box2 {background-color: #A3A847; order:1;}
+		.container > .box3 {background-color: #7F8B52; order:5;}
+		.container > .box4 {background-color: #EAE2B6; order:6;}
+		.container > .box5 {background-color: #E99497; order:7;}
+		.container > .box6 {background-color: #F3C583; order:3;}
+		.container > .box7 {background-color: #B3E283; order:2;}
+
+		@media (max-width:1200px) {
+			.container {flex-flow:row wrap;}
+			.container > .box {width: 40%;}
+			.container > .box1 { order:4;}
+			.container > .box2 { order:1;}
+			.container > .box3 { order:5;}
+			.container > .box4 { order:6;}
+			.container > .box5 { order:7;}
+			.container > .box6 { order:3;}
+			.container > .box7 { order:2;}
+		}
+
+		@media (max-width:768px) {
+			.container {flex-flow: column;}
+			.container > .box1 { order:4;}
+			.container > .box2 { order:1;}
+			.container > .box3 { order:5;}
+			.container > .box4 { order:6; display: none;}
+			.container > .box5 { order:7;}
+			.container > .box6 { order:3;}
+			.container > .box7 { order:2;}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="box box1">box1</div>
+		<div class="box box2">box2</div>
+		<div class="box box3">box3</div>
+		<div class="box box4">box4</div>
+		<div class="box box5">box5</div>
+		<div class="box box6">box6</div>
+		<div class="box box7">box7</div>
+	</div>
+</body>
+</html>

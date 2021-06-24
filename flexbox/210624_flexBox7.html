@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<>
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>flexBox7 : align-contents</title>
+	<style>
+		body{ margin:0;font-size: 2rem; font-weight: bold;text-align: center;}
+
+		/*  */
+
+		.wrapper{
+			border: 6px solid #008000;
+			width: 90vw; height: 80vh;
+			margin:3vw auto;
+
+
+			display: flex;
+			flex-flow: row wrap;
+			flex-flow: wrap;
+			flex-wrap: wrap;
+			justify-content: space-between; 
+			/* 교차축 기준으로 여러 줄의 플렉스 아이템과 여백 정렬  */
+			align-content: stretch;
+			/* 기본값. 높이값이 지정되지 않은 경우 확장 정렬 */
+			align-content: flex-start;
+			/* 교차축 기준 시작점에서 정렬 */
+			align-content: flex-end;
+			/* 교차축 기준 끝나는 점에서 정렬 */
+
+			
+		}
+
+
+		.wrapper > .box {width: 50%;}
+		.wrapper > .box1 {background-color: #053742; height: 150px;}
+		.wrapper > .box2 {background-color: #39A2DB; height: 100px;}
+		.wrapper > .box3 {background-color: #A2DBFA; height: 180px;}
+		.wrapper > .box4 {background-color: #E8F0F2; height: 110px;} 
+		.wrapper > .box5 {background-color: #F0D9E7; height: 200px;}
+	</style>
+
+<body>
+	<div class="wrapper"> <!-- flex container-->
+		<div class="box box1">box1</div> <!--flex item-->
+		<div class="box box2">box2</div> <!--flex item-->
+		<div class="box box3">box3</div>  <!--flex item-->
+		<div class="box box4">box4</div>  <!--flex item-->
+		<div class="box box5">box5</div>  <!--flex item-->
+	</div>
+</body>
+</html>

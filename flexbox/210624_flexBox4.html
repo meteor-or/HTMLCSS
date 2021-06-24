@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<>
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>flexBox4:justifyContent</title>
+	<style>
+		body{ margin:0;font-size: 2rem; font-weight: bold;text-align: center;}
+
+		/*  */
+
+		.wrapper{
+			border: 6px solid #5c33f6;
+			width: 90vw; height: 60vh;
+			margin:3vw auto;
+
+
+			display: flex;
+			flex-flow:row-reverse /* cloumn cloumn reverse, row*/ nowrap;
+			/* 주축을 기준으로 플렉스 아이템  */
+			justify-content: flex-start;
+			/* 기본값. 주축 기준으로 시작점부터 정렬 */
+			justify-content: flex-end; 
+			/* 주축 기준으로 끝나는 지점부터 정렬 */
+			justify-content: center;
+			/* 주축 기준으로 중앙 정렬 */
+			justify-content: space-around;
+			/* 주축 기준으로 여백 포함 양끝에 맞춰 정렬 */
+			justify-content: space-between; 
+			/* 주축 기준으로 양 끝에 맞춰 정렬하고 남은 여백은 */
+		}
+
+
+
+		.wrapper > .box1 {background-color: #f94144; width: 30%;}
+		.wrapper > .box2 {background-color: #f3722c; width: 20%;}
+		.wrapper > .box3 {background-color: #f8961e; width: 15%;}
+	</style>
+
+<body>
+	<div class="wrapper"> <!-- flex container-->
+		<div class="box box1">box1</div> <!--flex item-->
+		<div class="box box2">box2</div> <!--flex item-->
+		<div class="box box3">box3</div>  <!--flex item-->
+	</div>
+</body>
+</html>

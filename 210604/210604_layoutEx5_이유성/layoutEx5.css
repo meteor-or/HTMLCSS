@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "utf-8";
 
 
@@ -96,3 +97,135 @@ aside p{padding:15px;}
 
 footer { height: 35px;	line-height: 35px;}
 footer p {text-indent: 17px;}
+=======
+@charset "UTF-8";
+
+body {
+  background-image: url(Images/hotel-wallpaper-black.png);
+  font-family: "Noto Sans KR", "Nanum Gothic", sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  color: #ff3333;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 950px;
+  box-sizing: border-box;
+  border: red 3px solid;
+}
+
+/* 헤더영역 */
+header {
+  background-color: #ff3333;
+}
+header img {
+  padding: 25px;
+}
+header #nav {
+  background-color: #003366;
+  margin: 0;
+  height: 35px;
+  line-height: 34px;
+}
+
+#nav li {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+#nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  color: orange;
+}
+
+/* 메인 본문영역 */
+
+main {
+  background-color: #fff;
+  height: 615px;
+}
+
+.leftSection {
+  width: 660px;
+  float: left;
+}
+
+section {
+  padding: 30px 20px;
+  width: 666px;
+  height: 227px;
+}
+
+figure {
+  width: 304px;
+  height: 227px;
+  float: left;
+  box-sizing: border-box;
+  border: #003366 1px solid;
+  text-align: center;
+  padding: 6px 0;
+  margin: 0;
+}
+
+figcaption {
+  text-align: right;
+  font-style: italic;
+  font-weight: 100;
+  margin-right: 6px;
+}
+.textbox {
+  width: 300px;
+  float: left;
+  padding-left: 20px;
+}
+
+/* 메인 사이드 영역 */
+
+aside {
+  box-sizing: border-box;
+  width: 284px;
+  float: right;
+  border-left: #003366 1px solid;
+  height: 615px;
+}
+
+li {
+  padding: 16px 15px;
+  border-bottom: #003366 1px solid;
+  color: #ff3333;
+}
+aside h1 {
+  font-style: normal;
+  color: #ff3333;
+  padding: 30px 15px;
+}
+
+address p {
+  padding-left: 15px;
+  margin: 0;
+}
+
+/* 바닥글영역 */
+
+footer {
+  height: 35px;
+  line-height: 35px;
+  background-color: #ff3333;
+  text-indent: 15px;
+}
+>>>>>>> 187a59d63853b08de24e40cca4d18d46650e8d83

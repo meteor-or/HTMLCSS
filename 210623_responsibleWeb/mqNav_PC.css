@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#gnb li {width: 20%;}
+
+#gnb > .disable {
+	display: block;
+}
+
+#gnb > li > a {
+	border-bottom: none;
+	border-left: solid #000 1px;
+}
+
+#gnb > li:first-child > a {
+	border-left:  none;
+}
+/* 
+#gnb > li > a {
+ border-bottom: none;
+}
+
+#gnb > li:nth-child(3) < a {
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+} */
+
+#gnb > li > a:hover {
+	background-color: #000;
+	color: #fff;
+}

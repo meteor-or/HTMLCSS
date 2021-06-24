@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body{
+	font-family:'서울 남산체','나눔바른고딕','맑은 고딕','돋움',sans-serif;
+	font-size:20px;
+	line-height:1.5;
+	background-color:#eee
+	color:#333
+}
+
+h1{
+	background-color:#ff8474;
+	font-style:italic;
+	
+}
+
+#box1{
+	background-color:#bbbbbb;
+	text-align:right;
+}
+
+#box2{
+
+}
+
+#box3{
+
+}

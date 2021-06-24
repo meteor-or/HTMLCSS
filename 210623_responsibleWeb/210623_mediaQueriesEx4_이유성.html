@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>연습4</title>
+	<style>
+/* 
+		body{margin:0; width:300vw; color: lightyellow;}
+		.box {margin:0; padding: 0;
+			overflow-x: auto;}
+		.box li {
+			padding: 0; margin:0;
+			float: left; width: 100vw; height: 60vh;
+			list-style: none;font-size: 22px;text-align: center;
+		}
+		.box li:first-child{background-color: darkblue; display: none;}
+		.box li:nth-child(2) {background-color: lightskyblue;}
+		.box li:nth-child(3) {background-color: lightgreen;}
+		
+
+		@media (min-width:768px) {
+			body{width: 150vw;}
+			.box li{width: 50vw;}
+			li:first-child{display: block;}
+		}
+
+		@media (min-width:1024px) {
+			body{width: 100vw;}
+			.box {margin:0 auto;}
+			.box li {width: 20vw;}
+		} */
+
+		body{margin:0;text-align: center;font-weight: bold; font-size: 1.8rem;}
+		.box {list-style: none; padding: 0; margin:0; width: 200%;}
+		.box > li {float: left; height: 60vh; width: 50%;
+		/* %는 부모 기준 단위값
+			100%는 나를 감사는 부모 요소 크기 전부
+			50%는 나를 감싸는 부모 요소 크기의 반 */
+			
+			vw는 디바이스의 크기, 즉 브라우저 기준 단위값.
+			100vw는 현재 브라우저 창의 전부. (단, 우측(세로)스크롤이 있는 경우 하단(가로)스크롤이 생김)
+			50vw는 현재 브라우저 창의 절반.
+		}
+		.box > li:nth-child(1){background-color: #F0D9E7; display:none}
+		.box > li:nth-child(2){background-color: #FF94CC;}
+		.box > li:nth-child(3){background-color: #A239EA;}
+
+		@media (min-width:768px) {
+			.box {width: 150%;}
+			.box > li { width: 33.33333%;}
+			.box > li:nth-child(1){display: block;}
+
+		}
+
+		@media (min-width:1440px) {
+			.box{ margin:50px auto; width: 1440px;}
+			.box > .box1 {width: 30%;}
+			.box > .box2 {width: 40%;}
+			.box > .box3 {width: 50%;}
+			
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="box">
+		<li>box1</li>
+		<li>box2</li>
+		<li>box3</li>
+	</ul>
+</body>
+</html>

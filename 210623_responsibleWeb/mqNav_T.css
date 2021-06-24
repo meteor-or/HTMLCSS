@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* @media screen  and () {} */
+
+#gnb > li {
+	width: 50%;
+}
+
+#gnb > li:nth-child(3n+2) a {
+	border-left: 1px solid #000;
+}
