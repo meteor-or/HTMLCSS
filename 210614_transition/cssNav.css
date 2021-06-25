@@ -1,0 +1,22 @@
+nav #gnb > li > a {
+  display: block;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 50px;
+  border-right: 1px solid #fff;
+}
+
+/* nav #gnb > li:last-child a {
+  border-right: none;
+} */
+
+nav #gnb > li:first-child a {
+  border-left: 1px solid #fff;
+}
+
+nav #gnb > li > ul {
+}
+nav #gnb li > ul {
+}
+nav #gnb > li ul {
+}

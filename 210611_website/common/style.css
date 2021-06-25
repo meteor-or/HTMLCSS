@@ -1,0 +1,86 @@
+@charset 'utf-8';
+/***** common *****/
+body {
+  font-family:'Cafe24Ssurroundair',-apple-system,'Segoe UI','Malgun Gothic','맑은 고딕',Dotum,돋움, sans-serif;
+  line-height: 1.4;
+  font-size:18px;
+  text-transform: capitalize;
+}
+img {
+  vertical-align:top;
+}
+ul {
+  list-style:none;
+  margin:0; padding:0;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}
+.wrapper {/* header 자식, main */
+  width:980px;
+  margin:0 auto;
+}
+
+/***** header *****/
+header {
+  border-bottom:1px solid #000;
+  width:100%; 
+  margin-bottom:20px;
+}
+
+header #header_ht {
+  height:109px;
+  position:relative;
+}
+header h1 {
+  background-color: orange;
+  position:absolute;
+  left:0; bottom:9px;
+  width:185px; height:50px;
+  margin:0;
+}
+header li {
+  float: left;
+}
+header #register {
+  position: absolute;
+  right:0; top:4px;
+  font-size:16px;
+}
+header #register li:first-child::after {
+  content:"";
+  border-right:1px solid #000;
+  height:12px;
+  display:inline-block;
+  margin:0 10px;
+  vertical-align:middle;
+}
+header #register a:hover {
+  color:red;
+}
+header #gnb {
+  position: absolute;
+  right:0; bottom:9px;
+  font-family:'SpoqaHanSansNeo',sans-serif;
+  font-size:24px;
+}
+header #gnb li {
+  padding:0 20px;
+}
+header #gnb li:hover {
+  background-color: #f21170;
+  color:#fff;
+}
+
+/***** footer *****/
+footer.wrapper {
+  text-align: center;
+  font-size:15px;
+  margin:60px auto 30px;
+}
+footer address {
+  background-color: #ddd;
+  font-style: normal;
+  padding:2px 0; margin:8px 0;
+}

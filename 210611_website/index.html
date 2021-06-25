@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="실제 웹사이트 구조 연습과 호스팅">
+<meta name="title" content="웹사이트 연습">
+<!-- og -->
+<meta property="og:title" content="웹사이트 연습">
+<meta property="og:url" content="http://">
+<meta property="og:image" content="http://common/images/.png">
+<meta property="og:description" content="웹사이트 연습 페이지입니다">
+<meta property="type" content="website">
+
+<title>웹사이트 연습</title>
+
+<!-- favicon -->
+<!-- <link rel="shortcut icon" href="common/favicon/favicon.ico" type="image/x-icon"> -->
+<link rel="apple-touch-icon" sizes="180x180" href="common/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="common/favicon/favicon-16x16.png">
+<link rel="manifest" href="common/favicon/site.webmanifest">
+
+<!-- normalize css -->
+<link rel="stylesheet" href="common/normalize.css">
+
+<!-- web fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<!-- font-family: 'Cormorant', serif; -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&display=swap" rel="stylesheet">
+<!-- 'Cafe24Ssurroundair','SpoqaHanSansNeo',sans-serif -->
+<link rel="stylesheet" href="common/fonts.css">
+
+<!-- style css -->
+<link rel="stylesheet" href="common/style.css">
+<!-- index css -->
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!-- width:100% -->
+  <header>
+    <!-- 중앙정렬을 위한 한정된 값 -->
+    <div class="wrapper" id="header_ht">
+      <!-- '/' 루트 상대경로: index.html의 이름을 가질 경우 사용 가능하며 로컬에서는 확인 되지 않음 -->
+      <h1>
+        <a href="/">
+          <img src="http://via.placeholder.com/185x50/0779e4/fff?text=logo" alt="로고">
+        </a>
+      </h1>
+      <ul id="register">
+        <li><a href="register/login.html">login</a></li>
+        <li><a href="register/joinUs.html">join us</a></li>
+      </ul>
+      <ul id="gnb">
+        <li><a href="intro/intro.html">회사소개</a></li>
+        <li><a href="brand/brand.html">브랜드소개</a></li>
+        <li><a href="store/store.html">매장안내</a></li>
+        <li><a href="service/service.html">고객센터</a></li>
+        <li><a href="FAQ/FAQ.html">가맹문의</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <img src="http://via.placeholder.com/980x300/f54291/fff?text=gallery" alt="갤러리">
+    <div class="contents">
+      <section class="txt_box">
+        <h2>consectetur</h2>
+        <p>다 겨울이 다 이름과 까닭입니다. 노루, 없이 새워 북간도에 옥 흙으로 봅니다. 아무 이름과, 하나에 별 이름자 속의 봅니다. 어머니, 어머니, 아무 하나에 있습니다.</p>
+      </section>
+      <section class="img_box">
+        <h2>velit</h2>
+        <figure>
+          <img src="http://via.placeholder.com/255x140/158467/fff?text=img1" alt="img1">
+          <figcaption>phasellus</figcaption>
+        </figure>
+      </section>
+      <section class="img_box">
+        <h2>viverra</h2>
+        <figure>
+          <img src="http://via.placeholder.com/255x140/065446/fff?text=img2" alt="img2">
+          <figcaption>Sed Sit</figcaption>
+        </figure>
+      </section>
+    </div>
+  </main>
+
+  <footer class="wrapper">
+    <address>김미리 에프엔씨 food service mangenet 경기123-12 tel. 031-123-1234 fax. 031-123-1224</address>
+    &copy; copyright by kmr all right reserved.
+  </footer>
+</body>
+</html>

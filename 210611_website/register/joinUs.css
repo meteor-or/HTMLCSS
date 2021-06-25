@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+main {
+  overflow: hidden;
+  width: 720px;
+  margin: 60px auto;
+  box-shadow: 0 0 15px #ddd;
+}
+
+main form {
+  float: left;
+  width: 360px;
+  padding: 40px;
+}
+
+main form h3 {
+  font-family: "";
+  font-size: 36px;
+  margin-top: 0;
+}
+
+main form label {
+  display: block;
+}
+
+main form input {
+  outline: none;
+  border: 1px solid #999;
+  padding: 4px 4px 7px;
+  font-size: 20px;
+}
+
+main form button {
+}
+
+main img {
+  float: left;
+}

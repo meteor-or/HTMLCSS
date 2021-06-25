@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="실제 웹사이트 구조 연습과 호스팅">
+<meta name="title" content="웹사이트 연습">
+<!-- og -->
+<meta property="og:title" content="웹사이트 연습">
+<meta property="og:url" content="http://">
+<meta property="og:image" content="http://common/images/.png">
+<meta property="og:description" content="웹사이트 연습 페이지입니다">
+<meta property="type" content="website">
+
+<title>웹사이트 연습</title>
+
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="../common/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../common/favicon/favicon-16x16.png">
+<link rel="manifest" href="../common/favicon/site.webmanifest">
+
+<!-- normalize css -->
+<link rel="stylesheet" href="../common/normalize.css">
+
+<!-- web fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<!-- font-family: 'Cormorant', serif; -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&display=swap" rel="stylesheet">
+<!-- 'Cafe24Ssurroundair','SpoqaHanSansNeo',sans-serif -->
+<link rel="stylesheet" href="../common/fonts.css">
+
+<!-- style css -->
+<link rel="stylesheet" href="../common/style.css">
+<link rel="stylesheet" href="joinUs.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrapper" id="header_ht">
+      <h1>
+        <a href="../">
+          <img src="http://via.placeholder.com/185x50/0779e4/fff?text=logo" alt="로고">
+        </a>
+      </h1>
+      <ul id="register">
+        <li><a href="login.html">login</a></li>
+        <li><a href="joinUs.html">join us</a></li>
+      </ul>
+      <ul id="gnb">
+        <li><a href="../intro/intro.html">회사소개</a></li>
+        <li><a href="../brand/brand.html">브랜드소개</a></li>
+        <li><a href="../store/store.html">매장안내</a></li>
+        <li><a href="../service/service.html">고객센터</a></li>
+        <li><a href="../FAQ/FAQ.html">가맹문의</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <form>
+      <h3>join us</h3>
+      <label for="user_name">name</label>
+      <input type="text" name="user_name" id="user_name">
+
+      <label for="user_email">email</label>
+      <input type="email" name="user_email" id="user_email">
+
+      <label for="user_pw">password</label>
+      <input type="password" name="user_pw" id="user_pw">
+
+      <label>
+        <input type="checkbox" name="show_pw">show password
+      </label>
+
+      <button type="submit">done, sign me up</button>
+      
+      <p>by rigning up i agree to the <a href="#">term and conditions</a></p>
+    </form>
+
+    <img src="http://via.placeholder.com/360x550/0a97b0/fff?text=img" alt="img">
+  </main>
+
+  <footer class="wrapper">
+    <address>김미리 에프엔씨 food service mangenet 경기123-12 tel. 031-123-1234 fax. 031-123-1224</address>
+    &copy; copyright by kmr all right reserved.
+  </footer>
+</body>
+</html>

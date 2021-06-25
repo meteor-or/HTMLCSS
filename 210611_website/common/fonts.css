@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'Cafe24Ssurroundair';
+  src: url(fonts/Cafe24Ssurroundair.woff2) format('woff2'),
+  url(fonts/Cafe24Ssurroundair.woff) format('woff');
+  font-weight:400;/* == normal */
+  font-style:normal;
+  font-display:swap;
+}
+
+@font-face {
+  font-family:'SpoqaHanSansNeo';
+  src: url(fonts/SpoqaHanSansNeo-Medium.woff.woff2) format('woff2'),
+  url(fonts/SpoqaHanSansNeo-Medium.woff) format('woff');
+  font-weight:500;/* == bold */
+  font-style:normal;
+  font-display:swap;
+}

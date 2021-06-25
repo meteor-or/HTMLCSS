@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>transition-property와 -duration 연습1<</title>
+    <style>
+      ul{
+        list-style: none;
+        padding-left: 0;
+        border: 1px solid black;
+        width: 1000px; height: 562px;
+        padding: 0 10px;
+        
+      }
+
+      li {
+        font-size: 0px;
+        height: 100px;
+        margin: 10px 0;
+        
+        transition-property: all;
+        transition-duration: 1s;
+      }
+
+      .box:hover i:nth-child(1){
+        background-color: navy;
+        width: 100%;
+      }
+
+      li:nth-child(2){
+        background: orange;
+        width: 50%;
+      }
+      li:nth-child(3){
+        background-color: pink;
+        width: 23%;
+      }
+      li:nth-child(4){
+        background-color: lightcoral;
+        width: 45%;
+      }
+      li:nth-child(5){
+        background-color: aqua;
+        width: 67%;
+      }
+    </style>
+</head>
+
+<body>
+  <ul class="box">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</body>
+</html>
