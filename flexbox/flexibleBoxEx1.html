@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexible box 연습 1</title>
+<style>
+  body, ul, li { margin:0; padding:0; list-style:none; font-weight:bold; font-size:1.5rem; }
+  
+  /* .container {
+    display:flex;
+    justify-content: center;
+  } */
+  .box {
+    border:6px solid #000;
+    width:70vw; height:80vh;
+    margin:2vw auto;
+
+    display:flex;
+    /* flex-direction:row; flex-wrap:wrap; */
+    flex-direction:column;/* 주축:세로y, 교차축:가로x */
+    align-items:center;/* 교차축 기준 정렬. x축의 중앙 */
+    justify-content:center;/* 주축 기준 정렬 */
+  }
+  .box li {
+    width:50%; height:18%;
+    /* margin:0 auto; */
+
+    display:flex;
+    /* flex-direction:row; 주축 가로 x / 교차축 세로 y */
+    justify-content: center;
+    align-items:center;
+  }
+  .box .box1 { background-color: #848CCF; }
+  .box .box2 { background-color: #93B5E1; }
+  .box .box3 { background-color: #FFE4E4; }
+  .box .box4 { background-color: #35D0BA; }
+  .box .box5 { background-color: #12947F; }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="box"><!-- flex container -->
+      <li class="box1"><!-- flex item / flex container -->
+        box1<br>box<!-- flex item -->
+      </li>
+      <li class="box2">box2<br>box</li>
+      <li class="box3">box3<br>box</li>
+      <li class="box4">box4<br>box</li>
+      <li class="box5">box5<br>box</li>
+    </ul>
+  </div>
+</body>
+</html>

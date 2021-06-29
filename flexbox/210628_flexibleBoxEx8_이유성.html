@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ex8</title>
+<style>
+	body{margin: 0; font-weight: bold;font-size: 1.5rem;
+	text-align: center;}
+
+	.gallery {
+		list-style: none;
+		padding-left: 0;
+		background-color: #ddd;
+		height: 700px;
+		width: 700px;
+		display: flex;
+		margin:0 auto;
+		justify-content: space-around;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	img{
+		display: block;
+	}
+	figcaption {
+		background-color: #4C4C6D;
+		color:#fff;
+		width: 300px;
+		
+	}
+</style>
+</head>
+
+<body>
+	<h1>상하 정렬 갤러리</h1>
+	<ul class="gallery">
+		<li>
+			<img src="https://via.placeholder.com/300x300/FFE194?text=img1" alt=""></img>
+			<figcaption>Title 1</figcaption>
+		</li>
+		<li>
+			<img src="https://via.placeholder.com/300x300/E8F6EF?text=img2" alt=""></img>
+			<figcaption>Title 2</figcaption>
+		</li>
+		<li>
+			<img src="https://via.placeholder.com/300x300/B8DFD8?text=img3" alt=""></img>
+			<figcaption>Title 3</figcaption>
+		</li>
+		<li>
+			<img src="https://via.placeholder.com/300x300/4C4C6D?text=img3" alt=""></img>
+			<figcaption>Title 4</figcaption>
+		</li>
+	</ul>
+</body>
+</html>

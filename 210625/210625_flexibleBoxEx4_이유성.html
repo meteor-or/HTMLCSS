@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexible box 연습 4</title>
+<style>
+  body{margin: 0; font-size: 2rem; text-align: center; font-weight: bold;}
+  form { display: flex; justify-content: center;  vertical-align: middle;
+    flex-wrap: wrap; width: 32vw; height: 80vh; margin: 0 auto; 
+  }
+  input{
+    width: 20vw;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  label{
+    width:10vw;
+    margin-top: 10px;
+  }
+  
+</style>
+</head>
+
+<body>
+  <h1>폼 타이틀 세로 중앙 정렬</h1>
+  <form action="keywordlist">
+    <label for="txt1">채널 키워드</label><input type="text" id="txt1" placeholder="플렉스 적용하기">
+    <label for="txt2">채널 키워드</label><input type="text" id="txt2" placeholder="플렉스 적용하기">
+    <label for="txt3">channel keyword</label><input type="text" id="txt3" placeholder="플렉스 적용하기">
+    <label for="txt4">channel keyword keyword</label><input type="text" id="txt4" placeholder="플렉스 적용하기">
+    <label for="txt5">채널 키워드</label><input type="text" id="txt5" placeholder="플렉스 적용하기">
+  </form>
+</body>
+</html>

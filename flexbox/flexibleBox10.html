@@ -6,64 +6,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>flexible box 10: flex-grow</title>
 <style>
-	/* 
-	flex : 증가비율(flex-grow) 감소비율(flex-shrink) 기본비율 (flex-basis) 플렉스 아이템에 적용.
-	아이템의 증가, 감소, 기본 비율을 설정하는 단축 속성
+  /* flex: 증가비율(flex-grow) 감소비율(flex-shrink) 기본 비율(flex-basis)
+     플렉스 아이템에 적용.
+     아이템의 증가, 감소, 기본 비율을 설정하는 단축 속성
 
-	flex-grow: 0; 숫자가 클수록 더 큰 영역을 가짐. 가변값이 아니거나 0인 경우 적용되지 않음. 0,1
-	flex-shrink: 1; 숫자가 클수록 더 큰 영역이 감소. 가변갑이 아니거나 0인 경우 적용되지 않음.
-	flex-basis:auto; 기본 너비 값 설정. auto인 경우 width, height등의 속성으로 너비 설정 가능하나 단위값이 주어진 경우 설정할 수 없음.
-	
-	*/
+     flex-grow: 0; 숫자가 클수록 더 큰 영역을 가짐. 가변값이 아니거나 0인 경우 적용되지 않음. 0,1
+     flex-shrink: 1; 숫자가 클수록 더 큰 영역이 감소. 가변값이 아니거나 0인 경우 적용되지 않음.
+     flex-basis: auto; 기본 너비 값 설정. auto인 경우 width, height등의 속성으로 너비 설정 가능하나 단위값이 주어진 경우 설정할 수 없음.
+  */
+  ul {
+    list-style:none; margin:10px; padding:0; text-align:center; font-size:2rem; font-weight: bold; background-color: #ddd;
+    display:flex;
+    width:600px; height:60px;
+  }
+  li { width:0; }
+  li:nth-child(1) { background-color: #55a630; }
+  li:nth-child(2) { background-color: #bfd200; }
+  li:nth-child(3) { background-color: #eeef20; }
 
-	ul {list-style: none; margin: 10px; padding: 10px; font-weight: bold; font-size: 2rem; background-color: #ddd;
-	display: flex;
-	width: 600px; height: 60px;
-	}
+  .box1 > li { flex-grow:0; }/* 기본값. 증가하지 않음 */
+  .box2 > li { flex-grow:1; }/* 균일하게 커져서 플렉스 컨테이너를 채움 */
 
+  .box3 > li:nth-child(1) { flex-grow:1; }/* 1/5 20% 120px */
+  .box3 > li:nth-child(2) { flex-grow:2; }/* 2/5 40% 240px */
+  .box3 > li:nth-child(3) { flex-grow:2; }/* 2/5 40% 240px */
 
-	li {}
-	li:nth-child(1) {background-color: #185ADB;}
-	li:nth-child(2) {background-color: #1768AC;}
-	li:nth-child(3) {background-color: #E5D549;}
-
-	.box1 > li {flex-grow:0;}
-	.box2 > li {flex-grow:1;}
-
-	.box3 > li:nth-child(1) {flex-grow:1;} /* 1/5 20% 120px */
-	.box3 > li:nth-child(2) {flex-grow:2;} /* 2/5 40% 240px*/
-	.box3 > li:nth-child(3) {flex-grow:2;} /* 2/5 40% */
-
-	.box4 > li:nth-child(1) {flex-grow:1; } /* 1/4 25% 150px */
-	.box4 > li:nth-child(2) {flex-grow:2; } /* 2/4 50% 300px */
-	.box4 > li:nth-child(3) {flex-grow:1; } /* 1/4 25% 150px */
+  .box4 > li:nth-child(1) { flex-grow:1; }/* 1/4 25% 150px */
+  .box4 > li:nth-child(2) { flex-grow:2; }/* 2/4 50% 300px */
+  .box4 > li:nth-child(3) { flex-grow:1; }/* 1/4 25% 150px */
 </style>
 </head>
 
 <body>
-	<h2>flex-grow: 0 </h2>
-	<ul class="box1"> <!-- flex container -->
-		<li>item 1</li> <!-- flex item -->
-		<li>item 2</li>
-		<li>item 3</li>
-	</ul>
-	<h2>flex-grow: 1</h2>
-	<ul class="box2">
-		<li>item 1</li>
-		<li>item 2</li>
-		<li>item 3</li>
-	</ul>
-	<h2>flex-grow: 1 / flex-grow: 2</h2>
-	<ul class="box3">
-		<li>item 1</li>
-		<li>item 2</li>
-		<li>item 3</li>
-	</ul>
-	<h2>flex-grow: 1 / flex-grow: 2 / flex-grow: 1</h2>
-	<ul class="box4">
-		<li>item 1</li>
-		<li>item 2</li>
-		<li>item 3</li>
-	</ul>
+  <h2>flex-grow: 0; 기본값. 증가하지 않음</h2>
+  <ul class="box1"><!-- flex container -->
+    <li>item 1</li><!-- flex item -->
+    <li>item 2</li>
+    <li>item 3</li>
+  </ul>
+  <h2>flex-grow: 1; 1:1:1 비율로 균일하게 커져서 플렉스 컨테이너를 채움</h2>
+  <ul class="box2">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+  </ul>
+  <h2>flex-grow: 1 / flex-grow: 2; 1:2:2</h2>
+  <ul class="box3">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+  </ul>
+  <h2>flex-grow: 1 / flex-grow: 2 / flex-grow: 1</h2>
+  <ul class="box4">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+  </ul>
 </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexible box 11: flex-shrink</title>
+<style>
+  ul {
+    list-style:none; margin:10px; padding:0; text-align:center; font-size:2rem; font-weight: bold; background-color: #ddd; border:6px solid #000;
+    display:flex;
+    width:600px; height:60px;
+  }
+  li:nth-child(1) { background-color: #9b5de5; }
+  li:nth-child(2) { background-color: #f15bb5; }
+  li:nth-child(3) { background-color: #fee440; }
+
+  li { width:300px; }
+  .box1 > li { flex-shrink:0; }
+  .box2 > li { flex-shrink:1; }/* 기본값 */
+
+  /* 숫자가 크면 클수록 감소의 값 커짐. 숫자가 클수록 크기는 더 작아짐 */
+  .box3 > li:nth-child(1) { flex-shrink:1; }/* li:300 - (300/5)*1 = 240  */
+  .box3 > li:nth-child(2) { flex-shrink:2; }/* 300 - (300/5)*2 = 180 */
+  .box3 > li:nth-child(3) { flex-shrink:2; }/* 300 - (300/5)*2 = 180 */
+
+  .box4 > li:nth-child(1) { flex-shrink:0; }/* 300 */
+  .box4 > li:nth-child(2) { flex-shrink:1; }/* 300-(300/2)*1 = 150 */
+  .box4 > li:nth-child(3) { flex-shrink:1; }/* 150 */
+</style>
+</head>
+
+<body>
+  <h2>flex-shrink: 0; 주어진 값 그대로 적용. 넘치는 경우 컨테이너를 넘김</h2>
+    <ul class="box1">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+  <h2>flex-shrink: 1; 균일하게 작아져 부모 박스를 채움. 넘치지 않음</h2>
+    <ul class="box2">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+  <h2>flex-shrink: 1 / flex-shrink: 2</h2>
+    <ul class="box3">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+  <h2>flex-shrink: 0 / flex-shrink: 1</h2>
+    <ul class="box4">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+</body>
+</html>
