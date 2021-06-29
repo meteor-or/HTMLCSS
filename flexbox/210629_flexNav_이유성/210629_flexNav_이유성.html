@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6ce6db202.js" crossorigin="anonymous"></script>
+    <title>flexNav</title>
+    <style>
+      body{
+        background-image: url(image/sa_pixar_virtualbg_coco_16x9_9ccd7110.jpeg);
+        background-repeat: no-repeat;
+        text-transform: uppercase;
+        color: #fff; font-weight: bold;
+        font-size: 1.6rem;
+        margin: 0;
+      }
+
+      .gnb {
+        list-style: none;
+        display: flex;
+        flex-flow: column wrap;
+        padding: 0;
+        margin: 0;
+        background-color: #5D54A4;
+      }
+      
+      .gnb a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        
+      }
+
+      .gnb li:last-child a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .gnb a:hover {
+        background-color: rgba(77, 93, 238, 0.452);
+      }
+      
+      @media (min-width:786px) {
+        .gnb {
+          flex-flow: row wrap;
+        }
+
+        .gnb li {
+          width: 50%;
+          flex: auto;
+          
+        }
+        .gnb li:last-child{
+          display: none;
+        }
+
+        .gnb a{
+          border-right: 1px solid rgba(255, 255, 255, 0.3);
+          background-color: rgba(255, 255, 255, 0);
+        }
+      }
+      @media (min-width:1440px) {
+        .gnb {
+          flex-flow: row nowrap;
+          justify-content: center;
+          background-color:#5D54A4;
+          width: 100%;
+        }
+        .gnb li {
+          width: 20%;
+          flex: 0;
+        }
+        .gnb a{ 
+          
+          width: 180px;
+          border-right: 1px solid #fff;
+          border-bottom: none;
+          text-align: center;
+        }
+        .gnb li:nth-child(6) a {
+          border-right: none;
+        }
+      }
+    </style>
+</head>
+
+<body> 
+  <ul class="gnb">
+    <li><a href="#">home</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">web</a></li>
+    <li><a href="#">design</a></li>
+    <li><a href="#">map</a></li>
+    <li><a href="#">contact</a></li>
+    <li><a href="#">menu
+      <i class="fas fa-bars"></i></a></li> 
+  </ul>
+  
+</body>
+</html>

@@ -15,18 +15,25 @@
 		background-color: #ddd;
 		height: 700px;
 		width: 700px;
-		display: flex;
 		margin:0 auto;
-		justify-content: space-around;
+
+
+		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		align-items: center;
+		/*align-items: center;  한 줄 교차축 기준 정렬*/
+    align-content: center; /* 여러 줄 교차축 기준 정렬. 한 줄 일때는 적용되지 않음*/
+    align-content: space-around; /* 여백 포함 양 끝 정렬*/
+
+  
+		justify-content: space-around; /* 주축 기준 정렬*/
 	}
+
 
 	img{
 		display: block;
 	}
-	figcaption {
+	.gallery > li > figcaption {
 		background-color: #4C4C6D;
 		color:#fff;
 		width: 300px;

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex9</title>
+    <style>
+      body{margin: 0; text-align: center;
+        font-size: 1.8rem;
+        font-weight: bold;}
+      
+      h1{margin: 0;}
+
+      .gallery {
+        list-style: none;
+        padding: 0;
+        border: 6px solid #000;
+        margin: 0 auto;
+        width:80%; height: 45vw;
+
+        display: flex;
+        flex-flow: wrap;
+        align-content: center;
+        justify-content: space-around;
+      }
+
+
+      li {
+        width: 30%;  height: auto;
+      }
+
+    
+      .gallery > li > img {
+        /*width: 100%; 원본 크기와 상관없이 부모 요소의 크기에 맞춰 조절*/
+        max-width: 100%; /*원본 크기 이상으로는 커지지 않음*/
+        max-height: 19vw;
+        overflow: hidden;
+        display: block;
+        margin-top: 10px;
+      }
+      
+      .gallery > li > figcaption {
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        padding: 10px 0;
+      }
+      
+    </style>
+</head>
+
+<body>
+  <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+  <ul class="gallery">
+    <li class="img1">
+      <img src="../tani/tani1.jpg" alt="">
+      <figcaption>Title 1</figcaption>
+    </li>
+    <li>
+      <img src="../tani/tani2.jpg" alt="">
+      <figcaption>Title 2</figcaption>
+    </li>
+    <li>
+      <img src="../tani/tani3.jpg" alt="">
+      <figcaption>Title 3</figcaption>
+    </li>
+    <li>
+      <img src="../tani/tani4.jpg" alt="">
+      <figcaption>Title 4</figcaption>
+    </li>
+    <li>
+      <img src="../tani/tani5.png" alt="">
+      <figcaption>Title 5</figcaption>
+    </li>
+    <li>
+      <img src="../tani/tani6.png" alt="">
+      <figcaption>Title 6</figcaption>
+    </li>
+  </ul>
+</body>
+</html>
