@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		ul {
+			list-style: none;
+			height: 50px;
+			text-align: center;
+			margin: 0 auto;
+			padding-left: 0;
+			width: 686px;
+		}
+
+		ul li{
+			float: left;
+			height: 40px;
+			font-weight: bold;
+			text-align: center;}
+
+		ul li a {
+			text-decoration: none;
+			color: black;
+			width: 130px; height: 40px;
+			border: 6px solid #000;
+			display: block;
+			line-height: 40px;
+			border-right: 0;
+			font-size: 28px;
+		}
+
+		li:first-child a {
+			border-radius: 20px 0 0 20px;
+		}
+
+		/* a:last-child {같은 부모를 두고 있는 자식들 중에 제일 마지막 자식이 a} */
+		li:last-child a{ /* 같은 부모를 둔 li 중 제일 마지막 li의 하위로 있는 a */
+			border: 6px solid #000;
+			border-radius: 0 20px 20px 0;
+		}
+
+		a:hover{
+			background-color: #000;
+			color: orange;
+		}
+	</style>
+</head>
+
+<body>
+	<ul class="gnb">
+		<li><a href="">메뉴 1</a></li>
+		<li><a href="">메뉴 2</a></li>
+		<li><a href="">메뉴 3</a></li>
+		<li><a href="">메뉴 4</a></li>
+		<li><a href="">메뉴 5</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,281 @@
+@charset 'utf-8'
+
+@font-face {
+   font-family: 'Cafe24Ssurroundair';
+   src: url(fonts/Cafe24Ssurroundair.woff2) format('woff2'). src: url(fonts/Cafe24Ssurroundair.woff) format('woff');
+   font-weight:400p;/  /* ==normal */
+} 
+
+@font-face {
+   font-family: 'SpoqaHanSnasNeo';
+   src: url(font/SpoqaHanSnasNeo-Bold.woff2) format(woff2), url(fonts/SpoqaHanSansNeo-Bold.woff) format(woff');}
+   
+body{font-family: 'Noto Sans KR', Georgia, 'Times New Roman', Times, serif;}
+
+.wrap { 
+   width: 980px; 
+   margin: 0 auto;
+}
+
+ul {
+   list-style: none; 
+   padding-left: 0;
+   margin-top:0;
+}
+
+ul a {text-decoration:none ;color: #000;}
+
+ /* 공통 헤더 영역 */
+header{height: 109px;}
+header h1{margin:0;}
+header h1 a{position: absolute; top:50px;}
+
+header .headerTop .utilLi{
+   text-align: right;
+   margin-top: 5px;
+   margin-bottom: 55px;
+   font-size:16px;
+   font-weight: 100;
+}
+
+header .headerTop .utilLi li {display: inline-block;}
+header .headerTop .utilLi li a:hover{color: red;}
+
+header .gnb{text-align: right;}
+header .gnb li {
+   display: inline-block;
+   font-size: 20px;
+   font-weight: 700;
+}
+
+header .gnb li a{padding: 5px 10px;}
+header .gnb li a:hover{
+   background-color: #ffdbc5;
+   color: #c51350;
+}
+
+hr{
+   width: 100%;
+   position: absolute;
+   left: 0px;
+   top: 110px;
+   margin:0;
+}
+
+/* 공통 풋터영역 */
+
+footer{
+   width: 100%; 
+   text-align: center;
+   color: gray;
+   line-height: 1.5;
+   text-transform: uppercase;
+}
+
+footer span{
+   display: block;
+   color: black;
+}
+
+
+/* index 메인영역 */
+
+main{overflow: hidden;}
+main .galleryImg{
+   background-image: url(https://via.placeholder.com/980x300/b4846c/fff?text=gallery);
+   margin-top: 20px;
+   width: 980px; height: 300px;
+}
+
+main article {
+   width: 415px;
+   float: left;
+   margin-right: 30px;
+}
+
+main article h2 {
+   color: #35477d;
+   font-size: 34px;
+}
+
+main article p {
+   line-height: 1.5;
+}
+
+main figure{
+   width: 255px;
+   float:left;
+   margin: 0;
+}
+
+main figure img {
+   margin: 0;
+}
+
+main figure:first-of-type{
+   padding-right: 25px;
+}
+
+main figure h3 {
+   color: #c06c84;
+   text-transform: capitalize;
+}
+
+main figure figcaption{ text-align: right; line-height: 1.5;margin-bottom: 60px;}
+
+
+/* 회사소개 메인영역  */
+
+main .bannerImg{
+   background-image: url(https://via.placeholder.com/980x100/e5b299/fff/?text=banner);
+   width: 980px; height: 100px;
+   margin-top: 20px;
+}
+
+aside {
+   width: 190px;
+   float: left;
+   margin-top: 130px;
+}
+
+aside li a {
+   display: block;
+   padding: 20px 0 10px 0;
+   border-bottom: dotted 1px;
+}
+
+aside li a:hover {
+   color: white;
+   background-color: #ea2c62;
+   
+}
+
+
+main section {
+   width: 730px;
+   float: left;
+   padding-left: 60px;
+}
+
+main section h1 {
+   margin-top: 50px;
+   margin-bottom: 60px;
+   color: #ea2c62;
+   text-transform: capitalize;
+}
+
+main section .companyImgbox{
+   width: 420px;
+   margin-left: 20px;
+   float: right;
+   padding-right: 0;
+}
+
+main section figcaption{
+   text-align: right;
+   margin: 0;
+}
+
+main section p {
+   text-align: justify;
+   width: auto;
+   line-height: 1.5;
+}
+
+main section p:last-of-type{
+   margin-bottom: 75px;
+}
+
+/* 회원가입 메인화면 */
+
+
+.loginCont{
+   width: 720px; height: 555px;
+   margin: 60px auto;
+   box-shadow: gray 5px 5px 10px;
+}
+
+.loginCont form {
+   width: 280px; height: 465px;
+   float: left;
+   padding: 45px 40px;
+}
+
+.loginCont form h2{
+   text-transform: uppercase;
+   margin: 0;
+   
+}
+
+.loginCont form span{
+   display: block;
+   position: relative;
+}
+
+.loginCont form label{
+   font-size: 20px;
+   text-transform: capitalize;
+   position: absolute;
+   top:20px;
+   font-family: 'Noto Sans KR', Georgia, 'Times New Roman', Times, serif; 
+   font-weight: 100;
+}
+
+.loginCont form input{
+   width: 268px; height: 35px;
+   border: gray solid 1px;
+   margin-top: 47px;
+   padding:0 5px;
+}
+
+.loginCont form input:hover{
+   background-color: lightgray;
+   caret-color: #c51350;
+   border: gray solid 1px;
+}
+
+.loginCont form .checkbox label {
+   left: 25px;
+   top:18px;
+}
+
+.loginCont form input[type=checkbox]{
+   width: 18px; height: 18px;
+   margin-top: 22px;
+   margin-bottom: 48px;
+}
+
+.loginCont form input[type=button] {
+   border: 1px white solid;
+   background-color: #ef4f4f;
+   color: white;
+   text-transform: uppercase;
+   font-size: 18px;
+   font-weight: 500;
+   width: 280px; height:40px;
+   border-radius: 5px;
+   margin-top: 0;
+   margin-bottom: 20px;
+}
+
+.loginCont form input[type=button]:hover{
+   background: #74c7b8;
+}
+
+.loginCont form span.txt{
+   text-align: right;
+   font-size: 12px;
+   text-transform: capitalize;
+   line-height: 1.5;
+   color: gray;
+}
+
+.loginCont form span.txt:last-child{
+   text-decoration: underline;
+}
+
+.loginCont .loginImg {
+   background-image: url("https://via.placeholder.com/360x555/f1d4d4/000/fff?text=images");
+   width: 360px; height: 555px;
+   float: right;
+}

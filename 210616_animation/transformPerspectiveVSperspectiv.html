@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>transformPerspectiveVSperspectiv</title>
+	<style>
+		h1, h2 {text-align: center;}
+		ul {margin: 0 auto; padding: 0; border: 6px solid #000; width: 880px; list-style: none;}
+		ul::after {
+			content:"";
+			display: block;
+			clear: both;
+		} 
+		
+		ul li {
+			float:left;
+			width:200px; height:200px;
+			margin:10px;
+		}
+		.box1 {
+			/* 원근감을 적용시키고자 하는 부모 요소에 적용 */
+			perspective: 300px;}
+		.box1 li {background-color: teal;transform: rotateX(45deg);}
+		
+		/* 해당 요소에 적용. 각 각 원금감이 적용 */
+		.box2 li {background-color: maroon; transform: perspective(300px) rotateX(45deg);}
+		/* 전체의 흐름과 상관없이 개별적인 값으 가짐 */
+	</style>
+</head>
+
+<body>
+	<h1>transformPerspectiveVStransformPerspective</h1>
+	<div class="container">
+		<h2>transformPerspective</h2>
+		<ul class="box1">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<h2>transformPerspective</h2>
+		<ul class="box2">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

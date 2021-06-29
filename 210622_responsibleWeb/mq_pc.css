@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+		/* pc 1280px */
+		@media (min-width:1280px) {
+			.container {width: 60vw;}
+		.container > .box1 { background: #2b9348;}
+		.container > .box2 { background: #80b918;}
+		.container > .box3 { background: #aacc00;}
+		}

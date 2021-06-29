@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<>
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>flexBox4:justifyContent</title>
+	<style>
+		body{ margin:0;font-size: 2rem; font-weight: bold;text-align: center;}
+
+		/*  */
+
+		.wrapper{
+			border: 6px solid #008000;
+			width: 90vw; height: 60vh;
+			margin:3vw auto;
+
+
+			display: flex;
+			flex-flow:row nowrap;
+			/* 기본값이라 생략가능 */
+			justify-content: flex-end; 
+
+			/* 교차축 기준으로 플렉스 아이템과 여백 정렬 */
+			align-items: flex-start; 
+			/* 교차축 기준. 시작점에서 끝나는 점으로 정렬 */
+			align-items: flex-end;
+			/* 교차축 기준. 끝나는 점에서 시작점으로 정렬 */
+			align-items: stretch;
+			/* 기본값. 높이값이 지정되지 않은 경우 플렉스 아이템 확장 정렬 */
+			align-items: baseline;
+			/* 플렉스 아이템 시작점에서 배치되는 글자의 베이스라인에 맞춤 */
+			align-items: center; 
+			/* 교차축 기준 중앙 정렬, 자주 사용함 */
+			
+		}
+
+
+
+		.wrapper > .box1 {background-color: #053742; width: 30%;}
+		.wrapper > .box2 {background-color: #39A2DB; width: 20%;}
+		.wrapper > .box3 {background-color: #A2DBFA; width: 15%;}
+	</style>
+
+<body>
+	<div class="wrapper"> <!-- flex container-->
+		<div class="box box1">box1</div> <!--flex item-->
+		<div class="box box2">box2</div> <!--flex item-->
+		<div class="box box3">box3</div>  <!--flex item-->
+	</div>
+</body>
+</html>

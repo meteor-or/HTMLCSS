@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* 기본값(모바일) */
+body{margin:0; text-align: center; font-size:1.6rem;}
+h1{position: fixed; top: 0; width: 100%; background-color: maroon; padding:10px; color: white;}
+.container {width: 50vw; margin: 300px auto;}
+.container > div { height: 10vw;transition: 0.5s;}
+.container > .box1 { background: #f72585;}
+.container > .box2 { background: #b51793;}
+.container > .box3 { background: #7209b7;}

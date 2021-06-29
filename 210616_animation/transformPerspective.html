@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>transform:perspective() 원근감</title>
+	<style>
+		section > div {
+			width: 200px; height: 200px;
+			display: inline-block;
+			background-color: #ddd;
+			margin: 50px;
+		}
+
+		section > div > div {
+			width: 100%; height: 100%;
+			background-color: orange;
+			transition: 0.6s;
+		}
+		
+		.box1:hover .pers1 {transform: translateX(50px);}
+		.box2:hover .pers2 {transform: translateY(50px);}
+		.box3:hover .pers3 {transform: translateZ(50px);}
+		/* Z축은 움직이지 않는 것처럼 보임 */
+
+		.box4:hover .pers1 {transform:perspective(50px) translateX(50px);}
+		.box5:hover .pers2 {transform:perspective(50px) translateY(50px);}
+		.box6:hover .pers3 {transform:perspective(150px) translateZ(50px);}
+
+		
+		.box7:hover .pers1 {transform:perspective(150px) rotateX(45deg) ;}
+		.box8:hover .pers2 {transform:perspective(150px) rotateY(45deg);}
+		.box9:hover .pers3 {transform:rotateX(45deg);}
+	</style>
+</head>
+
+<body>
+	<h1>transform:perspective() 원근감</h1>
+	<section>
+		<h2>perspective 적용 안함</h2>
+		<div class="box1">
+			<div class="pers1"></div>
+		</div>
+		<div class="box2">
+			<div class="pers2"></div>
+		</div>
+		<div class="box3">
+			<div class="pers3"></div>
+		</div>
+	</section>
+	<section>
+		<h2>translate, perspective 적용 함</h2>
+		<div class="box4">
+			<div class="pers1"></div>
+		</div>
+		<div class="box5">
+			<div class="pers2"></div>
+		</div>
+		<div class="box6">
+			<div class="pers3"></div>
+		</div>
+	</section>
+	<section>
+		<h2>rotate, perspective 적용 함</h2>
+		<div class="box7">
+			<div class="pers1"></div>
+		</div>
+		<div class="box8">
+			<div class="pers2"></div>
+		</div>
+		<div class="box9">
+			<div class="pers3"></div>
+		</div>
+	</section>
+</body>
+</html>
