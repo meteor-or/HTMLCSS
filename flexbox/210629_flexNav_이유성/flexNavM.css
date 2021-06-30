@@ -1,0 +1,25 @@
+@charset "utf-08";
+
+nav > .gnb {}
+nav > .gnb > li {
+	width: 100%;
+}
+nav > .gnb > li:last-child > a {
+	border-right: none;
+	
+}
+nav a#moblie_menu {
+	display: block;
+	background-color: rgba(167, 101, 153, 1);
+	line-height: 1.5;
+	position: relative;
+}
+
+nav a#moblie_menu::after {
+	content: "";
+	background:  url(image/ellipsis.svg) no-repeat 50% 0;
+	width: 20px; height:20px;
+	display: inline-block;
+	position: absolute;
+	right: 20px; top:13px;
+}

@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- icon  -->
     <script src="https://kit.fontawesome.com/a6ce6db202.js" crossorigin="anonymous"></script>
+
+    <!-- pc -->
+    <link rel="stylesheet" href="flexNav.css">
+    <!-- tablet -->
+    <link rel="stylesheet" media="(max-width:1024px)" href="flexNavT.css">
+    <!-- moblie -->
+    <link rel="stylesheet" media="(max-width:768px)" href="flexNavM.css">
     <title>flexNav</title>
     <style>
-      body{
+      /* 나 혼자 한거 */
+      /* body{
         background-image: url(image/sa_pixar_virtualbg_coco_16x9_9ccd7110.jpeg);
         background-repeat: no-repeat;
         text-transform: uppercase;
@@ -84,12 +98,18 @@
         .gnb li:nth-child(6) a {
           border-right: none;
         }
-      }
+      } */
+
+      /* 같이 한거 */
+
+
     </style>
 </head>
 
-<body> 
-  <ul class="gnb">
+<body>
+  
+  <!-- 내가한거 -->
+  <!-- <ul class="gnb">
     <li><a href="#">home</a></li>
     <li><a href="#">about</a></li>
     <li><a href="#">web</a></li>
@@ -98,7 +118,19 @@
     <li><a href="#">contact</a></li>
     <li><a href="#">menu
       <i class="fas fa-bars"></i></a></li> 
-  </ul>
+  </ul> -->
   
+  <!-- 선생님과 같이 한거 -->
+  <nav>
+    <ul class="gnb">
+      <li><a href="#">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">web</a></li>
+      <li><a href="#">design</a></li>
+      <li><a href="#">map</a></li>
+      <li><a href="#">contact</a></li>
+      <a href="#" id="moblie_menu">menu</a>
+    </ul>
+  </nav>
 </body>
 </html>

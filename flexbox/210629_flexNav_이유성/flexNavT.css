@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+nav > .gnb {
+	flex-wrap: wrap;
+	height: auto;
+	box-shadow: none;
+}
+/* height의 초기화 값 : auto; 
+	position의 초기화 값: static; */
+nav > .gnb > li {
+	width: 50%; 
+}
+
+nav a{
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+nav > .gnb > li:nth-child(even) > a{
+	border-right: none;
+}
