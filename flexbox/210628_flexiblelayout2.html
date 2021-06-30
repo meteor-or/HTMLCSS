@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexibleLayout2</title>
+<style>
+
+body {
+	margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.warp{
+	display: flex;
+	height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.warp footer { /* flex item */
+ /* 부모 요소에 플렉스 적용시 자식 아이템에 margin:auto를 통해 개별 위치 지정 가능
+   */
+	 margin-left: auto;
+	 /* 아이템 왼족에서 오른쪽으로 자동 조절되어 요소는 오른쪽으로 이동 */
+	 margin-right: auto; /* 왼쪽 정렬 */
+	/*margin-bottom: auto; 
+	 위쪽 정렬 */
+	margin-top: auto; /* 아래쪽 정렬 */
+
+}
+
+
+.container footer{
+	background-color: purple;
+	color: lavenderblush;
+	width: 90vw;
+	margin: 0 auto;
+	padding: 10px;
+	
+}
+	
+</style>
+</head>
+
+<body>
+
+		<header></header>
+		<main></main>
+		<footer>
+		<h2>footer</h2>
+		<p>그들의 청춘에서만 생명을 것이다. 봄날의 싸인 것은 맺어, 끝까지 황금시대다.</p>
+	</footer>
+	
+</body>
+</html>

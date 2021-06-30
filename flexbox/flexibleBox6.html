@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexible box 6: align-self</title>
+<style>
+  body { margin:0; font-size:2rem; font-weight:bold; text-align: center; }
+  .wrapper {
+    border:6px solid #00AF91;
+    width:90vw; height:60vh;
+    margin:3vw auto;
+
+    display:flex;
+    flex-flow:row nowrap;
+    /* 주축을 기준으로 플렉스 아이템과 여백 정렬 */
+    justify-content:space-between;
+    /* 교차축 기준으로 플렉스 아이템과 여백 정렬 */
+    align-items: center;/* 교차축 기준 중앙 정렬 */
+  }
+
+  .wrapper > .box1 { 
+    background-color: #007965; width:30%;
+    /* 자식인 플렉스 아이템에 적용. align-items 속성의 개별 배치 */
+    align-self:flex-start;
+  }
+  .wrapper > .box2 { background-color: #F58634; width:20%; }
+  .wrapper > .box3 { 
+    background-color: #FFCC29; width:15%;
+    align-self:flex-end;
+  }
+</style>
+</head>
+
+<body>
+  <div class="wrapper"><!-- flex container -->
+    <div class="box box1">box1</div><!-- flex item -->
+    <div class="box box2">box2</div><!-- flex item -->
+    <div class="box box3">box3</div><!-- flex item -->
+  </div>
+</body>
+</html>

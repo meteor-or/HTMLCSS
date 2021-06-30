@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flexibleBoxEx7</title>
+<style>
+	body {margin: 0;
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.3rem;}
+	.gnb {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		background-color:gold;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		color:blue;
+		padding: 10px 0;
+		position: relative;
+	}
+
+	.gnb a.active::after {
+		content: "";
+		background-color: rgba(0, 225, 214, 0.5);
+		position: absolute;
+		height: 10px;
+		left: 0; right: 0; bottom: 30%;
+	}
+</style>
+</head>
+
+<body>
+	<nav>
+		<ul class="gnb">
+			<li><a href="#" class="active">MENU 1</a></li>
+			<li><a href="">MENU 2</a></li>
+			<li><a href="">MENU 3</a></li>
+		</ul>
+		<div class="unerline"></div>
+	</nav>
+</body>
+</html>
