@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#register li {
+  padding: 8px 20px;
+}
+
+#register li::after {
+  content: ":";
+  margin: 0 20px;
+}
+
+#register li:last-child::after {
+  content: "";
+}
+
+#register a {
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header h1 {
+}
+header #gnb {
+}
+
+/* main */
+
+/* footer */
