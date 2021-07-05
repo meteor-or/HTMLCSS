@@ -4,27 +4,35 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>flex web 연습</title>
 
-<!-- Noto Sans Kr /  -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<link rel="stylesheet" href="../common/normalize.css">
+
+<!-- 'Noto Sans KR'/'Oswald' -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+<!-- common style -->
 <link rel="stylesheet" href="style.css">
-<title>flex web 연습</title>
-<style>
-</style>
+<!-- index -->
+<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
   <!-- register -->
-  <ul id="register">
+  <ul id="register" class="flex_wrap">
     <li><a href="/">홈으로</a></li>
     <li><a href="#">로그인</a></li>
     <li><a href="#">회원가입</a></li>
   </ul>
 
   <!-- header -->
-  <header>
+  <header class="flex_wrap">
     <!-- 로고 -->
     <h1>
       <a href="/"><img src="images/logo.jpg" alt="미광디자인 로고"></a>
@@ -43,14 +51,14 @@
     <li>이미지</li>
   </ul>
 
-  <ul id="intro">
+  <ul id="intro"  class="flex_wrap">
     <li><a href="#"><img src="images/bg_company.png" alt="회사소개"><span>회사소개</span></a></li>
     <li><a href="#"><img src="images/bg_business.png" alt="사업소개"><span>사업소개</span></a></li>
     <li><a href="#"><img src="images/bg_map.png" alt="대리점안내"><span>대리점안내</span></a></li>
     <li><a href="#"><img src="images/bg_qna.png" alt="q & a"><span>q & a</span></a></li>
   </ul>
 
-  <div class="product">
+  <div class="product flex_wrap">
     <img src="images/pro_img.jpg" alt="제품소개 이미지">
     <section>
       <h2>product</h2>
@@ -59,7 +67,7 @@
     </section>
   </div>
 
-  <div class="guide">
+  <div class="guide flex_wrap">
     <a href="#">
       <h3>찾아오시는 길</h3>
       <p>저희 매장으로 찾아오시는 길을 안내해 드립니다.</p>
@@ -70,7 +78,7 @@
     </a>
   </div>
 
-  <ul class="gallery">
+  <ul class="gallery flex_wrap">
     <li>
       <a href="#">
         <img src="images/img1.jpg" alt="스툴">
@@ -99,13 +107,13 @@
 
   <!-- footer -->
   <footer>
-    <ul class="sns_group">
+    <ul class="sns_group flex_wrap">
       <li><a href="#"><img src="images/facebook-square-brands.svg" alt="facebook"></a></li>
       <li><a href="#"><img src="images/instagram-square-brands.svg" alt="instagram"></a></li>
       <li><a href="#"><img src="images/youtube-square-brands.svg" alt="youtube"></a></li>
     </ul>
 
-    <ul class="info">
+    <ul class="info flex_wrap">
       <li><a href="#">개인정보처리방침</a></li>
       <li><a href="#">이메일무단수집거부</a></li>
       <li><a href="#">찾아오시는 길</a></li>

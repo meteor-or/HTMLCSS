@@ -1,32 +1,86 @@
 @charset "utf-8";
+/***** common *****/
+ul { list-style:none; margin:0; padding:0; }
+a { text-decoration: none; color:inherit; }
+img { vertical-align:top; }
 
-#register li {
-  padding: 8px 20px;
+body {
+  font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+  font-weight:300;
+  font-size:18px;
+  text-align: center;
 }
-
-#register li::after {
-  content: ":";
-  margin: 0 20px;
-}
-
-#register li:last-child::after {
-  content: "";
-}
-
-#register a {
-}
-
-/* header */
-
-header {
+.flex_wrap {
   display: flex;
   justify-content: center;
 }
+
+/***** register *****/
+#register {/* flex container */
+  background-color: #000;
+  color:#fff;
+  font-size:16px;
+
+  justify-content:flex-end;/* 주축 기준 정렬 */
+}
+#register li {
+  padding:8px 0;
+}
+#register li::after {
+  content:":";
+  margin:0 20px;
+}
+#register li:last-child::after {
+  content:"";
+}
+#register a:hover {
+  color:red;
+}
+
+/***** header *****/
 header h1 {
+  /* margin:0 200px 0 0; */
+  margin:0 11.905vw 0 0;
 }
 header #gnb {
+  font-weight:500;
+  font-size:22px;
+  display: flex;
+  /* align-items: center;li를 세로 중앙 정렬 */
+}
+header #gnb a {
+  display:block;
+  width:150px; height:85px;
+  line-height:85px;
+  /* display: flex;
+  align-items: center; */
+}
+header #gnb a:hover {
+  background-color: #000;
+  color:#fff;
 }
 
-/* main */
+/***** footer *****/
+footer .sns_group li {
+  margin:40px;
+}
+footer .sns_group li img {
+  width:40px;
+}
 
-/* footer */
+footer .info li::after {
+  content:"";
+  display: inline-block;
+  width:1px; height:15px;
+  background-color: #000;
+  margin:0 20px;
+}
+footer .info li:last-child::after {
+  content:"";
+  width:0;
+}
+
+footer address {
+  margin:10px 0 60px;
+  font-style:normal;
+}

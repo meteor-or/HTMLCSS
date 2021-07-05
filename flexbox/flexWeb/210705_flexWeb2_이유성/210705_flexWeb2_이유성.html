@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>flexWebEx2</title>
+  <style>
+    body {
+      font-size: 1.5rem;
+      color:#fff;
+      margin: 0;}
+    .box {
+        height: 300px;
+      }
+
+    .box1{background-color: #7D5A50;
+    height: 100px;
+  }
+    .img1{ 
+      position: absolute;
+      right: 0;
+    width: 20px; height: 20px;
+    background: url(ellipsis-v-solid.svg) no-repeat;
+    }
+    .box2{background-color: #B4846C;}
+    .box3{background-color: #E5B299;}
+    .box4{background-color: #FCDEC0;}
+    .box5{background-color: #E99497;}
+    .box6{background-color: #F3C583;}
+    .box7{
+      background-color: #E8E46E; 
+      }
+    .box8{
+      background-color: #B3E283;
+      height: 200px;
+      }
+    .box9{
+      background-color: #B5EAEA;height: 200px;}
+    .box10{
+      background-color: #FFBCBC;
+      }
+    .box11{
+      background-color: #F38BA0;height: 100px;
+    }
+
+    @media (min-width:786px) {
+      body{ 
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .img1{
+        display: none;
+      }
+      .img2{
+        position: absolute;
+        right: 0;
+      width: 20px; height: 20px;
+      background: url(ellipsis-v-solid.svg) no-repeat;}
+      .box{
+        height: 25vh;
+      }
+      .box1 {
+        width: 10vw; height: 10vh;
+        order: 1;
+      }
+      .box2 {
+        width: 90vw; height: 10vh;
+        order: 2;
+      }
+      .box3 {
+        width: 60vw; 
+        height:25vh;
+        order: 3; 
+        
+      }
+      .box4 {
+        order: 5;
+        width: 40vw;
+      }
+      .box5 {
+        order: 6;
+        width: 40vw;}
+      .box6 {
+        order: 8;
+        width: 60vw;
+      }
+      .box7 {
+        order: 4; 
+        height:25vh;
+        width: 40vw;
+      }
+      .box8 {
+        order: 9;
+        height: 12.5vh;
+        width: 40vw;}
+      .box9 {
+        order: 10;
+        height: 12.5vh;
+        width: 40vw;}
+      .box10 {
+        order: 7;
+        width: 20vw;}
+      .box11 {
+        order: 11;
+        width:100vw ;
+        height: 5vh;}
+    }  
+    .wrap{
+      order: 9;
+    }
+    @media (min-width:1028px) {
+      .body{
+      }
+      .box{
+      }
+      .box1{
+        order: 1;
+        
+      }
+      .box2{
+        order: 2;}
+      .box3{
+        order: 3;
+      width: 50vw;
+      height: 40vh;}
+      .box4{
+        order: 6;
+      width: 30vw;
+      height: 40vh;}
+      .box5{
+        order: 7;
+      width: 30vw;
+      height: 40vh;}
+      .box6{
+        order: 4;
+        width: 25vw;
+        height: 40vh;}
+      .box7{
+        order: 5;
+        width: 25vw;
+        height: 40vh;}
+      .wrap{
+        order: 9;
+      width: 30vw;}
+      .box8{width: 30vw;
+        height: 20vh;}
+      .box9{width: 30vw;
+        height: 20vh;}
+      .box10{
+        order: 8;
+      width: 10vw;
+      height: 40vh;}
+      .box11{
+        order: 10;
+      
+        height: 10vh;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box box1">제목<div class="img1"></div></div>
+  <div class="box box2">네비게이션<div class="img2"></div></div>
+  <div class="box box3">슬라이드</div>
+  <div class="box box4">최신글</div>
+  <div class="box box5">인기글</div>
+  <div class="box box6">갤러리</div>
+  <div class="box box7">랭킹</div>
+  <div class="wrap">
+    <div class="box box8">배너1</div>
+    <div class="box box9">배너2</div>
+  </div>
+  <div class="box box10">SNS</div>
+  <div class="box box11">바닥글</div>
+</body>
+</html>
