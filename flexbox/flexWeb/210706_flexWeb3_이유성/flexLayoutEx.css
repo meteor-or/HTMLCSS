@@ -1,159 +1,173 @@
 @charset "utf-8";
 /* 기본(모바일) */
+@font-face {
+  font-family: "Spoqa Han Sans";
+  src: url() format("woff2"), url() format("woff2");
+}
+* {
+  font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
+}
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 body {
-  font-family:'나눔고딕','맑은 고딕',돋움,sans-serif;
+  font-family: "나눔고딕", "맑은 고딕", 돋움, sans-serif;
   font-size: 1.2rem;
   text-align: center;
   color: #fff;
   margin: 0;
-  background-color: #000;;
+  background-color: #000;
 }
 .container {
-  width:100%;
-  margin:0 auto;
+  width: 100%;
+  margin: 0 auto;
 
-  display:flex;
-  flex-direction:column;/* 주축의 값 세로 */
+  display: flex;
+  flex-direction: column;
 }
 .container > * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 .container > header {
   position: relative;
-  order:1;
+  order: 1;
 }
-.container > header > h1 { 
-  background-color: #21243d; 
-  margin:0;
-  width:100%; height:75px; 
+.container > header > h1 {
+  background-color: #21243d;
+  margin: 0;
+  width: 100%;
+  height: 75px;
   line-height: 75px;
   border-top: 1px solid #fff;
 }
-.container > header > nav { 
+.container > header > nav {
   background-color: #21243d;
-  height: 50px; 
-  list-style: none;
-  font-size:0;
+  font-size: 0;
 }
-.container> header > .gnb1 {
+.container > header > .gnb {
   display: none;
 }
-.container> header > nav > .gnb {
+.container > header > nav > .icon {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 50px;
 }
-.container> header > nav > .gnb > li {
-  width: 20px; height: 20px;
+.container > header > nav > .icon > li > a {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
-.container > header > nav > .gnb > .home > a{
+.container > header > nav > .icon > .home > a {
   background: url(Images/icon01.png) no-repeat 50% / contain;
-  width: 20px; height: 20px;
-  display: block;
 }
-.container > header > nav > .gnb > .login > a {
-  display: block;
-  width: 20px; height: 20px;
+.container > header > nav > .icon > .login > a {
   background: url(Images/icon02.png) no-repeat 50% / contain;
 }
-.container > header > nav > ul > .myPage > a{
-  display: block;
-  width: 20px; height: 20px;
+.container > header > nav > ul > .myPage > a {
   background: url(Images/icon03.png) no-repeat 50% / contain;
 }
-.container > header > nav > ul > .search > a{
-  display: block;
-  width: 20px; height: 20px;
+.container > header > nav > ul > .search > a {
   background: url(Images/icon04.png) no-repeat 50% / contain;
 }
-.container > header > .mobileBtnWrap > .mobile_btn { 
-  background:url(images/navBtn.svg) no-repeat 50% / contain;
-  text-indent:-9999px;
-  width:30px; height:30px;
+.container > header > .mobileBtnWrap > .mobile_btn {
+  background: url(images/navBtn.svg) no-repeat 50% / contain;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  top:60px; right:12px;
+  top: 60px;
+  right: 12px;
 }
 
 /* body */
-.container > section { height:300px; }
-.container > .slider { 
+.container > section {
+  height: 300px;
+}
+.container > .slider {
   background: url(Images/tanifavicion2.jpg) no-repeat 50% / cover;
   font-size: 0;
-  order:2;
-  height: 500px; }
+  order: 2;
+  height: 500px;
+}
 
-.container > .latest { 
-  background-color: #ff7c7c; 
-  color:#fff; 
-  order:3; }
+.container > .latest {
+  background-color: #ff7c7c;
+  color: #fff;
+  order: 3;
+}
 .container > .latest > ul {
   text-align: left;
   display: flex;
   flex-flow: column;
 }
-.container > .latest > ul > li{
+.container > .latest > ul > li {
   margin-top: 10px;
 }
 
-.container > .popular { 
-  background-color: #a660c2; order:4; }
+.container > .popular {
+  background-color: #a660c2;
+  order: 4;
+}
 .container > .popular > ul {
   text-align: left;
   display: flex;
   flex-flow: column;
-} 
-.container > .popular > ul > li{
-  margin-top: 10px;} 
-
-.container > .gallery { 
-  background-color: #21243d; 
-  order:5; 
-  height: auto;}
-  .container > .gallery > .imgBox > a {
-    text-decoration: none;
-    color: #fff;
-  }
-.container > .gallery > .imgBox > a > .galleryImg1 {
-  background: url(Images/tani4.jpg) no-repeat 50% / contain;
-  width: 80%; height: 200px;
-  margin: 0 auto;
-  position: relative;
-  margin-bottom: 70px;}
-.container > .gallery > .imgBox > a > .galleryImg1 > p {
-  position:absolute; top: 100%;  right: 40%; 
 }
-.container > .gallery > .imgBox > a > .galleryImg2 {
-  background: url(Images/tani6.png) no-repeat 50% / contain;
-  width: 80%; height: 200px;
+.container > .popular > ul > li {
+  margin-top: 10px;
+}
+
+.container > .gallery {
+  background-color: #21243d;
+  order: 5;
+  height: auto;
+}
+.container > .gallery > .imgBox > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container > .gallery > .imgBox > a > .galleryImg {
+  width: 80%;
+  height: 200px;
   margin: 0 auto;
   margin-bottom: 70px;
   position: relative;
-  }
-  .container > .gallery > .imgBox > a >.galleryImg2 > p {
-    position:absolute; top: 100%; right: 40%; 
-  }
+}
 
-.container > .ranking { 
-  background-color: #192965; 
-  order:6;
-  height: 400px; }
+.container > .gallery > .imgBox > a > .galleryImg1 {
+  background: url(Images/tani4.jpg) no-repeat 50% / contain;
+}
+.container > .gallery > .imgBox > a > .galleryImg2 {
+  background: url(Images/tani6.png) no-repeat 50% / contain;
+}
+.container > .gallery > .imgBox > a > div > p {
+  position: absolute;
+  top: 100%;
+  right: 40%;
+}
+
+.container > .ranking {
+  background-color: #192965;
+  order: 6;
+  height: 400px;
+}
 
 .container > .ranking > ul {
-  list-style: none; 
+  list-style: none;
   margin: 0;
   padding: 0;
+  height: 280px;
+
   display: flex;
   flex-flow: column wrap;
-  height: 280px;
   justify-self: center;
   align-items: center;
 }
 .container > .ranking > ul > li {
-  margin-top:10px;
+  margin-top: 10px;
   width: 40%;
 }
-.container > .ranking > ul > li > a{
+.container > .ranking > ul > li > a {
   display: block;
   box-sizing: border-box;
   text-decoration: none;
@@ -163,205 +177,228 @@ body {
   padding: 10px 0;
 }
 
-.container > .banner { order:7; font-size: 0; }
-.container > .banner > .banner1 { 
-  background: url(Images/tani3.jpg)50% / cover; 
-  height:50%; 
-  margin:0;
+.container > .banner {
+  order: 7;
+  font-size: 0;
 }
-.container > .banner > .banner2 { 
-  background: url(Images/tani5.jpg)50% / cover; 
-  height:50%; 
-  margin:0;
+.container > .banner > h3 {
+  height: 50%;
+  margin: 0;
 }
-.container > .sns { 
-  background-color:#fff; order:8;
+.container > .banner > .banner1 {
+  background: url(Images/tani3.jpg) 50% / cover;
+}
+.container > .banner > .banner2 {
+  background: url(Images/tani5.jpg) 50% / cover;
+}
+.container > .sns {
+  background-color: #fff;
+  order: 8;
   display: flex;
   flex-flow: nowrap column;
   justify-content: space-around;
 }
 .container > .sns > h2 {
-    display: none;
-  }
-.container > .sns > a > .twitterIcon{
+  display: none;
+}
+.container > .sns > a > div {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.container > .sns > a > .twitterIcon {
   background: url(Images/instagram-square-brands.svg) no-repeat 50% / cover;
-  width: 50px; height: 50px;
-  margin: 0 auto;
 }
-.container > .sns > a > .facebookIcon{
+.container > .sns > a > .facebookIcon {
   background: url(Images/facebook-square-brands.svg) no-repeat 50% / cover;
-  width: 50px; height: 50px;
-  margin: 0 auto;
 }
-.container > .sns > a > .googleIcon{
+.container > .sns > a > .googleIcon {
   background: url(Images/youtube-square-brands.svg) no-repeat 50% / cover;
-  width: 50px; height: 50px;
-  margin: 0 auto;}
-.container > footer { 
-  order:9;
-  background-color:#21243d;
-  height:80px;
+}
+.container > footer {
+  order: 9;
+  background-color: #21243d;
+  height: 80px;
   line-height: 80px;
-  /* width:100%; flex-grow와 width 중 하나만 작성 */
-  flex-grow:1;/* 플렉스 아이템에 적용. 영역이 남을 때 채움 */
+  flex-grow: 1;
 }
 
 /* 태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿태블릿*/
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .container {
-    width:96%;
-    flex-flow:row wrap;
+    width: 96%;
+    flex-flow: row wrap;
   }
-  .container > header {/* flex-item / flex-container */
-    width:100%;
+  .container > header {
+    width: 100%;
   }
   .container > header > h1 {
     float: left;
-    width:250px; height:110px;
+    width: 250px;
+    height: 110px;
     position: absolute;
-    top:0; left:0;
+    top: 0;
+    left: 0;
   }
   .container > header > nav {
-    display:block;
+    display: block;
   }
   .container > header > .mobileBtnWrap {
     width: 100%;
     height: 50px;
     background-color: #21243d;
   }
-  .container > header > .mobileBtnWrap > .mobile_btn {
-  
+
+  .container > .slider {
+    width: 60%;
+    order: 1;
   }
 
-  .container > .slider { width:60%; order:1; }
-
-  .container > .ranking { 
-    width:40%; 
+  .container > .ranking {
+    width: 40%;
     height: 500px;
-    order:2; }
-.container > .ranking > h2 {
-  margin-top: 60px;
-}
-  .container > .latest { width:40%; order:4; }
-  .container > .popular { width:40%; order:5; }
-  .container > .sns { width:20%; order:6; }
+    order: 2;
+  }
+  .container > .ranking > h2 {
+    margin-top: 60px;
+  }
+  .container > .latest {
+    width: 40%;
+    order: 4;
+  }
+  .container > .popular {
+    width: 40%;
+    order: 5;
+  }
+  .container > .sns {
+    width: 20%;
+    order: 6;
+  }
 
-  .container > .gallery { 
-    width:70%; order:7;
-    flex-direction: row;}
+  .container > .gallery {
+    width: 70%;
+    order: 7;
+    flex-direction: row;
+  }
   .container > .gallery > .imgBox {
     display: flex;
   }
   .container > .gallery > .imgBox > a {
-    overflow: hidden; 
     width: 80%;
   }
-  .container > .gallery > .imgBox > a > .galleryImg1 {
-    width: 50%; 
-  }
-  .container > .gallery > .imgBox > a > .galleryImg2 {
+  .container > .gallery > .imgBox > a > .galleryImg {
     width: 50%;
   }
-  .container > .banner { width:30%; 
-    order:8; 
-  height: 350.781px}  
+
+  .container > .banner {
+    width: 30%;
+    order: 8;
+    height: 350.781px;
+  }
 }
 
 /* PCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPCPC */
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .container {
-    width:93%;
-  }
-  .container > header {
+    width: 93%;
   }
   .container > header > h1 {
-    width:250px; height:120px;
+    width: 250px;
+    height: 120px;
     position: absolute;
     line-height: 120px;
-    top:0; left:0;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     border: none;
-
   }
   .container > header > nav {
-    height:90px;
+    height: 90px;
     display: flex;
   }
-  .container> header > .gnb1{
-    display: block;
-    height: 90px; width: 500px;
+  .container > header > .gnb {
+    margin: 0;
+    padding: 0;
+    height: 90px;
     display: flex;
     background-color: #21243d;
     list-style: none;
     width: 100%;
-    margin: 0;
-    position: relative;
-    padding: 0;
     line-height: 90px;
   }
-  
-  .container> header >  .gnb1 > li:first-child{
-    text-indent: 250px;}
-  .container> header >  .gnb1 > li > a{
+
+  .container > header > .gnb > li:first-child {
+    text-indent: 250px;
+  }
+  .container > header > .gnb > li > a {
     display: block;
-    padding:0 50px;
+    padding: 0 50px;
     color: #fff;
     text-decoration: none;
   }
-  .container > header > nav{
+  .container > header > nav {
     width: 300px;
     display: block;
     position: absolute;
     right: 0;
     top: 0;
   }
-  .container > header > nav > .gnb {
+  .container > header > nav > .icon {
     display: flex;
     justify-content: space-around;
     padding: 0;
     height: 90px;
   }
-  .container > header > .mobileBtnWrap{
+  .container > header > .mobileBtnWrap {
     display: none;
   }
   .container > header > .mobileBtnWrap > .mobile_btn {
-    display:none;
+    display: none;
   }
-  .container > section { height:400px; }
+  .container > section {
+    height: 400px;
+  }
 
-  
-  .container > .slider { width:50%; }
-  .container > .latest > h2{ margin: 50px 0;
+  .container > .slider {
+    width: 50%;
   }
-  .container > .popular > h2{ margin: 50px 0;
+  .container > .latest > h2 {
+    margin: 50px 0;
   }
-  .container > .gallery { width:25%; order:3;
-    flex-direction: column;}
-  .container > .gallery > h2{
-      display: none;
-    }
+  .container > .popular > h2 {
+    margin: 50px 0;
+  }
+  .container > .gallery {
+    width: 25%;
+    order: 3;
+    flex-direction: column;
+  }
+  .container > .gallery > h2 {
+    display: none;
+  }
+
   .container > .gallery > .imgBox {
-    display: block; height: 460px;margin: 20px 0 ;
+    display: block;
+    height: 460px;
+    margin: 20px 0;
   }
-  .container > .gallery > .imgBox > a > .galleryImg1{ 
+  .container > .gallery > .imgBox > a > .galleryImg {
     background-size: cover;
-    height: 180px; width: 80%;
-  }.container > .gallery > .imgBox > a > .galleryImg1 > p {
+    height: 180px;
+    width: 80%;
+  }
+  .container > .gallery > .imgBox > a > div > p {
     display: block;
     margin: 10px auto;
   }
-  .container > .gallery > .imgBox > a > .galleryImg2 {
-    background-size: cover;
-    height: 180px; width: 80%;
+
+  .container > .ranking {
+    width: 25%;
+    order: 4;
   }
-  .container > .gallery > .imgBox > a > .galleryImg2 > p {
-    display: block;
-    margin: 10px auto;
-  }
-  .container > .ranking { width:25%; order:4; }
   .container > .ranking > ul {
     width: auto;
-    display: block; 
+    display: block;
     list-style: decimal;
     text-align: center;
     height: auto;
@@ -370,17 +407,28 @@ body {
     text-align: center;
     margin: 10px auto;
   }
-  .container > .ranking > ul > li >a {
+  .container > .ranking > ul > li > a {
     padding: 0;
-    border:none;
+    border: none;
   }
 
-
-  .container > .latest { width:30%; order:5; }
-  .container > .popular { width:30%; order:6; }
-  .container > .sns { width:15%; order:8; }
-  .container > .banner { width:25%; order:7; 
-  height: 400px;}  
+  .container > .latest {
+    width: 30%;
+    order: 5;
+  }
+  .container > .popular {
+    width: 30%;
+    order: 6;
+  }
+  .container > .sns {
+    width: 15%;
+    order: 8;
+  }
+  .container > .banner {
+    width: 25%;
+    order: 7;
+    height: 400px;
+  }
   .container > footer {
     text-align-last: left;
     text-indent: 50px;
