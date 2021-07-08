@@ -6,8 +6,12 @@
 * flex-container: flex-direction, flex-wrap, justify-content, align-item...
 flex-item: flex. flex-grow, flex-shrink, flex-basis, order...
 
-## flex-direction  
+## flex-direction:  
 바로 밑에 있는 item을 제어한다.
+1. `flex-direction:row`  
+	기본값. 플렉스 아이템 왼쪽에서 오른쪽으로 배치. 주축(main axis)은 가로 교차축(cross axis)은 세로
+1. `flex-direction:row-reverse`  
+	역방향 가로로 배치. 주축은 가로 교차축은 세로
 
 ## align-items:
 1. `align-items:flex-start;`  

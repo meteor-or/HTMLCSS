@@ -1,0 +1,66 @@
+@charset "utf-8";
+.container {
+	width:96%;
+	flex-flow:row wrap;
+}
+
+/*** 머리말 ***/
+.container > header {/* flex-item / flex-container */
+	width:100%;
+
+	display:flex;
+}
+.container > header > h1 {
+	width:15%;
+	position: absolute;
+	top: 0; left: 0;
+}
+.container > header > nav {
+	display:block;
+	/* width:85%; */
+	flex-grow:1;
+	height: 70px;
+}
+
+.container > header > nav > .gnb {
+	background-color: #b5179e;
+	/* display: none; */
+	position: absolute;
+	right: 0;
+	top:70px;
+	width: 40%;
+}
+.container > header > .mobile_btn {
+	top:50%;
+	transform: translateY(-50%);/* 포지션 적용시 위아래 중앙 정렬 방법 */
+}
+
+
+/* main */
+/* 슬라이드 */
+.container > .slider { width:60%; }
+
+.container > .slider > div {
+	display: block;
+	height: auto; /* 초기화 */
+	background: url(asset/images/slider_arrow.png) no-repeat 0 0;
+	text-indent: -9999px;
+	width: 34px; height: 39px;
+	z-index: 1000;
+}
+.container > .slider > .prev {
+	margin-left: -11px;
+}
+.container > .slider > .nxt {
+	background-position: -34px 0;
+	margin-left: -11px;
+
+}
+
+
+.container > .ranking { width:40%; order:3; }
+.container > .latest { width:40%; order:4; }
+.container > .popular { width:40%; order:5; }
+.container > .sns { width:20%; order:6; }
+.container > .gallery { width:70%; order:7; }
+.container > .banner { width:30%; order:8; }  

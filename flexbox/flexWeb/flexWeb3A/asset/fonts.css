@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* SpoqaHanSansNeo */
+@font-face {
+  font-family:'SpoqaHanSansNeo';
+  src: url('fonts/SpoqaHanSansNeoRegular.woff2') format('woff2'), 
+  url(fonts/SpoqaHanSansNeo-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family:'SpoqaHanSansNeo';
+  src: url('fonts/SpoqaHanSansNeoBold.woff2') format('woff2'), 
+  url('fonts/SpoqaHanSansNeo-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+html{
+  background-image: url();
+  font-family: 'SpoqaHansansNeo',-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+ul{
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  vertical-align: top;
+}
+
+/* 모바일 */
+.container {
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+
+  display:flex;
+  flex-direction:column;/* 주축의 값 세로 */
+}
+.container > * {
+  box-sizing:border-box;
+}
+
+.container > .info {
+  background-color: darkorange;
+  width: 100%;
+  order: 1;
+}
+.container > .info > .info_list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  height: 40px;
+}
+
+/* .container > .info > .info_list >li {width: 25%;}
+.container > .info > .info_list >li > a {display: block; } */
+
+/* 머리말 */
+.container > header {
+  position: relative;
+  order:2;
+}
+.container > header > h1 { 
+  background-color: #67595E; color:#fff;
+  margin:0;
+  width:100%; height:90px;
+  line-height: 90px;
+  font-size: 60px;
+  font-family: 'Zen Loop',Arial, Helvetica, cursive;;
+}
+.container > header > nav { 
+  background-color: #b5179e;
+  /* display:none; */
+}
+.container > header > nav > .gnb a{
+  display: block;
+  width: 100%;
+  /* width:calc(100%-60px); */
+  font-style: 18px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 14px 30px;
+  box-sizing: border-box;
+}
+.container > header > .mobile_btn { 
+  background:url(asset/images/navBtn.svg) no-repeat 50% / contain;
+  text-indent:-9999px;
+  width:35px; height:35px;
+  position: absolute;
+  top:20px; right:12px;
+}
+
+/*** main ***/
+/* 슬라이드 */
+.container > .slider { 
+  background: url(asset/images/banner.JPG) no-repeat 50% 0 / cover;
+  /* 배경이미지기 때문에 보여질 공간이 필요하다. 혼자 컨텐츠를 보여줄 능력이 없음 */
+  order:3; }
+.container > .slider > h2,
+.container > .slider > div {
+  display: none;
+}
+
+/* 최신글 */
+.container > .latest { 
+  background-color: #391306; 
+  color:#fff; 
+  order:4;
+
+  padding: 20px 50px 50px; }
+
+/* 인기글 */
+.container > .popular { 
+  background-color: #F1CED4; 
+  order:5; 
+  padding: 20px 50px 50px;
+}
+.container > .latest > .latest_list, 
+.container > .popular > .popular_list {
+  list-style:circle;
+}
+/* 
+.container > .latest > .latest_list > li {
+  background: url(asset/images/post.png) no-repeat 0 50%;
+  padding-left: 10px;
+}
+리스트 스타일의 기호는 백그라운드에 넣는게 더 위치 제어하기가 쉽다. */
+.container > .latest > .latest_list > li,
+.container > .popular > .popular_list > li {
+  text-align-last: left;
+}
+
+/* 갤러리 */
+.container > .gallery { 
+  background-color: #AA1945; 
+  order:6; 
+  padding:40px;}
+.container > .gallery > .gallery_list img {
+  max-width: 100%;
+  /* 고품질 이미지! 그냥 width 값이 아니라 max-width: 사용 */
+}
+
+
+.container > .ranking { 
+  background-color: #F9CCD3; 
+  order:7; }
+
+.container > .ranking > .ranking_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container > .ranking > .ranking_list > li{
+  width: 42%;
+  border: 1px solid #fff;
+  background-color: rgba(0,0,0,.5);
+  padding:10px; margin: 3px;}
+
+.container > .banner { order:8; }
+.container > .banner > .banner1 { 
+  background-color: #821D30; 
+  height:50%; 
+  margin:0;
+  padding: 40px;
+}
+.container > .banner > .banner2 { 
+  background-color: #FB6090; 
+  height:50%; 
+  margin:0;
+  padding: 40px;
+
+  display: flex;
+  justify-content: space-around;
+}
+/* SNS */
+.container > .sns { 
+  background-color:#F7D6D0; 
+  order:8;
+  padding: 40px;}
+  .container > .sns > h2 {
+    display: none;
+  }
+.container > .sns > .sns_list{
+  display: flex;
+  justify-content: space-around;
+}
+
+/*** footer ***/
+.container > footer { 
+  order: 10;
+  order:9;
+  background-color:#FFC5D0;
+  height:60px; line-height: 40px;
+  /* width:100%; flex-grow와 width 중 하나만 작성 */
+  flex-grow:1;/* 플렉스 아이템에 적용. 영역이 남을 때 채움 */
+  font-size: 18px;
+  color: #000;
+  font-family: 'Zen Loop',Arial, Helvetica, cursive;;
+  }
+
+/*********** 태블릿 ***********/
+/*********** PC ***********/
