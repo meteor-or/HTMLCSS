@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+	Ex9
+</title>
+<style>
+	body > div {
+		margin: 50px auto;
+		width: 90%;
+		border: 4px solid #000;
+		display: grid;
+
+		grid-template: 100px 100px / 1fr 1fr;
+		grid-area:
+		"block block"
+		"block block"
+		;
+	}
+		
+	
+	.item {
+		background-color: red;
+	}
+	.box1 {
+		/* 그리드 아이템 안에서의 열 정렬 */
+		align-items: start;
+		align-items: end;
+		align-items: center;
+		align-items: stretch; /*늘림*/
+	}
+
+	.box1 .item , .box2 .item{
+		grid-area: block;
+	}
+	.box2 {
+		/* grid container */
+		/* 그리드 컨테이너 안의 행row 정렬. 하나일 때 */
+		justify-items: stretch;
+		justify-items: start;
+		justify-items: center;
+		justify-items: end;
+	}
+	.box3 {
+		grid-template: repeat(2,80px)/ repeat(3,1fr);
+		grid-auto-rows: 80px;
+		grid-template-areas: none; /* 초기화 */
+
+		align-items: center;
+		justify-items: center;
+		place-items: start center; /* align-items justify-items*/
+		place-items: center;
+	}
+		</style>
+</head>
+
+<body>
+	<h1>item 정렬 1 : justify-items, align-items</h1>
+	<div class="box1">
+		<div class="item">item</div>
+	</div>
+	<div class="box2">
+		<div class="item">item</div>
+	</div>
+	<div class="box3">
+		<div class="item">item</div>
+		<div class="item">item</div>
+		<div class="item">item</div>
+		<div class="item">item</div>
+		<div class="item">item</div>
+		<div class="item">item</div>
+		<div class="item">item</div>
+		<div class="item">item</div>
+		<div class="item">item</div>
+	</div>
+</body>
+</html>

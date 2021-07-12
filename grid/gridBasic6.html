@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid basic 6</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  body > div { 
+    width:90%; margin:50px auto; border:4px solid #00BCD4;
+    display: grid;
+    gap:0.4vh;
+
+      grid-template-rows:[r] 100px [] 100px []
+  }
+  .item { background-color: #B2EBF2; }
+
+  .container {
+    grid-template: repeat(2,100px) / repeat(3,1fr)
+  }
+  .merge {
+    grid-row: ;
+    grid-column: 2 /4 ;
+  }
+
+</style>
+</head>
+
+<body>
+  <h1>grid line naming</h1>
+  <div class="container">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item merge">item 4</div>
+  </div>
+</body>
+</html>

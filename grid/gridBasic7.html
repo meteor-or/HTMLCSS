@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid basic 7</title>
+<style>
+	.container {
+		margin: 50px auto;
+		width: 90%;
+		display: grid;
+		gap: 2px;
+	}
+	
+	.item {
+		background-color: #34a0a4;
+		color: #fFF;
+	}
+
+	.box1 {
+		/* 4행 2열 */
+		grid-template: repeat(4,100px) / repeat(2,1fr);
+		/* grid-template-areas : 이름으로 영역 지정
+			"인용부호 안의 값은 하나의 행 안의 하나의 셀" 1번째 행
+			"txt txt" 2번째 행. 텍스트 다음 띄어스기를 통해 셀 표시
+			". none" 3번째 행. 비움
+		*/
+
+		grid-template-areas: 
+			"header header"
+			"contents aside"
+			". ."
+			"footer footer";
+	}
+	
+	.box1 .header {
+		background-color: orange;
+		grid-row: header ;
+		grid-column: header;
+	}
+
+	.box1 .contents {
+		background-color: #ddd;
+		grid-row: contents;
+		grid-column: contents;
+	}
+	.box1 .aside {
+		background-color: maroon;
+		grid-row: aside ;
+		grid-column: aside;
+	}
+	.box1 .footer {
+		background-color: maroon;
+		grid-area:footer; /* 그리드 템플릿 영역의 이름을 불러와 적용*/
+	}
+
+	.box2{
+		/* 3행 2열 */
+		grid-template: repeat(3,100px) / repeat(2,1fr);
+		grid-template-areas: 
+		"header header"
+		"main nav"
+		"footer footer";
+	}
+
+	.box2 .header{
+		background-color: teal;
+	}
+	.box2 .main{background-color: salmon;}
+	.box2 .nav{background-color: lightcoral;}
+	.box2 .footer{background-color: lightseagreen;}
+
+	.box3 {
+		grid-template: repeat(5,80px) / repeat(2,1fr) 100px;
+		grid-template-areas: 
+		"header1 header1 header1" /*1행*/
+		"contents contents aside"/*2행*/
+		"contents contents aside"/*3행*/
+		"contents contents aside"/*4행*/
+		"footer1 footer1 footer1 "/*5행*/;
+	}
+
+	.box3 .itme1 {background-color:orange ; grid-area:header1 ;}
+	.box3 .itme2 {background-color:olivedrab ; grid-area:contents;}
+	.box3 .itme3 {background-color:orangered ; grid-area:aside ;}
+	.box3 .itme4 {background-color:maroon ; grid-area:footer1 ;}
+
+	.box4 {
+		/* 4행 4열 */
+		grid-template: repeat(4,100px) / repeat(4,1fr);
+		grid-template-areas: 
+		"header header header nav"
+		"main   main   main   nav"
+		"main   main   main   nav"
+		"footer footer footer nav"
+		;
+	}
+
+	.box4 .header {background-color: maroon; grid-area: header;}
+	.box4 .nav {background-color: mediumaquamarine; grid-area:nav ;}
+	.box4 .main {background-color: mediumorchid; grid-area: main;}
+	.box4 .footer {background-color: mediumpurple; grid-area: footer;}
+</style>
+</head>
+
+<body>
+	<h1>gird-template-area 그리드 영역 지정</h1>
+	<div class="container box1">
+		<div class="item header">item1</div>
+		<div class="item contents">item2</div>
+		<div class="item aside">item3</div>
+		<div class="item footer">item4</div>
+		<div class="item">item5</div>
+		<div class="item">item6</div>
+	</div>
+	<div class="container box2">
+		<div class="item main">item1</div>
+		<div class="item header">item2</div>
+		<div class="item footer">item3</div>
+		<div class="item nav">item4</div>
+		<div class="item">item5</div>
+		<div class="item">item6</div>
+	</div>
+	<div class="container box3">
+		<div class="item .item1 ">item1</div>
+		<div class="item">item2</div>
+		<div class="item">item3</div>
+		<div class="item">item4</div>
+		<div class="item">item5</div>
+		<div class="item">item6</div>
+	</div>
+	<div class="container box4">
+		<div class="item header">item1</div>
+		<div class="item nav">item2</div>
+		<div class="item main">item3</div>
+		<div class="item footer">item4</div>
+	</div>
+</body>
+</html>

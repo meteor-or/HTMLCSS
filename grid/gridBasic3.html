@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid basic 3</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  body > div {
+    width:80%; 
+    margin:50px auto;
+    border:4px solid #FF427F;
+    color:#fff;
+
+    display: grid;
+    /* 2행 2열 */
+    grid-template-rows:100px 100px;
+    grid-template-columns:1fr 1fr;
+    grid-template:100px 100px / 1fr 1fr;/* rows / columns */
+  }
+  .item {
+    background-color: #007892;
+  }
+
+  .wrap2 .item {
+    margin:1vw;
+  }
+  .wrap3 {/* grid container */
+    row-gap:30px;/* 행과 행사의 간격 */
+    column-gap:3vw;/* 열과 열사이의 간격 */
+  }
+  .wrap4 {
+    gap:30px 3vw;/* row-gap column-gap */
+    gap:3vw;
+  }
+</style>
+</head>
+
+<body>
+  <h1>gap: 열과 행의 간격(grid gutter)</h1>
+  <div class="wrap1">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <div class="wrap2">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <div class="wrap3">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <div class="wrap4">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+</body>
+</html>
