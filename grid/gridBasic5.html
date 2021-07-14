@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid basic 5</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  body > div { 
+    width:90%; margin:50px auto; border:4px solid #00BCD4;
+    display: grid;
+    gap:0.4vh;
+  }
+  .item { background-color: #B2EBF2; color:#fff}
+
+  .box1 {
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .box1 .merge {
+    /* 열병합 */
+    grid-column-start: 1; /*그리드라인 시작번호*/
+    grid-column-end: 4; /*그리드라인 끝 번호*/
+  }
+
+  .box2 {
+    /* 3행 3열 */
+    grid-template: repeat(3,100px) / repeat(3,minmax(100px,1fr));
+  }
+
+  .box2 .merge {
+    background-color: orange;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+  .box3 {
+    /* 4행 3열 */
+    grid-template:60px repeat(3,100px) / repeat(3,minmax(100px,1fr));
+  }
+  .box3 .merge {
+    background-color: orange;
+    /* grid-row-start:2 ;
+    grid-row-end: 5;
+    grid-column-start:2 ;
+    grid-column-end: 4; */
+
+    grid-row: 2 / 5;/* start / end*/
+    grid-column: 2/4;
+  }
+  .box4 {
+    grid-template: : repeat(4 ,100px) / repeat(3,1fr);
+  }
+  .box4 .merge {
+    background-color: maroon;
+    grid-row: 2 / span 3; /* 그리드라인 2번부터 3개의 영역을 합침 */
+    grid-column: 1 / span 2; /* */
+  }
+</style>
+</head>
+
+<body>
+  <h1>grid line에 따른 셀 제어</h1>
+  <p>grid-column, grid-row: 그리드 라인에 따른 위치 선정. 좌표 값</p>
+
+  <div class="box1">
+    <div class="item merge">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+  </div>
+  <div class="box2">
+    <div class="item">item1</div>
+    <div class="item merge">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+  </div>
+  <div class="box3">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item merge">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+  </div>
+  <div class="box4">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item merge">item6</div>
+    <div class="item">item7</div>
+    <div class="item">item8</div>
+    <div class="item">item9</div>
+  </div>
+</body>
+</html>

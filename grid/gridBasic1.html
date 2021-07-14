@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid basic 1</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  body > div {
+    width:80%; 
+    margin:50px auto;
+    border:4px solid #000;
+  }
+  .item {
+    background-color: #9B72AA;
+    margin:1px;
+  }
+  /* grid = row(행) / column(열)
+    grid container 속성: grid-template, grid-area, gap, justify-content, align-items..
+    grid item 속성: grid-row, grid-column, justify-self, align-self..
+  */
+  .container1 {
+    display: grid;
+    /* 구조: row행 */
+    grid-template-rows:200px 100px 50px 150px;/* 1행 2행 3행 4행 */
+    grid-template-rows:200px 100px;/* 1행 2행 */
+    grid-template-rows:20% 20% 25% 35%;/* 높이값이 지정되지 않으면 비율에 맞춰 조정 */
+    grid-template-rows:10vw 10vw 15vw 25vw;
+    grid-template-rows:10vh 6rem;
+    grid-template-rows:1fr 2fr 3fr 1fr;/* fr:공간 비율, 분수 fraction, 1/7 2/7 3/7 1/7 */
+  }
+  .container2 {
+    display: grid;
+    /* 구조: column 열 */
+    grid-template-columns:200px 100px 80px 140px;
+    grid-template-columns:200px 100px;/* 1열:200px 2열:100px, 아이템의 수와 상관없이 최종 2열을 유지 */
+    grid-template-columns:10vh 16rem 40%;/* 최종 3열을 유지 */
+    grid-template-columns: 50%;/* 1열 */
+    grid-template-columns: 1fr;/* 1열 */
+    grid-template-columns: 1fr 1fr;/* 2열 */
+    grid-template-columns: 1fr 1fr 1fr;/* 3열 */
+    grid-template-columns: 1fr 1fr 2fr 1fr;/* 4열, 1/5 1/5 2/5 1/5 */
+  }
+
+  .container3 {
+    display: grid;
+    grid-template-rows:150px 100px 100px;/* 3행 */
+    grid-template-columns:33.33333% 33.33333% 33.33333%;/* 3열 */
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+</style>
+</head>
+
+<body>
+  <h1>display: grid</h1>
+  <p>2차원(행row과 열column)의 레이아웃 시스템으로 부모 요소(grid container)와 자식 요소(grid item)으로 구성되어 있다.</p>
+
+  <div class="container1"><!-- gird container -->
+    <div class="item">item1</div><!-- grid item -->
+    <div class="item">item2</div><!-- grid item -->
+    <div class="item">item3</div><!-- grid item -->
+    <div class="item">item4</div><!-- grid item -->
+  </div>
+  <div class="container2">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+  <div class="container3">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+    <div class="item">item6</div>
+    <div class="item">item7</div>
+  </div>
+</body>
+</html>

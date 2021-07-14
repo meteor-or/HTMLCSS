@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gridBasicEx11</title>
+<style>
+	body{
+		margin: 0;
+	}
+	.container {
+		width: 100%; 
+color:#fff;
+
+		display: grid;
+		grid-auto-rows: 100px;
+		grid-template-columns: repeat(5,1fr);
+		
+		gap:2px;
+	}
+	.item:nth-child(odd) {
+		background-color: salmon;
+	}
+	.item:nth-child(even) {
+		background-color: maroon;
+	}
+	
+	.item:nth-child(1) {
+		grid-column: 1 / 3;
+	}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="item">item1</div>
+		<div class="item">item2</div>
+		<div class="item">item3</div>
+		<div class="item">item4</div>
+		<div class="item">item5</div>
+		<div class="item">item6</div>
+		<div class="item">item7</div>
+		<div class="item">item8</div>
+		<div class="item">item9</div>
+		<div class="item">item10</div>
+		<div class="item">item11</div>
+		<div class="item">item12</div>
+		<div class="item">item13</div>
+		<div class="item">item14</div>
+		<div class="item">item15</div>
+		<div class="item">item16</div>
+		<div class="item">item17</div>
+		<div class="item">item18</div>
+		<div class="item">item19</div>
+		<div class="item">item20</div>
+		<div class="item">item21</div>
+		<div class="item">item22</div>
+		<div class="item">item23</div>
+		<div class="item">item24</div>
+		<div class="item">item25</div>
+		<div class="item">item26</div>
+		<div class="item">item27</div>
+		<div class="item">item28</div>
+		<div class="item">item29</div>
+		<div class="item">item30</div>
+	</div>
+</body>
+</html>

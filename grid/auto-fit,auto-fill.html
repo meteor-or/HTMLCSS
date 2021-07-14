@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>auto-fit</title>
+<style>
+	.container{
+		width: 100%; height: 60vh; 
+		
+		gap: 3px;	
+		display: grid;
+		
+		grid-template-columns:repeat(auto-fit,minmax(30px,1fr)) ;
+		/* grid-template-rows: repeat(auto-fill,minmax(100px,1fr));
+		 */
+		/* 
+			auto-fit:아이템의 크기를 늘려 채움
+			auto-fill: 최대한 많은 아이템을 행에 채움. 여백이 남음
+
+
+			/  허용되지 않는 결합  /
+			repeat(auto-fill, auto)
+			repeat(auto-fill, 1fr)
+			repeat(auto-fill, auto)
+			auto repeat(auto-fill, )
+			1fr repeat(auto-fill, )
+		*/
+		grid-auto-rows: 100px;
+	}
+
+		.item {
+			background-color: salmon;
+		}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="item">i01</div>
+		<div class="item">i02</div>
+		<div class="item">i03</div>
+		<div class="item">i04</div>
+		<div class="item">i05</div>
+		<div class="item">i06</div>
+		<div class="item">i07</div>
+		<div class="item">i08</div>
+		<div class="item">i09</div>
+		<div class="item">i10</div>
+		<div class="item">i11</div>
+		<div class="item">i12</div>
+		<div class="item">i13</div>
+		<div class="item">i14</div>
+		<div class="item">i15</div>
+		<div class="item">i16</div>
+		<div class="item">i17</div>
+		<div class="item">i18</div>
+		<div class="item">i19</div>
+		<div class="item">i20</div>
+	</div>
+</body>
+</html>
