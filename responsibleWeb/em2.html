@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>em 상대단위 2</title>
+<style>
+  body {
+    /* em의 단위값은 font-size가 기준 */
+    /* font-size:26px; 모바일 버전 */
+    font-size:36px;/* 피씨 버전 */
+    color:#fff;
+  }
+  .box {
+    background-color: maroon;
+    width:500px; height:400px;
+    width:22.727em; height:18.182em;
+    margin:50px;
+    margin:2.273em;
+    overflow:hidden;/* 마진 상쇄현상 해결 */
+  }
+  .box .txt {
+    background-color: teal;
+    width:300px; height:200px;
+    width:13.636em; height:9.091em;
+    margin:30px;
+    margin:1.364em;
+  }
+</style>
+</head>
+
+<body>
+  <h1>em 상대단위 2</h1>
+  <div class="box">
+    <div class="txt">txt</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Liquid Layout 2</title>
+<style>
+  body { margin:0; text-align: center; font-size:35px; font-weight: bold;}
+  .wrapper {
+    border:6px solid #000;
+    width:1580px;
+    /* (요소의 너비 1580/전체 너비 1680)*100 */
+    width:94.047619%;
+    margin:0 auto;
+    overflow:hidden;
+  }
+  .wrapper .box { height:200px; float:left; }
+  .wrapper .box1 {
+    background-color: #ff0a54;
+    /* (컨텐츠 크기 527 / 감싸는 부모요소 크기 1580)*100 */
+    width:527px;
+    width: 33.354430%;
+  }
+  .wrapper .box2 {
+    background-color: #ff477e;
+    /* (컨텐츠 크기 526 / 1580)*100 */
+    width:526px;
+    width: 33.291139%;
+  }
+  .wrapper .box3 {
+    background-color: #ff5c8a;
+    width:527px;
+    width: 33.354430%;
+  }
+  .wrapper .box4 {
+    background-color: #ff7096;
+    width:1580px;
+    width:100%;
+  }
+  .wrapper .box5 {
+    background-color: #ff85a1;
+    /* (컨텐츠 크기 395 / 1580)*100 */
+    width:395px;
+    width:25%;
+  }
+  .wrapper .box6 {
+    background-color: #ff99ac;
+    width:395px;
+    width:25%;
+  }
+  .wrapper .box7 {
+    background-color: #fbb1bd;
+    width:395px;
+    width:25%;
+  }
+  .wrapper .box8 {
+    background-color: #f9bec7;
+    width:395px;
+    width:25%;
+  }
+</style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box box5">box5</div>
+    <div class="box box6">box6</div>
+    <div class="box box7">box7</div>
+    <div class="box box8">box8</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>rem 루트 상대단위</title>
+<style>
+  /* rem: root, 즉 최상위 요소(html)를 기준으로 설정 */
+  html { font-size:20px; }
+  body { font-size: 1.2rem; }
+  .wrap { font-size:1rem; }
+  .box { font-size:1.5rem; }
+  p { font-size:1.5rem;}
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    1rem == 20px
+    <div class="box">
+      1.5rem == 30px; html, 즉 최상위 루트의 값을 기준으로 설정 .바로 위 부모 x
+      <p>
+        1.5rem == 30px<br>
+        html, 즉 최상위 루트의 값을 기준으로 설정 .바로 위 부모 x
+      </p>
+    </div>
+  </div>
+</body>
+</html>

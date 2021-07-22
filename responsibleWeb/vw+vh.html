@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>뷰포트 단위 vw, vh</title>
+<style>
+  body, ul { margin:0; font-size:22px; }
+  .box {
+    background-color:maroon;
+    color:#fff;
+    /* 뷰포트의 가로값을 기준으로 적용. 1680px == 100vw, 1920 == 100vw, 1480px == 100vw  주의: 해상도 값이 기준이 아님 */
+    width:100vw;
+    /* 뷰포트의 세로값을 기준으로 적용. 1050 == 100vh 934px ==100vh */
+    height:50vh;
+  }
+  .box p {
+    background-color:orange;
+    /* 부모 요소를 기준으로 적용 */
+    width:50%; height:50%;
+    /* viewport 기준 */
+    width:50vw; height:50vh;
+  }
+</style>
+</head>
+
+<body>
+  <h1>뷰포트 단위 vw, vh란?</h1>
+  <ul>
+    <li>뷰포트의 가로 세로 값을 기준으로 사용하는 상대단위 값</li>
+    <li>100분의 1 단위</li>
+    <li>상대단위인 %는 부모를 기준으로 값을 정하지만, vw vh는 부모와는 상관없이 뷰포트를 기준으로 값을 정한다.</li>
+  </ul>
+  <div class="box">
+    <p>뷰포트 기준 단위값</p>
+  </div>
+</body>
+</html>

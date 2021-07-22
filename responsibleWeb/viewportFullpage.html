@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>뷰포트를 이용한 풀페이지</title>
+<style>
+  /* html,body { height:100%; } */
+  body { margin:0; text-align: center; }
+  h1 { 
+    position:fixed; 
+    top:20px; 
+    left:0; right:0; margin:auto;/* 포지션 적용시 중앙 정렬 */
+  }
+  ul {
+    list-style:none;
+    margin:0; padding:0;
+  }
+  ul li {
+    width:100%;
+    /* 100vw의 경우 브라우저 스크롤의 값이 존재하지 않는 것으로 해석하기 때문에 요소의 폭이 예상보다 커짐. width:100%를 많이 사용 */
+    /* width:100vw; */
+    /* height:100%; */
+    height:100vh;/* 브라우저의 높이값 기준 */
+    text-indent:-9999px;
+    background:no-repeat 50% / cover;
+  }
+  ul .pic1 { background-image:url(images/mt1.jpg); }
+  ul .pic2 { background-image:url(images/mt2.jpg); }
+  ul .pic3 { background-image:url(images/mt4.jpg); }
+  ul .pic4 { background-image:url(images/windmill.jpg); }
+</style>
+</head>
+
+<body>
+  <h1>뷰포트를 이용한 풀페이지</h1>
+  <ul>
+    <li class="pic1"><a href="#">img1</a></li>
+    <li class="pic2"><a href="#">img2</a></li>
+    <li class="pic3"><a href="#">img3</a></li>
+    <li class="pic4"><a href="#">img4</a></li>
+  </ul>
+</body>
+</html>

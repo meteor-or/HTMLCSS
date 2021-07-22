@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>em 상대단위 연습</title>
+</head>
+
+<body>
+  <div class="box1">
+    font-size:26px -> 1em: 26px
+    <div class="txt">
+      1.5em: 39px
+      <p>
+        <!-- 1em: 39px -->
+        1.2em: 46px
+        <span>1em: 46px</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="box2">
+    font-size:20px
+    <div class="txt">
+      <!-- 1em: 20px -->
+      1.5em: 30px
+      <p>
+        <!-- 1em: 30px -->
+        1.2em: 36px
+        <span>
+          <!-- 1em: 36px -->
+          0.95em: 34px
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <div class="box3">
+    font-size:30px
+    <div class="txt">
+      <!-- font-size:30px -->
+      <p>0.95em: 28px / 1em:30px</p>
+      <p>
+        1.1em: 33px / 1em:30px
+        <span>0.95em: 31px / 1em:30px</span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

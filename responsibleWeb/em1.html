@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>em 상대단위 1</title>
+<style>
+  .container * { border:6px solid #000; margin:20px; padding:10px; }
+
+  body { 
+    font-size:20px;
+  }
+  .container { 
+    border:6px solid #000; 
+    font-size:1.2em; 
+  }
+  .container > h2 { font-size: 1em; }
+  .container > p { font-size: 1em; }
+  .container > .txt { font-size: 1.1em; }
+  .container > .txt > p { font-size: 0.8em; }
+  .container > .txt > p > span { font-size: 1em; }
+</style>
+</head>
+
+<body>
+  <h1>em 상대단위 1</h1>
+  <ul>
+    <li>알파벳 M을 기준으로 만들어진 단위.</li>
+    <li>부모의 값을 기준으로 상속 받아 값 설정</li>
+    <li>브라우저의 기본 폰트 사이즈: 16px</li>
+  </ul>
+  <div class="container">
+    .container: 1.2em의 크기는? 24px
+    <h2>h2: 1em의 크기는? 24px 부모 기준으로 계산</h2>
+    <p>p: 1em의 크기는? 24px</p>
+    <div class="txt">
+      .txt: 1em의 크기는? 24px<br>
+      1.1em == 26px
+      <p>
+        0.8em의 크기는? 20px
+        <span>1em의 크기는? 20px</span>
+      </p>
+    </div>
+  </div>
+
+  <ul>
+    <li>body:16px -> 1em:16px</li>
+    <li>body:20px -> 1em:20px / .container:1.2em(==24px) / h2:1em(==24px ) </li>
+    <li></li>
+  </ul>
+</body>
+</html>
