@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid layout 6</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  body { margin:0; }
+  ul { margin:0; padding:0; list-style:none; }
+
+  .container {
+    width:100%;
+    display:grid;
+    gap:2vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  }
+  .container .item {/* grid-item / flex container */
+    background-color: #ddd;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container .item img {
+    max-width:100%;
+  }
+</style>
+</head>
+
+<body>
+  <ul class="container">
+    <li class="item">
+      <h2>제목 1</h2>
+      <p>사람들의 그리워 그러나 별 봅니다. 하나에 가슴속에 위에도 노루.</p>
+      <img src="http://via.placeholder.com/300x150/EC4646/fff" alt="img1">
+    </li>
+    <li class="item">
+      <h2>제목 2</h2>
+      <p>쓸쓸함과 것은</p>
+      <img src="http://via.placeholder.com/300x150/663F3F/fff" alt="img2">
+    </li>
+    <li class="item">
+      <h2>제목 3</h2>
+      <p>이웃 많은 별에도 까닭이요.그리워 책상을 밤을 동경과 계십니다.그리워 책상을 밤을 동경과 계십니다.</p>
+      <img src="http://via.placeholder.com/300x150/BE5683/fff" alt="img3">
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* header */
+
+header .gnb {
+  float: left;
+}
+
+/* main */
+
+main .gridSection {
+  
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4 1fr);
+}
+
+main .gridSection .img0 {
+  grid-column: 1/4;
+  grid-row: 1/3;
+}
+main .gridSection .img0 img {
+  object-fit: contain;
+}
+main .gridSection .txt1 {
+  grid-column: 4 /6;
+  object-fit: ;
+}
+main .gridSection .txt2 {
+  grid-column: 2 /4;
+}
+main .gridSection .img4, 
+main .gridSection .img6 {
+  grid-column: auto;
+}
+main .gridSection .img5 {
+  grid-column: 1/3;
+}
+main .gridSection .img5 img {
+  object-fit: contain;
+}
+main .gridSection .img6

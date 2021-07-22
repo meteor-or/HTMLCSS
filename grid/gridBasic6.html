@@ -7,33 +7,40 @@
 <title>grid basic 6</title>
 <link rel="stylesheet" href="../common/basic.css">
 <style>
-  body > div { 
-    width:90%; margin:50px auto; border:4px solid #00BCD4;
-    display: grid;
+  .container { 
+    width:90%; margin:50px auto; border:4px solid #264653;
     gap:0.4vh;
 
-      grid-template-rows:[r] 100px [] 100px []
-  }
-  .item { background-color: #B2EBF2; }
+    display: grid;
+    /* 2행 3열 */
+    /* grid-template:100px 100px/ repeat(3, 1fr); */
 
-  .container {
-    grid-template: repeat(2,100px) / repeat(3,1fr)
+    /* grid container */
+    /* [사용자지정라인이름] 아이템 크기 [사용자지정라인이름] */
+    grid-template-rows:[row1] 100px [row2] 100px [row3];
+    grid-template-columns:[col1] 1fr [col2] 1fr [col3] 1fr [col4];
   }
-  .merge {
-    grid-row: ;
-    grid-column: 2 /4 ;
+  .container>.item { 
+    background-color: maroon; color:#fff
   }
-
+  .container>.item.merge {
+    /*
+    grid-row:2 / 3;
+    grid-column:2 / 4;
+    */
+    grid-row:row2 / row3;
+    grid-column:col2 / col4;
+  }
 </style>
 </head>
 
 <body>
   <h1>grid line naming</h1>
   <div class="container">
-    <div class="item">item 1</div>
-    <div class="item">item 2</div>
-    <div class="item">item 3</div>
-    <div class="item merge">item 4</div>
+    <div class="item merge">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
   </div>
 </body>
 </html>

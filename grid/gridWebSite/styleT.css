@@ -2,7 +2,84 @@
 
 /* header */
 
+header .ultili ul {
+  display: grid;
 
+  grid-template-columns: repeat(10, 1fr);
+}
 
+header .ultili li:nth-child(3) {
+  grid-column: 9/10;
+}
+header .gnb {
+  display: flex;
+}
+header .gnb ul {
+  position: static;
+  display: flex;
 
+  justify-content: flex-end;
+}
+
+header .gnb ul .home {
+  background: url();
+}
+header .gnb ul .news {
+  background: url();
+}
+header .gnb ul .bcast {
+  background: url();
+}
+header .gnb ul .shop {
+  background: url();
+}
+
+header .gnb ul a {
+  padding: 0 30px;
+  line-height: 80px;
+}
+header .gnb .nav_btn {
+  display: none;
+}
 /* main */
+
+main .gridSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+main .gridSection .img2,
+main .gridSection .img3,
+main .gridSection .img4,
+main .gridSection .img6 {
+  display: block;
+}
+
+main .gridSection .img0 {
+  grid-column: 1 /4;
+  grid-row: 1/3;
+}
+main .gridSection .img0 img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+main .gridSection .txt1 {
+  grid-column: inherit;
+  background-color: #fff;
+  color: #000;
+}
+main .gridSection .txt2 {
+  grid-column: 3 /5;
+}
+
+main .gridSection .img4,
+main .gridSection .img6 {
+  grid-column: 1/3;
+}
+
+main .gridSection .img6 img {
+  object-fit: scale-down;
+}

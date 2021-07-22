@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid layout 5</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  .container {
+    font-weight: bold;
+    width:90%; height:50vw;
+    margin:50px auto;
+    border:6px solid #000;
+
+    display:grid;
+    /* grid-template-columns:repeat(4,100px) ; */
+    grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));/* 최대값으로 아이템들이 컨테이너를 채움 */
+    grid-template-columns:repeat(auto-fill, minmax(100px, 1fr));/* 최소값으로 더 많은 아이템으로 컨테이너를 채움 */
+    /*
+    repeat(auto-fit,100px); 여백이 남지 않게 아이템의 크기를 늘려 컨테이너의 영역을 채움
+    repeat(auto-fill, 100px); 여백이 남음. 컨테이너 영역을 가능한 많은 아이템으로 채움
+
+    주로 minmax()함수와 함께 '최소,최대' 값 사용
+    repeat(auto-fill, 100px);
+    repeat(auto-fit, 20%);
+    repeat(auto-fill, minmax(auto, 100px));
+    repeat(auto-fit, minmax(100px, auto));
+    repeat(auto-fit, minmax(100px, 1fr));
+
+    * minmax()함수없이 auto, 1fr 단독 사용시 적용되지 않음
+
+    */
+
+  }
+  .container > .item:nth-child(odd) { background-color: #2FC4B2;}
+  .container > .item:nth-child(even) { background-color: #E71414; color:#fff;}
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+  </div>
+</body>
+</html>

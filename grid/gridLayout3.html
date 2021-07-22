@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>grid layout 3</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  .container {
+    width:90%; height:50vw;
+    margin:50px auto;
+    border:6px solid #000;
+    font-weight: bold;
+
+    display: grid;
+    /* 3행 3열 */
+    grid-template:100px 1fr auto / minmax(80px,15%) 2fr 1fr;
+  }
+  .container > header { 
+    background-color: #52006A; color:#fff; 
+    grid-column:1/4;
+  }
+  .container > nav { background-color: #CD113B; color:#fff; }
+  .container > main { background-color: #FF7600; }
+  .container > aside { background-color: #FFA900; }
+  .container > footer { 
+    background-color: #12CAD6; 
+    grid-column:1/span 3;
+  }
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <header>header-고정</header>
+    <nav>nav-유동</nav>
+    <main>main-유동</main>
+    <aside>aside-유동</aside>
+    <footer>footer-고정</footer>
+  </div>
+</body>
+</html>
