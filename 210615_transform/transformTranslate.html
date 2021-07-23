@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>transform:translate()</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  div {
+    border:6px solid #000;
+    width:250px; height:250px;
+    margin:70px auto;
+  }
+  img { 
+    width:250px;
+    transition:0.6s;
+  }
+  .box1:hover img { transform: translateX(200px); }
+  .box2:hover img { transform: translateY(-150px); }
+  .box3:hover img { transform: translate(50%,50%); }/* x, y */
+  .box4:hover img { transform: translate(-50%,-50%); }/* 자기 자신을 기준으로 이동 */
+</style>
+</head>
+
+<body>
+  <h1>transform:translate() 이동</h1>
+  <!--
+    이동 가능한 속성: 
+      margin: 레이아웃에 영향을 줌,
+      position: 레이아웃에 영향을 주기도 하고 주지 않기도 함,
+      transform:translate(); 레이아웃에 영향을 주지 않음
+  -->
+  <div class="box1"><img src="images/css.jpg" alt="img1"></div>
+  <div class="box2"><img src="images/code.png" alt="img2"></div>
+  <div class="box3"><img src="images/name.jpg" alt="img3"></div>
+  <div class="box4"><img src="images/ps_250.jpg" alt="img4"></div>
+</body>
+</html>

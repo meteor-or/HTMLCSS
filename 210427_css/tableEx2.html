@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>table + form 연습 2</title>
+</head>
+<body>
+	<h1>폼 연습 2</h1>
+	<form action="http://~">
+		<table border="1">
+			<caption>실습 예제</caption>
+			<!-- 9행 4셀 -->	
+			<tbody>
+				<tr><!-- 1행 -->
+					<th>학교</th>
+					<td colspan="2"><input type="search" name="school" id="school"></td>
+					<td><button type="submit">학교 찾기</button></td>
+				</tr>
+				<tr><!-- 2행 -->
+					<th>담당학년</th>
+					<td colspan="3">
+						<select id="grade">
+							<option value="-">-</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+						</select> 학년
+						<select id="num">
+							<option value="-">-</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+						</select> 반
+					</td>
+				</tr>
+				<tr><!-- 3행 -->
+					<th>학교전화</th>
+					<td>
+						<select id="tel1">
+							<option value="선택">선택</option>
+							<option value="010">010</option>
+							<option value="011">011</option>
+						</select>
+					</td>
+					<td> - </td>
+					<td><input type="text" name="tel2"> - <input type="text" name="tel3"></td>
+				</tr>
+				<tr><!-- 4행 -->
+					<th>휴대전화</th>
+					<td>
+						<select id="phone">
+							<option value="선택">선택</option>
+							<option value="010">010</option>
+							<option value="011">011</option>
+						</select>
+					</td>
+					<td> - </td>
+					<td><input type="text"> - <input type="text"></td>
+				</tr>
+				<tr><!-- 5행 -->
+					<th rowspan="3">교사인증</th>
+					<td colspan="3"><input type="file"></td>
+				</tr>
+				<tr><!-- 6행 -->
+					<td colspan="3">* 교사 인증은 교육 행정 정보시스템 로그인 한 다음 화면 캡쳐해서 첨부해 주시면 됩니다.</td>
+				</tr>
+				<tr><!-- 7행 -->
+					<td colspan="3"><a href="#">[자세한 방법 보기]</a></td>
+				</tr>
+				<tr><!-- 8행 -->
+					<th rowspan="2">간단한 인사 및 소개</th>
+					<td colspan="3"><textarea></textarea></td>
+				</tr>
+				<tr><!-- 9행 -->
+					<td colspan="3">간단한 인사 및 소개를 남겨 주시면 교내 사랑방 게시판에 자동 등록되어 집니다.</td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="submit">등록</button>	
+		<button type="reset">취소</button>
+	</form>
+</body>
+</html>

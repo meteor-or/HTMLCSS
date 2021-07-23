@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>transform:skew()</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  div {
+    border:6px solid #000;
+    width:250px; height:250px;
+    margin:70px auto;
+  }
+  img { 
+    width:250px;
+    transition:0.6s;
+  }
+  .box1:hover img { transform:skewX(45deg); }
+  .box2:hover img { transform:skewY(45deg); }
+  .box3:hover img { transform:skew(20deg, 20deg); }
+  .box4:hover img { transform:skew(-20deg, -20deg); }
+</style>
+</head>
+
+<body>
+  <h1>transform:skew() 기울기</h1>
+  <div class="box1"><img src="images/css.jpg" alt="img1"></div>
+  <div class="box2"><img src="images/code.png" alt="img2"></div>
+  <div class="box3"><img src="images/name.jpg" alt="img3"></div>
+  <div class="box4"><img src="images/ps_250.jpg" alt="img4"></div>
+</body>
+</html>

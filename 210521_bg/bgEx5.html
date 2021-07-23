@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>background 연습 5</title>
+<style>
+  form {
+    border:1px solid #ba135d;
+    width:400px;
+    margin:50px auto;
+    padding:50px;
+    box-sizing:border-box;/* 상속 x. w(b+p) + m = 요소의 실제 크기 */
+  }
+  form input {
+    font-family:'나눔바른고딕','나눔고딕','맑은 고딕',돋움,sans-serif;
+    font-size:20px;
+    color:#ba135d;
+    padding:8px 8px 8px 40px;
+    /* text-indent:40px; */
+    width:298px;
+    box-sizing:border-box;
+    outline:none;
+    border:1px solid #ba135d;
+    border-radius:10px;
+    margin:3px 0;
+    /* background-color: #eee; */
+    background:#eee no-repeat 8px 50% / 26px;/* 축약형의 경우 반드시 포지션 / 사이즈의 값을 가져야 함. 사이즈가 제일 마지막에 작성 */
+  }
+  /* #userEmail {} */
+  input[type="email"] {/* 속성 선택자: 해당 요소의 속성과 값으로 지정하는 선택자 */
+    background-image: url(images/envelope-solid.svg);
+  }
+  input[name=user_tel] {/* input 요소 중 name 속성 값이 user_tel */
+    background-image: url(images/mobile-solid.svg);
+    background-size: 18px;
+    background-position: 12px 50%;
+  }
+  [id = userText] {
+    background-image: url(images/map-solid.svg);
+  }
+
+  form input:hover, form input:focus {
+    border-color:#000;
+    background-color: #ba135d;
+    color:#fff;
+  }
+</style>
+</head>
+
+<body>
+  <form>
+    <input type="email" name="user_email" id="userEmail">
+    <input type="tel" name="user_tel" id="userTel">
+    <input type="text" name="user_text" id="userText">
+  </form>
+</body>
+</html>

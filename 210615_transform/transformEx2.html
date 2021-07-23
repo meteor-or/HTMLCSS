@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>transform 연습 2</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  .gallery {
+    list-style:none;
+    padding:0;
+    margin:0 auto;
+    width:816px;
+  }
+  .gallery li {/* 272px */
+    width:250px;
+    margin:10px;
+    float:left;
+    border:1px solid #000;
+    box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+      0 12.5px 10px rgba(0, 0, 0, 0.035),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      0 100px 80px rgba(0, 0, 0, 0.07);
+
+    transition:0.6s;
+  }
+  .gallery li img {
+    /* display: block; */
+    vertical-align:top;
+  }
+  .gallery li:hover {
+    transform:scale(1.4) rotate(360deg);
+  }
+</style>
+</head>
+
+<body>
+  <h1>trans 연습 2</h1>
+  <ul class="gallery">
+    <li><img src="http://via.placeholder.com/250/343A40/fff?text=img1" alt="img1"></li>
+    <li><img src="http://via.placeholder.com/250/7952B3/fff?text=img2" alt="img2"></li>
+    <li><img src="http://via.placeholder.com/250/FFC107/fff?text=img3" alt="img3"></li>
+    <li><img src="http://via.placeholder.com/250/FF005C/fff?text=img4" alt="img4"></li>
+    <li><img src="http://via.placeholder.com/250/0E918C/fff?text=img5" alt="img5"></li>
+    <li><img src="http://via.placeholder.com/250/72147E/fff?text=img6" alt="img6"></li>
+  </ul>
+</body>
+</html>

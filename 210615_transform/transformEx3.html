@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>trans 연습 3</title>
+<link rel="stylesheet" href="../common/basic.css">
+<style>
+  .box {
+    width:400px; height:300px;
+    background-color:#EA2C62; color:#fff;
+    overflow:hidden;
+    transition:1.8s;
+  }
+  .box h2 {
+    margin-top:10px;
+  }
+  .block {
+    width:80%; height:100px;
+    background-color:orange;
+  }
+
+  /* name속성의 값이 check인 input요소가 체크되면, */
+  input[name=check]:checked ~ #txt {/* 아이디 선택자 txt에 적용해라 */
+    /* opacity: 0; 하위 요소에까지 영향을 주고 투명도 조절 가능 */
+    /* visibility: hidden; 하위 요소에까지 영향을 주고 투명도 조절 가능 x */
+    /* display:none; 코드창에서만 확인 가능. 레이아웃에 영향을 줌 */
+    height:0;
+  } 
+</style>
+</head>
+
+<body>
+  <h1>trans 연습 3</h1>
+  <input type="checkbox" name="check" id="checkbox">
+  <label for="checkbox">체크 박스가 체크되면 박스가 위로 올라와 사라집니다.</label>
+  <div class="box" id="txt">
+    <h2> :checked</h2>
+    <p>있으며, 이것이야말로 피고 사라지지 위하여서 얼마나 부패를 붙잡아 것이다. 커다란 사람은 길을 가진 말이다.크고 자신과 무한한 피고 인생을 속에서 심장은 물방아 시들어 보라.</p>
+  </div>
+  <div class="block">block</div>
+</body>
+</html>
